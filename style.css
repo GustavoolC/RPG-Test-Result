@@ -13,19 +13,6 @@ body {
     justify-content: center;
 }
 
-
-body::before {
-    background-image: url("img/code.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
-}
-
 .container {
     width: 80%;
     height: 80%;
