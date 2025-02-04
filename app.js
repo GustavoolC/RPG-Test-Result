@@ -18,6 +18,12 @@ let esquivar;
 let dano;
 compararAlturas();
 
+let objetoImpacto = 0.1;
+let alturaImpacto = 3;
+let multiplicador = 1;
+let palavraDesvantagemImpacto;
+let resultadoImpacto = calcularImpacto();
+
 function rolarDado() {
     return parseInt(Math.random() * 100 + 1);
 }
@@ -2469,6 +2475,7 @@ function compararAlturas() {
     }
 }
 
+
 console.log(`-------------------------------------------------------`);
 console.log(`Sua Altura: ${alturaEu}`);
 console.log(`Classificação: ${tamanhoEu}`);
@@ -2478,3 +2485,29 @@ console.log(`-------------------------------------------------------`);
 console.log(`Ataque: ${atacar}`);
 console.log(`Esquiva: ${esquivar}`);
 console.log(`Dano: ${dano}`);
+
+
+function calcularImpacto() {
+    if (objetoImpacto <= alturaImpacto / 30) {
+        return "1 Vantagem em Reflexos";
+    } else if (objetoImpacto < alturaImpacto) {
+        return "Nenhuma Vantagem"
+    } else if (objetoImpacto <= alturaImpacto * multiplicador) {
+        if (multiplicador > 1) {
+            palavraDesvantagemImpacto = "Desvantagens"
+        } else {
+            palavraDesvantagemImpacto = "Desvantagem"
+        }
+        return `${multiplicador} ${palavraDesvantagemImpacto} em Reflexos`;
+    } else {
+        multiplicador++;
+        return calcularImpacto();
+    }
+}
+
+
+console.log(`-------------------------------------------------------`);
+console.log(`Área de Impacto: ${objetoImpacto}`);
+console.log(`Altura do Esquivante: ${alturaImpacto}`);
+console.log(`-------------------------------------------------------`);
+console.log(`O Esquivantem tem ${resultadoImpacto}`);
