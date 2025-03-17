@@ -1,127 +1,150 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+    color:#75ffe3;
+    font-family: "Doto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
-body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
+.corpo-n1 {
+    background-image: url(assets/FundoNoturno.png);
+}
+
+.corpo-n2 {
+    background-image: url(assets/dice.png);
+}
+
+.personagem {
     display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#personagens-escolha {
+    font-size: 20px;
+    padding: 10px;
+    color:rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 10px;
+    border-style: dashed;
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+    appearance: none;
+}
+
+#personagens-escolha:hover {
+    background-color: rgb(17, 17, 17);
+    border-style: solid;
+}
+
+#personagens-escolha:focus {
+    outline: none;
+}
+
+p {
+    font-size: 350%;
+    margin: 0;
+}
+
+.testeroll {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-content: center;
+    margin-top: 0%;
+    gap: 5px;
+    background-image: url(assets/boxcosmo.png);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-attachment: fixed;
+    padding-bottom: 10%;
+    
 }
 
-.container {
-    width: 80%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 24px;
-    border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
-    position: relative;
+#escolhaerole {
+    margin-top: 4.8%;
 }
 
-
-.container__conteudo {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
+#testeroll__pericia {
+    font-size: 20px;
+    padding: 10px;
+    color:#00ffc3;
+    background-color: black;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    border-color: #00ffc3;
+    text-align: center;
+    box-shadow: 0 10px 25px black;
 }
 
-.container__informacoes {
-    flex: 1;
-    padding: 3rem;
+#testeroll__pericia:hover {
+    background-color: rgb(17, 17, 17);
+    border-style: solid;
 }
 
-.container__botao {
-    border-radius: 16px;
-    background: #1875E8;
-    padding: 16px 24px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-    margin-top: 2rem;
+#testeroll__atributo:hover {
+    background-color: rgb(17, 17, 17);
+    border-style: solid;
 }
 
-.container__texto {
-    margin: 16px 0 16px 0;
+#testeroll__pericia:focus {
+    outline: none;
 }
 
-.container__texto-azul {
-    color: #1875E8;
+#testeroll__atributo:focus {
+    outline: none;
 }
 
-.container__input {
-    width: 100%;
-    height: 72px;
-    border-radius: 16px;
-    background-color: #FFF;
-    border: none;
-    color: #1875E8;
-    padding: 2rem;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
+#testeroll__atributo {
+    font-size: 20px;
+    padding: 10px;
+    color: #00ffc3;
+    background-color: black;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    border-color: #00ffc3;
+    text-align: center;
+    box-shadow: 0 10px 25px black;
 }
 
-.container__botoes {
-    display: flex;
-    gap: 2em;
+.botao-rolar {
+    cursor: pointer;
+    border-style:double;
+    border-color: #00ff95;
+    background-color: #10281e;
+    border-radius: 10px;
+    padding: 0px 40px;
+    margin: 1%;
+    box-shadow: 0px 0px 50px rgba(0, 255, 145, 0.679);
 }
 
-h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
-    padding-bottom: 3rem;
+.botao-rolar:hover {
+    background-color: #1b3f30;
+    border-style: solid;
+    padding: 5px 45px;
+    width: 4.2%;
 }
 
-p,
-button {
-    font-family: 'Inter', sans-serif;
+#testeroll__valoresiniciais {
+    color: aqua;
+    font-size: 110%;
 }
 
-.texto__paragrafo {
-    font-size: 32px;
-    font-weight: 400;
+#testeroll__resultadoinicial {
+    color:magenta;
+    font-size: 160%;
 }
 
-button:disabled {
-    background-color: gray;
-}
-
-@media screen and (max-width: 1250px) {
-
-    h1 {
-        font-size: 50px;
-    }
-
-    .container__botao {
-        font-size: 16px;
-    }
-
-
-    .texto__paragrafo {
-        font-size: 24px;
-    }
-
-    .container__imagem-pessoa {
-        display: none;
-    }
-
-    .container__conteudo {
-        display: block;
-        position: inherit;
-    }
-
-    .container__informacoes {
-        padding: 1rem
-    }
+#testeroll__resultadofinal {
+    color:lime;
+    font-size: 300%;
+    font-weight: bold;
 }

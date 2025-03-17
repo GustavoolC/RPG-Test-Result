@@ -1,19 +1,67 @@
-FAVELA DICE ROLL<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Favela RPG Hub</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <title>Favela Dice Roll</title>
 </head>
-
-<body>
-    <script src="app.js" defer></script>
+<body class="corpo-n1">
+    <header class="cabecalho">
+        <div class="personagem">
+            <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="7%" id="perfil">
+        <select id="personagens-escolha" onclick="atualizarPerfil()">
+            <option value="izumi">Izumi</option>
+            <option value="victoria">Victoria</option>
+            <option value="vladimir">Vladimir</option>
+            <option value="rodrigo">Rodrigo</option>
+        </select>
+        </div>
+    </header>
+    <main>
+    <section class="testeroll">
+        <p id="escolhaerole">Escolha e Role</p>
+        <div class="testeroll__escolha">
+            <select id="testeroll__pericia">
+                <option value="5">Sanidade</option>
+                <option value="6">Imunidade</option>
+                <option value="7">Fôlego</option>
+                <option value="8">Percepção</option>
+                <option value="9">Intuição</option>
+                <option value="10">Tecnologia</option>
+                <option value="11">Furtividade</option>
+                <option value="12">Acrobacia</option>
+                <option value="13">Adestramento</option>
+                <option value="14">Lábia</option>
+                <option value="15">Intimidação</option>
+                <option value="16">Medicina</option>
+                <option value="17">Primeiros-Socorros</option>
+                <option value="18">Misticismo</option>
+                <option value="19">Poder</option>
+                <option value="20">Corpo-a-Corpo</option>
+                <option value="21">Mira</option>
+                <option value="22">Reflexos</option>
+                <option value="23">Música</option>
+                <option value="24">Culinária</option>
+                <option value="25">Resistência</option>
+                <option value="26">Existência</option>
+               </select>
+           <select id="testeroll__atributo">
+               <option value="0">Força</option>
+               <option value="1">Destreza</option>
+               <option value="2">Constituição</option>
+               <option value="3">Intelecto</option>
+               <option value="4">Carisma</option>
+           </select>
+       </div>
+       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" class="botao-rolar"></button>
+       <p id="testeroll__valoresiniciais"></p>
+       <p id="testeroll__resultadoinicial"></p>
+       <p id="testeroll__resultadofinal"></p>
+    </section>
+    </main>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
