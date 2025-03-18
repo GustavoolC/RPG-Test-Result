@@ -1,7 +1,9 @@
 let personagemEscolhido = document.getElementById("personagens-escolha");
-let ficha;
-let perfilImagem;
-let perfilEscolha;
+let noturno = "true";
+let tema = "cosmo";
+let valoresIniciaisLogica = document.getElementById("testeroll__valoresiniciais");
+let resultadoInicialLogica = document.getElementById("testeroll__resultadoinicial");
+let resultadoFinalLogica = document.getElementById("testeroll__resultadofinal");
 
 function atualizarPerfil() {
     let perfilImagem = document.getElementById("perfil");
@@ -19,6 +21,50 @@ function atualizarPerfil() {
     } else if (perfilEscolha == "rodrigo") {
         perfilImagem.setAttribute("src","assets/RodrigoPerfil.png");
         perfilImagem.setAttribute("alt","Ícone do Rodrigo")
+    }
+}
+
+function trocarModo() {
+    let modo = document.getElementById("modos");
+    let background = document.getElementById("fundo");
+    let personagensSelector = document.getElementById("personagens-escolha");
+    let titulo = document.getElementById("titulo");
+    let box = document.getElementById("testeroll");
+    let periciaSelector = document.getElementById("testeroll__pericia");
+    let atributoSelector = document.getElementById("testeroll__atributo");
+    let botao = document.getElementById("botao-rolar");
+    if (tema == "cosmo") {
+        if (noturno == "true") {
+            modo.setAttribute("src","assets/lua.png");
+            modo.setAttribute("alt","Ícone do Modo Noturno");
+            background.setAttribute("class","claro1");
+            personagensSelector.setAttribute("class","personagens-c1");
+            titulo.setAttribute("class","roleclaro1");
+            box.setAttribute("class","testeroll_c1");
+            periciaSelector.setAttribute("class","prc_atr_c1");
+            atributoSelector.setAttribute("class","prc_atr_c1");
+            botao.setAttribute("src","assets/dicediurno.png")
+            botao.setAttribute("class","botao-c1");
+            valoresIniciaisLogica.setAttribute("class","valoresiniciais-c1");
+            resultadoInicialLogica.setAttribute("class","resultadoinicial-c1");
+            resultadoFinalLogica.setAttribute("class","resultadofinal-c1");
+            noturno = "false";
+        } else {
+            modo.setAttribute("src","assets/sol.png");
+            modo.setAttribute("alt","Ícone do Modo Claro");
+            background.setAttribute("class","noturno1");
+            personagensSelector.setAttribute("class","personagens-n1");
+            titulo.setAttribute("class","rolenoturno1");
+            box.setAttribute("class","testeroll_n1");
+            periciaSelector.setAttribute("class","prc_atr_n1");
+            atributoSelector.setAttribute("class","prc_atr_n1");
+            botao.setAttribute("src","assets/dice.png")
+            botao.setAttribute("class","botao-n1");
+            valoresIniciaisLogica.setAttribute("class","valoresiniciais-n1");
+            resultadoInicialLogica.setAttribute("class","resultadoinicial-n1");
+            resultadoFinalLogica.setAttribute("class","resultadofinal-n1");
+            noturno = "true";
+        }
     }
 }
 
@@ -42,9 +88,6 @@ function iniciarTeste() {
     let atributoResultado = analisarResultadoInicial(atributo,atributoDado);
     let resultadoFinal = analisarResultadoFinal(periciaResultado,atributoResultado);
     
-    let valoresIniciaisLogica = document.getElementById("testeroll__valoresiniciais");
-    let resultadoInicialLogica = document.getElementById("testeroll__resultadoinicial");
-    let resultadoFinalLogica = document.getElementById("testeroll__resultadofinal");
     valoresIniciaisLogica.innerHTML = periciaDado + " (" + pericia + ") --- " + atributoDado + " (" + atributo + ")";
     resultadoInicialLogica.innerHTML = periciaResultado + " + " + atributoResultado;
     resultadoFinalLogica.innerHTML = resultadoFinal;

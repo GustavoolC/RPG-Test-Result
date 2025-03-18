@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favela RPG Hub</title>
+    <title>Favela Hub</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="corpo-n1">
+<body class="noturno1" id="fundo">
     <header class="cabecalho">
         <div class="personagem">
-            <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="7%" id="perfil">
-        <select id="personagens-escolha" onclick="atualizarPerfil()">
+            <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
+        <select id="personagens-escolha" class="personagens-n1" onclick="atualizarPerfil()">
             <option value="izumi">Izumi</option>
             <option value="victoria">Victoria</option>
             <option value="vladimir">Vladimir</option>
             <option value="rodrigo">Rodrigo</option>
         </select>
         </div>
+        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="6%" onclick="trocarModo()" id="modos"></button>
     </header>
     <main>
-    <section class="testeroll">
-        <p id="escolhaerole">Escolha e Role</p>
+    <section id="testeroll" class="testeroll_n1">
+        <p id="titulo" class="rolenoturno1">Escolha e Role</p>
         <div class="testeroll__escolha">
-            <select id="testeroll__pericia">
+            <select id="testeroll__pericia" class="prc_atr_n1">
                 <option value="5">Sanidade</option>
                 <option value="6">Imunidade</option>
                 <option value="7">Fôlego</option>
@@ -47,7 +48,7 @@
                 <option value="25">Resistência</option>
                 <option value="26">Existência</option>
                </select>
-           <select id="testeroll__atributo">
+           <select id="testeroll__atributo" class="prc_atr_n1">
                <option value="0">Força</option>
                <option value="1">Destreza</option>
                <option value="2">Constituição</option>
@@ -55,10 +56,10 @@
                <option value="4">Carisma</option>
            </select>
        </div>
-       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" class="botao-rolar"></button>
-       <p id="testeroll__valoresiniciais"></p>
-       <p id="testeroll__resultadoinicial"></p>
-       <p id="testeroll__resultadofinal"></p>
+       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n1"></button>
+       <p id="testeroll__valoresiniciais" class="valoresiniciais-n1"></p>
+       <p id="testeroll__resultadoinicial" class="resultadoinicial-n1"></p>
+       <p id="testeroll__resultadofinal" class="resultadofinal-n1"></p>
     </section>
     </main>
     <script src="js/app.js"></script>

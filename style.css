@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
 
 body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size:cover;
-    color:#75ffe3;
-    font-family: "Doto", sans-serif;
-    font-weight: 600;
-    font-style: normal;
 }
 
-.corpo-n1 {
+.noturno1 {
     background-image: url(assets/FundoNoturno.png);
 }
 
-.corpo-n2 {
-    background-image: url(assets/dice.png);
+.claro1 {
+    background-image: url(assets/FundoClaro.png);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
 }
 
 .personagem {
@@ -28,16 +31,14 @@ body{
 #personagens-escolha {
     font-size: 20px;
     padding: 10px;
-    color:rgb(255, 255, 255);
-    background-color: black;
     border-radius: 10px;
     border-style: dashed;
-    box-shadow: 0 10px 25px rgb(0, 0, 0);
     appearance: none;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight:600;
 }
 
 #personagens-escolha:hover {
-    background-color: rgb(17, 17, 17);
     border-style: solid;
 }
 
@@ -45,12 +46,36 @@ body{
     outline: none;
 }
 
+.personagens-n1 {
+    color:rgb(255, 255, 255);
+    background-color: black;
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+}
+
+.personagens-n1:hover {
+    background-color: rgb(17, 17, 17);
+}
+
+.personagens-c1 {
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 185, 255);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
+}
+
+.personagens-c1:hover {
+    background-color: rgb(255, 199, 255);
+}
+
+#modos:hover {
+    cursor: pointer;
+}
+
 p {
     font-size: 350%;
     margin: 0;
 }
 
-.testeroll {
+#testeroll {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,39 +83,49 @@ p {
     align-content: center;
     margin-top: 0%;
     gap: 5px;
-    background-image: url(assets/boxcosmo.png);
-    background-size: 30%;
+    background-size: 580px;
     background-repeat: no-repeat;
     background-position: 50%;
     background-attachment: fixed;
-    padding-bottom: 10%;
-    
+    padding-bottom: 9%;
+    font-family: "Doto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
-#escolhaerole {
-    margin-top: 4.8%;
+.testeroll_n1 {
+    background-image: url(assets/boxcosmo.png);
 }
+
+.testeroll_c1 {
+    background-image: url(assets/boxcosmoclaro.png);
+}
+
+.rolenoturno1 {
+    margin-top: 4.8%;
+    color:#75ffe3;
+    text-shadow: 0px 0px 30px rgb(0, 255, 234);
+}
+
+.roleclaro1 {
+    margin-top: 4.8%;
+    color: #410036;
+    font-family: "Big Shoulders", sans-serif;
+} 
 
 #testeroll__pericia {
-    font-size: 20px;
+    font-size: 22px;
     padding: 10px;
-    color:#00ffc3;
-    background-color: black;
     border-radius: 50px;
     appearance: none;
     border-style: dashed;
-    border-color: #00ffc3;
     text-align: center;
-    box-shadow: 0 10px 25px black;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight:800;
+    font-style:italic;
 }
 
 #testeroll__pericia:hover {
-    background-color: rgb(17, 17, 17);
-    border-style: solid;
-}
-
-#testeroll__atributo:hover {
-    background-color: rgb(17, 17, 17);
     border-style: solid;
 }
 
@@ -98,53 +133,113 @@ p {
     outline: none;
 }
 
+#testeroll__atributo {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight:800;
+    font-style:italic;
+}
+
+#testeroll__atributo:hover {
+    border-style: solid;
+}
+
 #testeroll__atributo:focus {
     outline: none;
 }
 
-#testeroll__atributo {
-    font-size: 20px;
-    padding: 10px;
+.prc_atr_n1 {
     color: #00ffc3;
     background-color: black;
-    border-radius: 50px;
-    appearance: none;
-    border-style: dashed;
-    border-color: #00ffc3;
-    text-align: center;
     box-shadow: 0 10px 25px black;
 }
 
-.botao-rolar {
+.prc_atr_n1:hover {
+    background-color: rgb(17, 17, 17);
+}
+
+.prc_atr_c1 {
+    color: #380038;
+    background-color: rgb(163, 79, 162);
+    border-color: #380038;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.745);
+}
+
+.prc_atr_c1:hover {
+    background-color: rgb(176, 89, 175);
+}
+
+#botao-rolar {
     cursor: pointer;
     border-style:double;
-    border-color: #00ff95;
-    background-color: #10281e;
     border-radius: 10px;
     padding: 0px 40px;
     margin: 1%;
-    box-shadow: 0px 0px 50px rgba(0, 255, 145, 0.679);
 }
 
-.botao-rolar:hover {
-    background-color: #1b3f30;
+#botao-rolar:hover {
     border-style: solid;
     padding: 5px 45px;
     width: 4.2%;
 }
 
-#testeroll__valoresiniciais {
+.botao-n1 {
+    border-color: #00ff95;
+    background-color: #10281e;
+    box-shadow: 0px 0px 50px rgba(0, 255, 145, 0.679);
+}
+
+.botao-n1:hover {
+    background-color: #1b3f30;
+}
+
+.botao-c1 {
+    border-color: #551d55;
+    background-color: #ce79c4;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.866);
+}
+
+.botao-c1:hover {
+    background-color: #d785cd;
+}
+
+.valoresiniciais-n1 {
     color: aqua;
     font-size: 110%;
 }
 
-#testeroll__resultadoinicial {
+.resultadoinicial-n1 {
     color:magenta;
     font-size: 160%;
 }
 
-#testeroll__resultadofinal {
+.resultadofinal-n1 {
     color:lime;
     font-size: 300%;
     font-weight: bold;
+    text-shadow: 0px 0px 30px rgb(13, 255, 0);
+}
+
+.valoresiniciais-c1 {
+    color: rgb(105, 25, 44);
+    font-size: 110%;
+    font-family: "Big Shoulders", sans-serif;
+}
+
+.resultadoinicial-c1 {
+    color:rgb(75, 11, 101);
+    font-size: 160%;
+    font-family: "Big Shoulders", sans-serif;
+}
+
+.resultadofinal-c1 {
+    color:rgb(112, 10, 107);
+    font-size: 300%;
+    font-weight: bold;
+    font-family: "Big Shoulders", sans-serif;
 }
