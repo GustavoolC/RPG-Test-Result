@@ -110,7 +110,7 @@ function trocarModo() {
             box.setAttribute("class","testeroll_c2");
             periciaSelector.setAttribute("class","prc_atr_c2");
             atributoSelector.setAttribute("class","prc_atr_c2");
-            botao.setAttribute("src","assets/Cataclismodiceclaro.png");
+            botao.setAttribute("src","assets/cataclismodiceclaro.png");
             botao.setAttribute("class","botao-c2");
             valoresIniciaisLogica.setAttribute("class","valoresiniciais-c2");
             resultadoInicialLogica.setAttribute("class","resultadoinicial-c2");
