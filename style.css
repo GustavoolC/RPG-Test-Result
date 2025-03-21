@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+@font-face {
+    font-family: "cataclism";
+    src: url(fonts/Inkfree.ttf);
+}
+@font-face {
+    font-family: "avara";
+    src: url(fonts/Avara-Bold.otf);
+}
+@font-face {
+    font-family: "avara-bold";
+    src: url(fonts/Avara-Black.otf);
+}
+@font-face {
+    font-family: "avara-bolditalic";
+    src: url(fonts/Avara-BoldItalic.otf);
+}
 
 body{
     background-repeat: no-repeat;
@@ -14,6 +30,14 @@ body{
 
 .claro1 {
     background-image: url(assets/FundoClaro.png);
+}
+
+.noturno2 {
+    background-image: url(assets/CataclismoFundoNoturno.png);
+}
+
+.claro2 {
+    background-image: url(assets/CataclismoFundoClaro.png);
 }
 
 .cabecalho {
@@ -31,10 +55,34 @@ body{
 #personagens-escolha {
     font-size: 20px;
     padding: 10px;
+    padding-left: 34px;
+    padding-right: 34px;
     border-radius: 10px;
     border-style: dashed;
     appearance: none;
-    font-family: "Big Shoulders", sans-serif;
+    font-weight:600;
+}
+
+#cosmo {
+    font-family: "Doto", sans-serif;
+    background-color: rgb(0, 17, 26);
+    color: #00ff95;
+}
+
+#cataclismo {
+    font-family: "cataclism";
+    background-color: rgb(67, 0, 0);
+    color: #f6ff00;
+}
+
+#tema-escolha {
+    font-size: 20px;
+    padding: 10px;
+    padding-right: 34px;
+    border-radius: 10px;
+    border-radius: 10px;
+    border-style: dashed;
+    appearance: none;
     font-weight:600;
 }
 
@@ -46,24 +94,56 @@ body{
     outline: none;
 }
 
-.personagens-n1 {
+.cabecalhos-n1 {
+    font-family: "Big Shoulders", sans-serif;
     color:rgb(255, 255, 255);
     background-color: black;
     box-shadow: 0 10px 25px rgb(0, 0, 0);
 }
 
-.personagens-n1:hover {
+.cabecalhos-n1:hover {
     background-color: rgb(17, 17, 17);
 }
 
-.personagens-c1 {
+.cabecalhos-c1 {
+    font-family: "Big Shoulders", sans-serif;
     color:rgb(0, 0, 0);
     background-color: rgb(255, 185, 255);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
 }
 
-.personagens-c1:hover {
+.cabecalhos-c1:hover {
     background-color: rgb(255, 199, 255);
+}
+
+.cabecalhos-n2 {
+    font-family: "cataclism";
+    color:rgb(255, 255, 255);
+    background-color: rgb(23, 0, 0);
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+}
+
+.cabecalhos-n2:hover {
+    background-color: rgb(34, 1, 1);
+}
+
+.cabecalhos-c2 {
+    font-family: "avara";
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.662);
+    color:rgb(0, 0, 0);
+    border-color: rgb(16, 39, 57);
+    background-color: rgb(161, 197, 217);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
+}
+
+.cabecalhos-c2:hover {
+    background-color: rgb(207, 231, 246);
+}
+
+.aparencia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #modos:hover {
@@ -88,8 +168,6 @@ p {
     background-position: 50%;
     background-attachment: fixed;
     padding-bottom: 9%;
-    font-family: "Doto", sans-serif;
-    font-weight: 600;
     font-style: normal;
 }
 
@@ -101,9 +179,19 @@ p {
     background-image: url(assets/boxcosmoclaro.png);
 }
 
+.testeroll_n2 {
+    background-image: url(assets/boxcataclismo.png);
+}
+
+.testeroll_c2 {
+    background-image: url(assets/boxcataclismoclaro.png);
+}
+
 .rolenoturno1 {
+    font-family: "Doto", sans-serif;
+    font-weight: 600;
     margin-top: 4.8%;
-    color:#75ffe3;
+    color:rgb(0, 255, 234);
     text-shadow: 0px 0px 30px rgb(0, 255, 234);
 }
 
@@ -111,7 +199,23 @@ p {
     margin-top: 4.8%;
     color: #410036;
     font-family: "Big Shoulders", sans-serif;
-} 
+}
+
+.rolenoturno2 {
+    font-family: "cataclism";
+    margin-top: 4.8%;
+    color:#eeff00;
+    text-shadow: 0px 0px 30px #eeff00;
+}
+
+.roleclaro2 {
+    font-weight: 600;
+    margin-top: 5.6%;
+    color: #d81300;
+    text-shadow: 2px 1px 0px black;
+    font-size: 300%;
+    font-family: "avara";
+}
 
 #testeroll__pericia {
     font-size: 22px;
@@ -120,9 +224,6 @@ p {
     appearance: none;
     border-style: dashed;
     text-align: center;
-    font-family: "Big Shoulders", sans-serif;
-    font-weight:800;
-    font-style:italic;
 }
 
 #testeroll__pericia:hover {
@@ -140,9 +241,6 @@ p {
     appearance: none;
     border-style: dashed;
     text-align: center;
-    font-family: "Big Shoulders", sans-serif;
-    font-weight:800;
-    font-style:italic;
 }
 
 #testeroll__atributo:hover {
@@ -155,6 +253,9 @@ p {
 
 .prc_atr_n1 {
     color: #00ffc3;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight:800;
+    font-style:italic;
     background-color: black;
     box-shadow: 0 10px 25px black;
 }
@@ -165,6 +266,9 @@ p {
 
 .prc_atr_c1 {
     color: #380038;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight:800;
+    font-style:italic;
     background-color: rgb(163, 79, 162);
     border-color: #380038;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.745);
@@ -174,53 +278,112 @@ p {
     background-color: rgb(176, 89, 175);
 }
 
+.prc_atr_n2 {
+    color: #eeff00;
+    font-family: "cataclism";
+    font-style:italic;
+    background-color: rgb(23, 0, 0);
+    border-color: #5b1717;
+    box-shadow: 0 10px 25px black;
+}
+
+.prc_atr_n2:hover {
+    background-color: rgb(34, 1, 1);
+}
+
+.prc_atr_c2 {
+    color: #001234;
+    font-family: "avara";
+    font-style:italic;
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.48);
+    background-color: rgb(66, 129, 180);
+    border-color: rgb(16, 39, 57);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.745);
+}
+
+.prc_atr_c2:hover {
+    background-color: rgb(80, 143, 195);
+}
+
 #botao-rolar {
     cursor: pointer;
-    border-style:double;
     border-radius: 10px;
     padding: 0px 40px;
     margin: 1%;
 }
 
 #botao-rolar:hover {
-    border-style: solid;
     padding: 5px 45px;
     width: 4.2%;
 }
 
 .botao-n1 {
     border-color: #00ff95;
+    border-style: double;
     background-color: #10281e;
     box-shadow: 0px 0px 50px rgba(0, 255, 145, 0.679);
 }
 
 .botao-n1:hover {
     background-color: #1b3f30;
+    border-style: solid;
 }
 
 .botao-c1 {
     border-color: #551d55;
+    border-style: double;
     background-color: #ce79c4;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.866);
 }
 
 .botao-c1:hover {
     background-color: #d785cd;
+    border-style: solid;
+}
+
+.botao-n2 {
+    border-color: #eeff00e0;
+    border-style: solid;
+    background-image: url("assets/botaocataclismo.png");
+    box-shadow: 0px 0px 50px #eeff00e0;
+}
+
+.botao-n2:hover {
+    background-image: url("assets/botaocataclismohover.png");
+    border-style: solid;
+}
+
+.botao-c2 {
+    border-color: #153c4a;
+    border-style: solid;
+    background-image: url("assets/botaocataclismoclaro.png");
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.866);
+}
+
+.botao-c2:hover {
+    background-image: url("assets/botaocataclismoclarohover.png");
+    border-style: solid;
 }
 
 .valoresiniciais-n1 {
+    font-family: "Doto", sans-serif;
     color: aqua;
     font-size: 110%;
+    font-weight: 600;
 }
 
 .resultadoinicial-n1 {
+    font-family: "Doto", sans-serif;
     color:magenta;
     font-size: 160%;
+    font-weight: 600;
 }
 
 .resultadofinal-n1 {
+    font-family: "Doto", sans-serif;
     color:lime;
     font-size: 300%;
+    font-weight: 600;
     font-weight: bold;
     text-shadow: 0px 0px 30px rgb(13, 255, 0);
 }
@@ -242,4 +405,49 @@ p {
     font-size: 300%;
     font-weight: bold;
     font-family: "Big Shoulders", sans-serif;
+}
+
+.valoresiniciais-n2 {
+    font-family: "cataclism";
+    font-size: 110%;
+    font-weight: 300;
+    color: rgb(255, 0, 0);
+}
+
+.resultadoinicial-n2 {
+    font-family: "cataclism";
+    font-size: 160%;
+    font-weight: 300;
+    color:rgb(170, 0, 255);
+}
+
+.resultadofinal-n2 {
+    font-family: "cataclism";
+    color:rgb(251, 255, 0);
+    font-size: 300%;
+    font-weight: bold;
+    text-shadow: 0px 0px 30px rgb(251, 255, 0);
+}
+
+.valoresiniciais-c2 {
+    font-family: "avara";
+    font-size: 100%;
+    font-weight: 800;
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.617);
+    color: rgb(14, 69, 69);
+}
+
+.resultadoinicial-c2 {
+    font-family: "avara";
+    font-size: 140%;
+    font-weight: 600;
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.617);
+    color:rgb(11, 70, 45);
+}
+
+.resultadofinal-c2 {
+    color:rgb(0, 22, 191);
+    font-size: 270%;
+    font-family: "avara-bold";
+    text-shadow: 3px 1px 0px black;
 }

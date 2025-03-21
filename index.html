@@ -11,14 +11,20 @@
     <header class="cabecalho">
         <div class="personagem">
             <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
-        <select id="personagens-escolha" class="personagens-n1" onclick="atualizarPerfil()">
+        <select id="personagens-escolha" class="cabecalhos-n1" onclick="atualizarPerfil()">
             <option value="izumi">Izumi</option>
             <option value="victoria">Victoria</option>
             <option value="vladimir">Vladimir</option>
             <option value="rodrigo">Rodrigo</option>
         </select>
         </div>
-        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="6%" onclick="trocarModo()" id="modos"></button>
+        <div class="aparencia">
+        <select id="tema-escolha" class="cabecalhos-n1" onclick="trocarTema()">
+            <option value="cosmo" id="cosmo">Cosmo</option>
+            <option value="cataclismo" id="cataclismo">Cataclismo</option>
+        </select>
+        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos"></button>
+        </div>
     </header>
     <main>
     <section id="testeroll" class="testeroll_n1">
