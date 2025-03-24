@@ -178,7 +178,7 @@ function iniciarTeste() {
     let atributoDados = [rolarDado()];
 
     if (periciaVantagens > 0) {
-        console.log(periciaVantagens + " Vantagens");
+        //console.log(periciaVantagens + " Vantagens");
         while (periciaVantagens > 0) {
             periciaDados.push(rolarDado());
             periciaVantagens--;
@@ -188,10 +188,10 @@ function iniciarTeste() {
             return a - b;
           });
         valoresIniciais1Logica.setAttribute("title",periciaDados);
-        console.log("Dados Coletados: " + periciaDados);
-        console.log("Dado Escolhido: " + periciaDado);
+        //console.log("Dados Coletados: " + periciaDados);
+        //console.log("Dado Escolhido: " + periciaDado);
     } else if (periciaVantagens < 0) {
-        console.log(periciaVantagens + " Vantagens");
+        //console.log(periciaVantagens + " Vantagens");
         while (periciaVantagens < 0) {
             periciaDados.push(rolarDado());
             periciaVantagens++;
@@ -202,17 +202,17 @@ function iniciarTeste() {
           });
         periciaDados.reverse();
         valoresIniciais1Logica.setAttribute("title",periciaDados);
-        console.log("Dados Coletados: " + periciaDados);
-        console.log("Dado Escolhido: " + periciaDado);
+        //console.log("Dados Coletados: " + periciaDados);
+        //console.log("Dado Escolhido: " + periciaDado);
     } else {
         periciaDado = periciaDados;
-        console.log(periciaVantagens + " Vantagens");
-        console.log("Dados Coletados: " + periciaDados);
-        console.log("Dado Escolhido: " + periciaDado);
+        //console.log(periciaVantagens + " Vantagens");
+        //console.log("Dados Coletados: " + periciaDados);
+        //console.log("Dado Escolhido: " + periciaDado);
     }
 
     if (atributoVantagens > 0) {
-        console.log(atributoVantagens + " Vantagens");
+        //console.log(atributoVantagens + " Vantagens");
         while (atributoVantagens > 0) {
             atributoDados.push(rolarDado());
             atributoVantagens--;
@@ -222,10 +222,10 @@ function iniciarTeste() {
             return a - b;
           });
         valoresIniciais2Logica.setAttribute("title",atributoDados);
-        console.log("Dados Coletados: " + atributoDados);
-        console.log("Dado Escolhido: " + atributoDado);
+        //console.log("Dados Coletados: " + atributoDados);
+        //console.log("Dado Escolhido: " + atributoDado);
     } else if (atributoVantagens < 0) {
-        console.log(atributoVantagens + " Vantagens");
+        //console.log(atributoVantagens + " Vantagens");
         while (atributoVantagens < 0) {
             atributoDados.push(rolarDado());
             atributoVantagens++;
@@ -236,13 +236,13 @@ function iniciarTeste() {
           });
         atributoDados.reverse();
         valoresIniciais2Logica.setAttribute("title",atributoDados);
-        console.log("Dados Coletados: " + atributoDados);
-        console.log("Dado Escolhido: " + atributoDado);
+        //console.log("Dados Coletados: " + atributoDados);
+        //console.log("Dado Escolhido: " + atributoDado);
     } else {
         atributoDado = atributoDados;
-        console.log(atributoVantagens + " Vantagens");
-        console.log("Dados Coletados: " + atributoDados);
-        console.log("Dado Escolhido: " + atributoDado);
+        //console.log(atributoVantagens + " Vantagens");
+        //console.log("Dados Coletados: " + atributoDados);
+        //console.log("Dado Escolhido: " + atributoDado);
     }
     
     let periciaResultado = analisarResultadoInicial(pericia,periciaDado);
