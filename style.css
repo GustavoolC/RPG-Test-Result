@@ -251,6 +251,45 @@ p {
     outline: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+#vantagens__pericia {
+    font-size: 15px;
+    font-style: normal;
+    padding: 5px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+}
+
+#vantagens__pericia:focus {
+    outline: none;
+}
+
+#vantagens__atributo {
+    font-size: 15px;
+    font-style: normal;
+    padding: 5px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+}
+
+#vantagens__atributo:focus {
+    outline: none;
+}
+
 .prc_atr_n1 {
     color: #00ffc3;
     font-family: "Big Shoulders", sans-serif;
@@ -363,6 +402,11 @@ p {
 .botao-c2:hover {
     background-image: url("assets/botaocataclismoclarohover.png");
     border-style: solid;
+}
+
+.valores-iniciais {
+    display: flex;
+    flex-direction: row;
 }
 
 .valoresiniciais-n1 {

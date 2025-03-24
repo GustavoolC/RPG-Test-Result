@@ -2,7 +2,9 @@ let personagemEscolhido = document.getElementById("personagens-escolha");
 let temaSelector = document.getElementById("tema-escolha");
 let noturno = "true";
 let tema = "cosmo";
-let valoresIniciaisLogica = document.getElementById("testeroll__valoresiniciais");
+let valoresIniciais1Logica = document.getElementById("testeroll__valoresiniciais1");
+let barrinhaLogica = document.getElementById("testeroll__barras");
+let valoresIniciais2Logica = document.getElementById("testeroll__valoresiniciais2");
 let resultadoInicialLogica = document.getElementById("testeroll__resultadoinicial");
 let resultadoFinalLogica = document.getElementById("testeroll__resultadofinal");
 
@@ -64,6 +66,8 @@ function trocarModo() {
     let box = document.getElementById("testeroll");
     let periciaSelector = document.getElementById("testeroll__pericia");
     let atributoSelector = document.getElementById("testeroll__atributo");
+    let periciaVtgSelector = document.getElementById("vantagens__pericia");
+    let atributoVtgSelector = document.getElementById("vantagens__atributo"); 
     let botao = document.getElementById("botao-rolar");
     if (tema == "cosmo") {
         if (noturno == "true") {
@@ -76,9 +80,13 @@ function trocarModo() {
             box.setAttribute("class","testeroll_c1");
             periciaSelector.setAttribute("class","prc_atr_c1");
             atributoSelector.setAttribute("class","prc_atr_c1");
+            periciaVtgSelector.setAttribute("class","prc_atr_c1");
+            atributoVtgSelector.setAttribute("class","prc_atr_c1");
             botao.setAttribute("src","assets/dicediurno.png");
             botao.setAttribute("class","botao-c1");
-            valoresIniciaisLogica.setAttribute("class","valoresiniciais-c1");
+            valoresIniciais1Logica.setAttribute("class","valoresiniciais-c1");
+            barrinhaLogica.setAttribute("class","valoresiniciais-c1");
+            valoresIniciais2Logica.setAttribute("class","valoresiniciais-c1");
             resultadoInicialLogica.setAttribute("class","resultadoinicial-c1");
             resultadoFinalLogica.setAttribute("class","resultadofinal-c1");
             noturno = "false";
@@ -92,9 +100,13 @@ function trocarModo() {
             box.setAttribute("class","testeroll_n1");
             periciaSelector.setAttribute("class","prc_atr_n1");
             atributoSelector.setAttribute("class","prc_atr_n1");
+            periciaVtgSelector.setAttribute("class","prc_atr_n1");
+            atributoVtgSelector.setAttribute("class","prc_atr_n1");
             botao.setAttribute("src","assets/dice.png");
             botao.setAttribute("class","botao-n1");
-            valoresIniciaisLogica.setAttribute("class","valoresiniciais-n1");
+            valoresIniciais1Logica.setAttribute("class","valoresiniciais-n1");
+            barrinhaLogica.setAttribute("class","valoresiniciais-n1");
+            valoresIniciais2Logica.setAttribute("class","valoresiniciais-n1");
             resultadoInicialLogica.setAttribute("class","resultadoinicial-n1");
             resultadoFinalLogica.setAttribute("class","resultadofinal-n1");
             noturno = "true";
@@ -110,9 +122,13 @@ function trocarModo() {
             box.setAttribute("class","testeroll_c2");
             periciaSelector.setAttribute("class","prc_atr_c2");
             atributoSelector.setAttribute("class","prc_atr_c2");
+            periciaVtgSelector.setAttribute("class","prc_atr_c2");
+            atributoVtgSelector.setAttribute("class","prc_atr_c2");
             botao.setAttribute("src","assets/cataclismodiceclaro.png");
             botao.setAttribute("class","botao-c2");
-            valoresIniciaisLogica.setAttribute("class","valoresiniciais-c2");
+            valoresIniciais1Logica.setAttribute("class","valoresiniciais-c2");
+            barrinhaLogica.setAttribute("class","valoresiniciais-c2");
+            valoresIniciais2Logica.setAttribute("class","valoresiniciais-c2");
             resultadoInicialLogica.setAttribute("class","resultadoinicial-c2");
             resultadoFinalLogica.setAttribute("class","resultadofinal-c2");
             noturno = "false";
@@ -126,9 +142,13 @@ function trocarModo() {
             box.setAttribute("class","testeroll_n2");
             periciaSelector.setAttribute("class","prc_atr_n2");
             atributoSelector.setAttribute("class","prc_atr_n2");
+            periciaVtgSelector.setAttribute("class","prc_atr_n2");
+            atributoVtgSelector.setAttribute("class","prc_atr_n2");
             botao.setAttribute("src","assets/cataclismodicenoturno.png");
             botao.setAttribute("class","botao-n2");
-            valoresIniciaisLogica.setAttribute("class","valoresiniciais-n2");
+            valoresIniciais1Logica.setAttribute("class","valoresiniciais-n2");
+            barrinhaLogica.setAttribute("class","valoresiniciais-n2");
+            valoresIniciais2Logica.setAttribute("class","valoresiniciais-n2");
             resultadoInicialLogica.setAttribute("class","resultadoinicial-n2");
             resultadoFinalLogica.setAttribute("class","resultadofinal-n2");
             noturno = "true";
@@ -146,17 +166,92 @@ function iniciarTeste() {
     } else if (personagemEscolhido.value == "rodrigo") {
         ficha = [170,-100,170,60,0,0,0,0,50,60,70,-100,-100,0,10,150,40,40,30,20,70,50,-100,0,0,0,0]
     }
+    let periciaVantagens = document.getElementById("vantagens__pericia").value;
+    let atributoVantagens = document.getElementById("vantagens__atributo").value;
+    let periciaDado;
+    let atributoDado;
     let periciaEscolhida = document.getElementById("testeroll__pericia");
     let atributoEscolhido = document.getElementById("testeroll__atributo");
     let pericia = ficha[periciaEscolhida.value];
     let atributo = ficha[atributoEscolhido.value];
-    let periciaDado = rolarDado();
-    let atributoDado = rolarDado();
+    let periciaDados = [rolarDado()];
+    let atributoDados = [rolarDado()];
+
+    if (periciaVantagens > 0) {
+        console.log(periciaVantagens + " Vantagens");
+        while (periciaVantagens > 0) {
+            periciaDados.push(rolarDado());
+            periciaVantagens--;
+        }
+        periciaDado = Math.min(...periciaDados);
+        periciaDados.sort(function(a, b) {
+            return a - b;
+          });
+        valoresIniciais1Logica.setAttribute("title",periciaDados);
+        console.log("Dados Coletados: " + periciaDados);
+        console.log("Dado Escolhido: " + periciaDado);
+    } else if (periciaVantagens < 0) {
+        console.log(periciaVantagens + " Vantagens");
+        while (periciaVantagens < 0) {
+            periciaDados.push(rolarDado());
+            periciaVantagens++;
+        }
+        periciaDado = Math.max(...periciaDados);
+        periciaDados.sort(function(a, b) {
+            return a - b;
+          });
+        periciaDados.reverse();
+        valoresIniciais1Logica.setAttribute("title",periciaDados);
+        console.log("Dados Coletados: " + periciaDados);
+        console.log("Dado Escolhido: " + periciaDado);
+    } else {
+        periciaDado = periciaDados;
+        console.log(periciaVantagens + " Vantagens");
+        console.log("Dados Coletados: " + periciaDados);
+        console.log("Dado Escolhido: " + periciaDado);
+    }
+
+    if (atributoVantagens > 0) {
+        console.log(atributoVantagens + " Vantagens");
+        while (atributoVantagens > 0) {
+            atributoDados.push(rolarDado());
+            atributoVantagens--;
+        }
+        atributoDado = Math.min(...atributoDados);
+        atributoDados.sort(function(a, b) {
+            return a - b;
+          });
+        valoresIniciais2Logica.setAttribute("title",atributoDados);
+        console.log("Dados Coletados: " + atributoDados);
+        console.log("Dado Escolhido: " + atributoDado);
+    } else if (atributoVantagens < 0) {
+        console.log(atributoVantagens + " Vantagens");
+        while (atributoVantagens < 0) {
+            atributoDados.push(rolarDado());
+            atributoVantagens++;
+        }
+        atributoDado = Math.max(...atributoDados);
+        atributoDados.sort(function(a, b) {
+            return a - b;
+          });
+        atributoDados.reverse();
+        valoresIniciais2Logica.setAttribute("title",atributoDados);
+        console.log("Dados Coletados: " + atributoDados);
+        console.log("Dado Escolhido: " + atributoDado);
+    } else {
+        atributoDado = atributoDados;
+        console.log(atributoVantagens + " Vantagens");
+        console.log("Dados Coletados: " + atributoDados);
+        console.log("Dado Escolhido: " + atributoDado);
+    }
+    
     let periciaResultado = analisarResultadoInicial(pericia,periciaDado);
     let atributoResultado = analisarResultadoInicial(atributo,atributoDado);
     let resultadoFinal = analisarResultadoFinal(periciaResultado,atributoResultado);
     
-    valoresIniciaisLogica.innerHTML = periciaDado + " (" + pericia + ") --- " + atributoDado + " (" + atributo + ")";
+    valoresIniciais1Logica.innerHTML = periciaDado + " (" + pericia + ")";
+    barrinhaLogica.innerHTML = "  ---  ";
+    valoresIniciais2Logica.innerHTML = atributoDado + " (" + atributo + ")";
     resultadoInicialLogica.innerHTML = periciaResultado + " + " + atributoResultado;
     resultadoFinalLogica.innerHTML = resultadoFinal;
 }
