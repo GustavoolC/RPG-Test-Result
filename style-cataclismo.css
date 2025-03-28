@@ -25,11 +25,11 @@ body{
 }
 
 .noturno {
-    background-image: url(assets/FundoNoturno.png);
+    background-image: url(assets/CataclismoFundoNoturno.png);
 }
 
 .claro {
-    background-image: url(assets/FundoClaro.png);
+    background-image: url(assets/CataclismoFundoClaro.png);
 }
 
 .cabecalho {
@@ -87,25 +87,27 @@ body{
 }
 
 .cabecalhos-n {
-    font-family: "Big Shoulders", sans-serif;
+    font-family: "cataclism";
     color:rgb(255, 255, 255);
-    background-color: black;
+    background-color: rgb(23, 0, 0);
     box-shadow: 0 10px 25px rgb(0, 0, 0);
 }
 
 .cabecalhos-n:hover {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(34, 1, 1);
 }
 
 .cabecalhos-c {
-    font-family: "Big Shoulders", sans-serif;
+    font-family: "avara";
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.662);
     color:rgb(0, 0, 0);
-    background-color: rgb(255, 185, 255);
+    border-color: rgb(16, 39, 57);
+    background-color: rgb(161, 197, 217);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
 }
 
 .cabecalhos-c:hover {
-    background-color: rgb(255, 199, 255);
+    background-color: rgb(207, 231, 246);
 }
 
 .aparencia {
@@ -121,10 +123,6 @@ body{
 p {
     font-size: 350%;
     margin: 0;
-}
-
-.invisivel {
-color: red;
 }
 
 #testeroll {
@@ -144,25 +142,27 @@ color: red;
 }
 
 .testeroll_n {
-    background-image: url(assets/boxcosmo.png);
+    background-image: url(assets/boxcataclismo.png);
 }
 
 .testeroll_c {
-    background-image: url(assets/boxcosmoclaro.png);
+    background-image: url(assets/boxcataclismoclaro.png);
 }
 
 .rolenoturno {
-    font-family: "Doto", sans-serif;
-    font-weight: 600;
+    font-family: "cataclism";
     margin-top: 4.8%;
-    color:rgb(0, 255, 234);
-    text-shadow: 0px 0px 30px rgb(0, 255, 234);
+    color:#eeff00;
+    text-shadow: 0px 0px 30px #eeff00;
 }
 
 .roleclaro {
-    margin-top: 4.8%;
-    color: #410036;
-    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
+    margin-top: 5.6%;
+    color: #d81300;
+    text-shadow: 2px 1px 0px black;
+    font-size: 300%;
+    font-family: "avara";
 }
 
 #testeroll__pericia {
@@ -239,30 +239,30 @@ input[type=number] {
 }
 
 .prc_atr_n {
-    color: #00ffc3;
-    font-family: "Big Shoulders", sans-serif;
-    font-weight:800;
+    color: #eeff00;
+    font-family: "cataclism";
     font-style:italic;
-    background-color: black;
+    background-color: rgb(23, 0, 0);
+    border-color: #5b1717;
     box-shadow: 0 10px 25px black;
 }
 
 .prc_atr_n:hover {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(34, 1, 1);
 }
 
 .prc_atr_c {
-    color: #380038;
-    font-family: "Big Shoulders", sans-serif;
-    font-weight:800;
+    color: #001234;
+    font-family: "avara";
     font-style:italic;
-    background-color: rgb(163, 79, 162);
-    border-color: #380038;
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.48);
+    background-color: rgb(66, 129, 180);
+    border-color: rgb(16, 39, 57);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.745);
 }
 
 .prc_atr_c:hover {
-    background-color: rgb(176, 89, 175);
+    background-color: rgb(80, 143, 195);
 }
 
 #botao-rolar {
@@ -278,26 +278,26 @@ input[type=number] {
 }
 
 .botao-n {
-    border-color: #00ff95;
-    border-style: double;
-    background-color: #10281e;
-    box-shadow: 0px 0px 50px rgba(0, 255, 145, 0.679);
+    border-color: #eeff00e0;
+    border-style: solid;
+    background-image: url("assets/botaocataclismo.png");
+    box-shadow: 0px 0px 50px #eeff00e0;
 }
 
 .botao-n:hover {
-    background-color: #1b3f30;
+    background-image: url("assets/botaocataclismohover.png");
     border-style: solid;
 }
 
 .botao-c {
-    border-color: #551d55;
-    border-style: double;
-    background-color: #ce79c4;
+    border-color: #153c4a;
+    border-style: solid;
+    background-image: url("assets/botaocataclismoclaro.png");
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.866);
 }
 
 .botao-c:hover {
-    background-color: #d785cd;
+    background-image: url("assets/botaocataclismoclarohover.png");
     border-style: solid;
 }
 
@@ -307,43 +307,46 @@ input[type=number] {
 }
 
 .valoresiniciais-n {
-    font-family: "Doto", sans-serif;
-    color: aqua;
+    font-family: "cataclism";
     font-size: 110%;
-    font-weight: 600;
+    font-weight: 300;
+    color: rgb(255, 0, 0);
 }
 
 .resultadoinicial-n {
-    font-family: "Doto", sans-serif;
-    color:magenta;
+    font-family: "cataclism";
     font-size: 160%;
-    font-weight: 600;
+    font-weight: 300;
+    color:rgb(170, 0, 255);
 }
 
 .resultadofinal-n {
-    font-family: "Doto", sans-serif;
-    color:lime;
+    font-family: "cataclism";
+    color:rgb(251, 255, 0);
     font-size: 300%;
-    font-weight: 600;
     font-weight: bold;
-    text-shadow: 0px 0px 30px rgb(13, 255, 0);
+    text-shadow: 0px 0px 30px rgb(251, 255, 0);
 }
 
 .valoresiniciais-c {
-    color: rgb(105, 25, 44);
-    font-size: 110%;
-    font-family: "Big Shoulders", sans-serif;
+    font-family: "avara";
+    font-size: 100%;
+    font-weight: 800;
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.617);
+    color: rgb(14, 69, 69);
 }
 
 .resultadoinicial-c {
-    color:rgb(75, 11, 101);
-    font-size: 160%;
-    font-family: "Big Shoulders", sans-serif;
+    font-family: "avara";
+    font-size: 140%;
+    font-weight: 600;
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.617);
+    color:rgb(11, 70, 45);
 }
 
 .resultadofinal-c {
-    color:rgb(112, 10, 107);
-    font-size: 300%;
-    font-weight: bold;
-    font-family: "Big Shoulders", sans-serif;
+    color:rgb(0, 22, 191);
+    font-size: 270%;
+    font-family: "avara-bold";
+    text-shadow: 3px 1px 0px black;
 }

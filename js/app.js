@@ -44,10 +44,13 @@ function atualizarPerfil() {
 }
 
 function trocarTema() {
+    let estilo = document.getElementById("estilo");
     if (temaSelector.value == "cosmo") {
         tema = "cosmo";
+        estilo.setAttribute("href","style.css");
     } else if (temaSelector.value == "cataclismo") {
         tema = "cataclismo";
+        estilo.setAttribute("href","style-cataclismo.css");
     }
     if (noturno=="true") {
         noturno = "false";
@@ -69,92 +72,58 @@ function trocarModo() {
     let periciaVtgSelector = document.getElementById("vantagens__pericia");
     let atributoVtgSelector = document.getElementById("vantagens__atributo"); 
     let botao = document.getElementById("botao-rolar");
-    if (tema == "cosmo") {
-        if (noturno == "true") {
-            modo.setAttribute("src","assets/lua.png");
+    if (noturno == "true") {
             modo.setAttribute("alt","Ícone do Modo Noturno");
-            background.setAttribute("class","claro1");
-            personagensSelector.setAttribute("class","cabecalhos-c1");
-            temaSelector.setAttribute("class","cabecalhos-c1");
-            titulo.setAttribute("class","roleclaro1");
-            box.setAttribute("class","testeroll_c1");
-            periciaSelector.setAttribute("class","prc_atr_c1");
-            atributoSelector.setAttribute("class","prc_atr_c1");
-            periciaVtgSelector.setAttribute("class","prc_atr_c1");
-            atributoVtgSelector.setAttribute("class","prc_atr_c1");
-            botao.setAttribute("src","assets/dicediurno.png");
-            botao.setAttribute("class","botao-c1");
-            valoresIniciais1Logica.setAttribute("class","valoresiniciais-c1");
-            barrinhaLogica.setAttribute("class","valoresiniciais-c1");
-            valoresIniciais2Logica.setAttribute("class","valoresiniciais-c1");
-            resultadoInicialLogica.setAttribute("class","resultadoinicial-c1");
-            resultadoFinalLogica.setAttribute("class","resultadofinal-c1");
+            background.setAttribute("class","claro");
+            personagensSelector.setAttribute("class","cabecalhos-c");
+            temaSelector.setAttribute("class","cabecalhos-c");
+            titulo.setAttribute("class","roleclaro");
+            box.setAttribute("class","testeroll_c");
+            periciaSelector.setAttribute("class","prc_atr_c");
+            atributoSelector.setAttribute("class","prc_atr_c");
+            periciaVtgSelector.setAttribute("class","prc_atr_c");
+            atributoVtgSelector.setAttribute("class","prc_atr_c");
+            botao.setAttribute("class","botao-c");
+            valoresIniciais1Logica.setAttribute("class","valoresiniciais-c");
+            barrinhaLogica.setAttribute("class","valoresiniciais-c");
+            valoresIniciais2Logica.setAttribute("class","valoresiniciais-c");
+            resultadoInicialLogica.setAttribute("class","resultadoinicial-c");
+            resultadoFinalLogica.setAttribute("class","resultadofinal-c");
             noturno = "false";
+            if (tema == "cosmo") {
+                modo.setAttribute("src","assets/lua.png");
+                botao.setAttribute("src","assets/dicediurno.png");
+            } else if (tema == "cataclismo") {
+                modo.setAttribute("src","assets/luacataclismo.png");
+                botao.setAttribute("src","assets/cataclismodiceclaro.png");
+            }
         } else {
-            modo.setAttribute("src","assets/sol.png");
             modo.setAttribute("alt","Ícone do Modo Claro");
-            background.setAttribute("class","noturno1");
-            personagensSelector.setAttribute("class","cabecalhos-n1");
-            temaSelector.setAttribute("class","cabecalhos-n1");
-            titulo.setAttribute("class","rolenoturno1");
-            box.setAttribute("class","testeroll_n1");
-            periciaSelector.setAttribute("class","prc_atr_n1");
-            atributoSelector.setAttribute("class","prc_atr_n1");
-            periciaVtgSelector.setAttribute("class","prc_atr_n1");
-            atributoVtgSelector.setAttribute("class","prc_atr_n1");
-            botao.setAttribute("src","assets/dice.png");
-            botao.setAttribute("class","botao-n1");
-            valoresIniciais1Logica.setAttribute("class","valoresiniciais-n1");
-            barrinhaLogica.setAttribute("class","valoresiniciais-n1");
-            valoresIniciais2Logica.setAttribute("class","valoresiniciais-n1");
-            resultadoInicialLogica.setAttribute("class","resultadoinicial-n1");
-            resultadoFinalLogica.setAttribute("class","resultadofinal-n1");
+            background.setAttribute("class","noturno");
+            personagensSelector.setAttribute("class","cabecalhos-n");
+            temaSelector.setAttribute("class","cabecalhos-n");
+            titulo.setAttribute("class","rolenoturno");
+            box.setAttribute("class","testeroll_n");
+            periciaSelector.setAttribute("class","prc_atr_n");
+            atributoSelector.setAttribute("class","prc_atr_n");
+            periciaVtgSelector.setAttribute("class","prc_atr_n");
+            atributoVtgSelector.setAttribute("class","prc_atr_n");
+            botao.setAttribute("class","botao-n");
+            valoresIniciais1Logica.setAttribute("class","valoresiniciais-n");
+            barrinhaLogica.setAttribute("class","valoresiniciais-n");
+            valoresIniciais2Logica.setAttribute("class","valoresiniciais-n");
+            resultadoInicialLogica.setAttribute("class","resultadoinicial-n");
+            resultadoFinalLogica.setAttribute("class","resultadofinal-n");
             noturno = "true";
-        }
-    } else if (tema == "cataclismo") {
-        if (noturno == "true") {
-            modo.setAttribute("src","assets/luacataclismo.png");
-            modo.setAttribute("alt","Ícone do Modo Noturno");
-            background.setAttribute("class","claro2");
-            personagensSelector.setAttribute("class","cabecalhos-c2");
-            temaSelector.setAttribute("class","cabecalhos-c2");
-            titulo.setAttribute("class","roleclaro2");
-            box.setAttribute("class","testeroll_c2");
-            periciaSelector.setAttribute("class","prc_atr_c2");
-            atributoSelector.setAttribute("class","prc_atr_c2");
-            periciaVtgSelector.setAttribute("class","prc_atr_c2");
-            atributoVtgSelector.setAttribute("class","prc_atr_c2");
-            botao.setAttribute("src","assets/cataclismodiceclaro.png");
-            botao.setAttribute("class","botao-c2");
-            valoresIniciais1Logica.setAttribute("class","valoresiniciais-c2");
-            barrinhaLogica.setAttribute("class","valoresiniciais-c2");
-            valoresIniciais2Logica.setAttribute("class","valoresiniciais-c2");
-            resultadoInicialLogica.setAttribute("class","resultadoinicial-c2");
-            resultadoFinalLogica.setAttribute("class","resultadofinal-c2");
-            noturno = "false";
-        } else {
-            modo.setAttribute("src","assets/solcataclismo.png");
-            modo.setAttribute("alt","Ícone do Modo Claro");
-            background.setAttribute("class","noturno2");
-            personagensSelector.setAttribute("class","cabecalhos-n2");
-            temaSelector.setAttribute("class","cabecalhos-n2");
-            titulo.setAttribute("class","rolenoturno2");
-            box.setAttribute("class","testeroll_n2");
-            periciaSelector.setAttribute("class","prc_atr_n2");
-            atributoSelector.setAttribute("class","prc_atr_n2");
-            periciaVtgSelector.setAttribute("class","prc_atr_n2");
-            atributoVtgSelector.setAttribute("class","prc_atr_n2");
-            botao.setAttribute("src","assets/cataclismodicenoturno.png");
-            botao.setAttribute("class","botao-n2");
-            valoresIniciais1Logica.setAttribute("class","valoresiniciais-n2");
-            barrinhaLogica.setAttribute("class","valoresiniciais-n2");
-            valoresIniciais2Logica.setAttribute("class","valoresiniciais-n2");
-            resultadoInicialLogica.setAttribute("class","resultadoinicial-n2");
-            resultadoFinalLogica.setAttribute("class","resultadofinal-n2");
-            noturno = "true";
+            if (tema == "cosmo") {
+                modo.setAttribute("src","assets/sol.png");
+                botao.setAttribute("src","assets/dice.png");
+            } else if (tema == "cataclismo") {
+                modo.setAttribute("src","assets/solcataclismo.png");
+                botao.setAttribute("src","assets/cataclismodicenoturno.png");
+            }
         }
     }
-}
 
 function iniciarTeste() {
     if (personagemEscolhido.value == "izumi") {

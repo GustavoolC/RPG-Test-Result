@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favela Hub</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link id="estilo" rel="stylesheet" href="style.css">
 </head>
-<body class="noturno1" id="fundo">
+<body class="noturno" id="fundo">
     <header class="cabecalho">
         <div class="personagem">
             <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
-        <select id="personagens-escolha" class="cabecalhos-n1" onclick="atualizarPerfil()">
+        <select id="personagens-escolha" class="cabecalhos-n" onclick="atualizarPerfil()">
             <option value="izumi">Izumi</option>
             <option value="victoria">Victoria</option>
             <option value="vladimir">Vladimir</option>
@@ -19,7 +19,7 @@
         </select>
         </div>
         <div class="aparencia">
-        <select id="tema-escolha" class="cabecalhos-n1" onclick="trocarTema()">
+        <select id="tema-escolha" class="cabecalhos-n" onclick="trocarTema()">
             <option value="cosmo" id="cosmo">Cosmo</option>
             <option value="cataclismo" id="cataclismo">Cataclismo</option>
         </select>
@@ -27,11 +27,11 @@
         </div>
     </header>
     <main>
-    <section id="testeroll" class="testeroll_n1">
-        <p id="titulo" class="rolenoturno1">Escolha e Role</p>
+    <section id="testeroll" class="testeroll_n invisivel">
+        <p id="titulo" class="rolenoturno">Escolha e Role</p>
         <div class="testeroll__escolha">
-            <input id="vantagens__pericia" class="prc_atr_n1" type="number" min="-999" max="999" title="Vantagens">
-            <select id="testeroll__pericia" class="prc_atr_n1">
+            <input id="vantagens__pericia" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
+            <select id="testeroll__pericia" class="prc_atr_n">
                 <option value="5">Sanidade</option>
                 <option value="6">Imunidade</option>
                 <option value="7">Fôlego</option>
@@ -55,24 +55,24 @@
                 <option value="25">Resistência</option>
                 <option value="26">Existência</option>
                </select>
-           <select id="testeroll__atributo" class="prc_atr_n1">
+           <select id="testeroll__atributo" class="prc_atr_n">
                <option value="0">Força</option>
                <option value="1">Destreza</option>
                <option value="2">Constituição</option>
                <option value="3">Intelecto</option>
                <option value="4">Carisma</option>
            </select>
-           <input id="vantagens__atributo" class="prc_atr_n1" type="number" min="-999" max="999" title="Vantagens">
+           <input id="vantagens__atributo" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
        </div>
-       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n1"></button>
+       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n"></button>
        <div class="valores-iniciais">
-       <p id="testeroll__valoresiniciais1" class="valoresiniciais-n1"></p>
-       <p id="testeroll__barras" class="valoresiniciais-n1"></p>
-       <p id="testeroll__valoresiniciais2" class="valoresiniciais-n1"></p>
+       <p id="testeroll__valoresiniciais1" class="valoresiniciais-n"></p>
+       <p id="testeroll__barras" class="valoresiniciais-n"></p>
+       <p id="testeroll__valoresiniciais2" class="valoresiniciais-n"></p>
        </div>
-       <p id="testeroll__resultadoinicial" class="resultadoinicial-n1"></p>
-       <p id="testeroll__resultadofinal" class="resultadofinal-n1"></p>
-    </section>
+       <p id="testeroll__resultadoinicial" class="resultadoinicial-n"></p>
+       <p id="testeroll__resultadofinal" class="resultadofinal-n"></p>
+</section>
     </main>
     <script src="js/app.js"></script>
 </body>
