@@ -123,10 +123,6 @@ p {
     margin: 0;
 }
 
-.invisivel {
-color: red;
-}
-
 #testeroll {
     display: flex;
     flex-direction: column;
