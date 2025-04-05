@@ -18,20 +18,27 @@
             <option value="rodrigo">Rodrigo</option>
         </select>
         </div>
+        <div class="funcoes">
+            <img src="assets/rollicon.png" alt="Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores"></button>
+            <img src="assets/atributoicon.png" alt="Dados" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores"></button>
+            <img src="assets/sizeicon.png" alt="Dados" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores"></button>
+        </div>
         <div class="aparencia">
         <select id="tema-escolha" class="cabecalhos-n" onclick="trocarTema()">
             <option value="cosmo" id="cosmo">Cosmo</option>
             <option value="cataclismo" id="cataclismo">Cataclismo</option>
+            <option value="aquarela" id="aquarela">Aquarela</option>
         </select>
         <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos"></button>
         </div>
     </header>
     <main>
+    <span id="rolador">
     <section id="testeroll" class="testeroll_n">
         <p id="titulo" class="rolenoturno">Escolha e Role</p>
         <div class="testeroll__escolha">
             <input id="vantagens__pericia" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
-            <select id="testeroll__pericia" class="prc_atr_n">
+            <select id="testeroll__pericia" class="prc_atr_n" onclick="verificarVantagensPericia()">
                 <option value="5">Sanidade</option>
                 <option value="6">Imunidade</option>
                 <option value="7">Fôlego</option>
@@ -55,7 +62,7 @@
                 <option value="25">Resistência</option>
                 <option value="26">Existência</option>
                </select>
-           <select id="testeroll__atributo" class="prc_atr_n">
+           <select id="testeroll__atributo" class="prc_atr_n" onclick="verificarVantagensAtributo()">
                <option value="0">Força</option>
                <option value="1">Destreza</option>
                <option value="2">Constituição</option>
@@ -64,6 +71,7 @@
            </select>
            <input id="vantagens__atributo" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
        </div>
+       <input id="vantagens__atributo-solo" class="invisivel" type="number" min="-999" max="999" title="Vantagens">
        <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n"></button>
        <div class="valores-iniciais">
        <p id="testeroll__valoresiniciais1" class="valoresiniciais-n"></p>
@@ -73,6 +81,95 @@
        <p id="testeroll__resultadoinicial" class="resultadoinicial-n"></p>
        <p id="testeroll__resultadofinal" class="resultadofinal-n"></p>
 </section>
+</span>
+<span id="comparadorSize" class="invisivel">
+    <section id="comparaSize" class="testeroll_n">
+        <p id="titulo2" class="rolenoturno">Compare Alturas</p>
+        <div id="size-buttons">
+            <select id="size-type" class="prc_atr_n" onclick="sizeTipo()">
+                <option value="metragem">Metragem</option>
+                <option value="nomenclatura">Nomenclatura</option>
+                <option value="personagemsize">Personagem</option>
+            </select>
+        </div>
+        <div id="metragem-escolha">
+            <input id="eu-altura" class="prc_atr_n" type="number" min="0.000000001" max="9460536207068016" title="Sua Altura">
+            <input id="ele-altura" class="prc_atr_n" type="number" min="0.000000001" max="9460536207068016" title="Altura do Oponente">
+        </div>
+        <div id="nomenclatura-escolha" class="invisivel">
+            <select id="eu-altura2" class="prc_atr_n">
+                <option value="Microscópico">Microscópico</option>
+                <option value="Ínfimo">Ínfimo</option>
+                <option value="Minúsculo">Minúsculo</option>
+                <option value="Pequeno">Pequeno</option>
+                <option value="Anão">Anão</option>
+                <option value="Comum">Comum</option>
+                <option value="Grande">Grande</option>
+                <option value="Enorme">Enorme</option>
+                <option value="Gigante">Gigante</option>
+                <option value="Colossal">Colossal</option>
+                <option value="Super Colossal">Super Colossal</option>
+                <option value="Ultra Colossal">Ultra Colossal</option>
+                <option value="Hiper Colossal">Hiper Colossal</option>
+                <option value="Titã Menor">Titã Menor</option>
+                <option value="Titã Médio">Titã Médio</option>
+                <option value="Titã Maior">Titã Maior</option>
+                <option value="Titã Máximo">Titã Máximo</option>
+                <option value="Troposférico">Troposférico</option>
+                <option value="Estratosférico">Estratosférico</option>
+                <option value="Mesosférico">Mesosférico</option>
+                <option value="Termosférico">Termosférico</option>
+                <option value="Exosférico">Exosférico</option>
+                <option value="Sobrenatural">Sobrenatural</option>
+                <option value="Limite">Limite</option>
+            </select>
+            <select id="ele-altura2" class="prc_atr_n">
+                <option value="Microscópico">Microscópico</option>
+                <option value="Ínfimo">Ínfimo</option>
+                <option value="Minúsculo">Minúsculo</option>
+                <option value="Pequeno">Pequeno</option>
+                <option value="Anão">Anão</option>
+                <option value="Comum">Comum</option>
+                <option value="Grande">Grande</option>
+                <option value="Enorme">Enorme</option>
+                <option value="Gigante">Gigante</option>
+                <option value="Colossal">Colossal</option>
+                <option value="Super Colossal">Super Colossal</option>
+                <option value="Ultra Colossal">Ultra Colossal</option>
+                <option value="Hiper Colossal">Hiper Colossal</option>
+                <option value="Titã Menor">Titã Menor</option>
+                <option value="Titã Médio">Titã Médio</option>
+                <option value="Titã Maior">Titã Maior</option>
+                <option value="Titã Máximo">Titã Máximo</option>
+                <option value="Troposférico">Troposférico</option>
+                <option value="Estratosférico">Estratosférico</option>
+                <option value="Mesosférico">Mesosférico</option>
+                <option value="Termosférico">Termosférico</option>
+                <option value="Exosférico">Exosférico</option>
+                <option value="Sobrenatural">Sobrenatural</option>
+                <option value="Limite">Limite</option>
+            </select>
+        </div>
+        <div id="personagemsize-escolha" class="invisivel">
+            <select id="eu-altura3" class="prc_atr_n">
+                <option value="1.78">Izumi</option>
+                <option value="1.76">Victoria</option>
+                <option value="1.85">Vladimir</option>
+                <option value="45">Rodrigo</option>
+            </select>
+            <select id="ele-altura3" class="prc_atr_n">
+                <option value="1.78">Izumi</option>
+                <option value="1.76">Victoria</option>
+                <option value="1.85">Vladimir</option>
+                <option value="45">Rodrigo</option>
+            </select>
+        </div>
+        <img src="assets/comparador.png" alt="Comparar" width="4%" onclick="iniciarSize()" type="button" id="botao-compararsize" class="botao-n"></button>
+        <p id="ataque-vantagem" class="ataquevantagem-n"></p>
+        <p id="esquiva-vantagem" class="esquivavantagem-n"></p>
+        <p id="dano-adicional" class="danoadicional-n"></p>
+    </section>
+</span>
     </main>
     <script src="js/app.js"></script>
 </body>

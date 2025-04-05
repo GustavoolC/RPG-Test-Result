@@ -22,6 +22,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size:cover;
+    background-color: black;
 }
 
 .noturno {
@@ -67,6 +68,13 @@ body{
     color: #f6ff00;
 }
 
+#aquarela {
+    font-family: "cataclism";
+    font-weight: bold;
+    color:rgb(255, 225, 0);
+    background-color: rgb(102, 164, 226);
+}
+
 #tema-escolha {
     font-size: 20px;
     padding: 10px;
@@ -110,6 +118,23 @@ body{
     background-color: rgb(207, 231, 246);
 }
 
+.funcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 150px;
+    gap: 20px;
+}
+
+.botoes-superiores {
+    margin-top: 23px;
+    width: 80px;
+}
+
+.botoes-superiores:hover {
+    cursor: pointer;
+}
+
 .aparencia {
     display: flex;
     justify-content: flex-end;
@@ -118,6 +143,10 @@ body{
 
 #modos:hover {
     cursor: pointer;
+}
+
+.invisivel {
+    display:none;
 }
 
 p {
@@ -147,6 +176,7 @@ p {
 
 .testeroll_c {
     background-image: url(assets/boxcataclismoclaro.png);
+    position: 20px;
 }
 
 .rolenoturno {
@@ -235,6 +265,20 @@ input[type=number] {
 }
 
 #vantagens__atributo:focus {
+    outline: none;
+}
+
+#vantagens__atributo-solo {
+    font-size: 15px;
+    font-style: normal;
+    padding: 5px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+}
+
+#vantagens__atributo-solo:focus {
     outline: none;
 }
 
@@ -348,5 +392,180 @@ input[type=number] {
     color:rgb(0, 22, 191);
     font-size: 270%;
     font-family: "avara-bold";
+    text-shadow: 3px 1px 0px black;
+}
+
+#titulo2 {
+    margin-top:110px;
+}
+
+#comparaSize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0%;
+    gap: 5px;
+    background-size: 610px;
+    background-repeat: no-repeat;
+    background-position: 50% 56%;
+    background-attachment: fixed;
+    padding-bottom: 9%;
+    font-style: normal;   
+}
+
+#size-type {
+    font-size: 18px;
+    font-style: normal;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-style: dashed;
+}
+
+#size-type:hover {
+    border-style: solid;
+}
+
+#size-type:focus {
+    outline: none;
+}
+
+#altura-escolha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#eu-altura {
+    font-size: 20px;
+    font-style: normal;
+    border-radius: 20px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+}
+
+#ele-altura {
+    font-size: 20px;
+    font-style: normal;
+    border-radius: 20px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+}
+
+#eu-altura2 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#ele-altura2 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#eu-altura3 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#ele-altura3 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#botao-compararsize {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0px 40px;
+    margin: 3px;
+}
+
+#botao-compararsize:hover {
+    padding: 5px 45px;
+    width: 4.2%;
+}
+
+#ataque-vantagem {
+    font-size: 30px;
+}
+
+#esquiva-vantagem {
+    font-size: 30px;
+}
+
+#dano-adicional {
+    font-size: 30px;
+}
+
+.ataquevantagem-n {
+    font-family: "cataclism";
+    font-size: 110%;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 30px rgb(255, 0, 0);
+}
+
+.esquivavantagem-n {
+    font-family: "cataclism";
+    font-size: 160%;
+    font-weight: bold;
+    color:rgb(170, 0, 255);
+    text-shadow: 0px 0px 30px rgb(170, 0, 255);
+}
+
+.danoadicional-n {
+    font-family: "cataclism";
+    color:rgb(251, 255, 0);
+    font-size: 400;
+    font-weight: bold;
+    text-shadow: 0px 0px 30px rgb(251, 255, 0);
+}
+
+.ataquevantagem-c {
+    padding-top: 10px;
+    font-family: "avara";
+    font-size: 100%;
+    text-shadow: 3px 1px 0px black;
+    color:rgb(0, 156, 191);
+}
+
+.esquivavantagem-c {
+    font-family: "avara";
+    font-size: 100%;
+    text-shadow: 3px 1px 0px black;
+    color:rgb(0, 105, 191);
+}
+
+.danoadicional-c {
+    color:rgb(0, 22, 191);
+    font-size: 100%;
+    font-family: "avara";
     text-shadow: 3px 1px 0px black;
 }

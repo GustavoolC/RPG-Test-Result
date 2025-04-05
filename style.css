@@ -22,6 +22,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size:cover;
+    background-color: black;
 }
 
 .noturno {
@@ -67,6 +68,13 @@ body{
     color: #f6ff00;
 }
 
+#aquarela {
+    font-family: "cataclism";
+    font-weight: bold;
+    color:rgb(255, 225, 0);
+    background-color: rgb(102, 164, 226);
+}
+
 #tema-escolha {
     font-size: 20px;
     padding: 10px;
@@ -91,6 +99,8 @@ body{
     color:rgb(255, 255, 255);
     background-color: black;
     box-shadow: 0 10px 25px rgb(0, 0, 0);
+    -webkit-appearance: none;
+    appearance:unset;
 }
 
 .cabecalhos-n:hover {
@@ -108,6 +118,23 @@ body{
     background-color: rgb(255, 199, 255);
 }
 
+.funcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 140px;
+    gap: 20px;
+}
+
+.botoes-superiores {
+    margin-top: 23px;
+    width: 80px;
+}
+
+.botoes-superiores:hover {
+    cursor: pointer;
+}
+
 .aparencia {
     display: flex;
     justify-content: flex-end;
@@ -116,6 +143,10 @@ body{
 
 #modos:hover {
     cursor: pointer;
+}
+
+.invisivel {
+    display:none;
 }
 
 p {
@@ -234,6 +265,20 @@ input[type=number] {
     outline: none;
 }
 
+#vantagens__atributo-solo {
+    font-size: 15px;
+    font-style: normal;
+    padding: 5px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+}
+
+#vantagens__atributo-solo:focus {
+    outline: none;
+}
+
 .prc_atr_n {
     color: #00ffc3;
     font-family: "Big Shoulders", sans-serif;
@@ -341,5 +386,179 @@ input[type=number] {
     color:rgb(112, 10, 107);
     font-size: 300%;
     font-weight: bold;
+    font-family: "Big Shoulders", sans-serif;
+}
+
+#titulo2 {
+    margin-top:80px;
+}
+
+#comparaSize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0%;
+    gap: 5px;
+    background-size: 610px;
+    background-repeat: no-repeat;
+    background-position: 50% 52%;
+    background-attachment: fixed;
+    padding-bottom: 9%;
+    font-style: normal;   
+}
+
+#size-type {
+    font-size: 18px;
+    font-style: normal;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-style: dashed;
+}
+
+#size-type:hover {
+    border-style: solid;
+}
+
+#size-type:focus {
+    outline: none;
+}
+
+#altura-escolha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#eu-altura {
+    font-size: 20px;
+    font-style: normal;
+    border-radius: 20px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+}
+
+#ele-altura {
+    font-size: 20px;
+    font-style: normal;
+    border-radius: 20px;
+    appearance: none;
+    border-style: solid;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+}
+
+#eu-altura2 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#ele-altura2 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#eu-altura3 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#ele-altura3 {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50px;
+    appearance: none;
+    border-style: dashed;
+    text-align: center;
+    width: 210px;
+}
+
+#botao-compararsize {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0px 40px;
+    margin: 3px;
+}
+
+#botao-compararsize:hover {
+    padding: 5px 45px;
+    width: 4.2%;
+}
+
+#ataque-vantagem {
+    font-size: 30px;
+}
+
+#esquiva-vantagem {
+    font-size: 30px;
+}
+
+#dano-adicional {
+    font-size: 30px;
+}
+
+.ataquevantagem-n {
+    font-family: "Doto", sans-serif;
+    color: aqua;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0px 0px 30px aqua;
+}
+
+.esquivavantagem-n {
+    font-family: "Doto", sans-serif;
+    color:magenta;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0px 0px 30px magenta;
+}
+
+.danoadicional-n {
+    font-family: "Doto", sans-serif;
+    color:lime;
+    font-size:30px;
+    font-weight: 600;
+    text-shadow: 0px 0px 30px rgb(13, 255, 0);
+}
+
+.ataquevantagem-c {
+    color: rgb(105, 25, 44);
+    font-size: 110%;
+    font-weight: 600;
+    font-family: "Big Shoulders", sans-serif;
+}
+
+.esquivavantagem-c {
+    color:rgb(75, 11, 101);
+    font-size: 160%;
+    font-weight: 600;
+    font-family: "Big Shoulders", sans-serif;
+}
+
+.danoadicional-c {
+    color:rgb(112, 10, 107);
+    font-size: 300%;
+    font-weight: 600;
     font-family: "Big Shoulders", sans-serif;
 }
