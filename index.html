@@ -16,12 +16,14 @@
             <option value="victoria">Victoria</option>
             <option value="vladimir">Vladimir</option>
             <option value="rodrigo">Rodrigo</option>
+            <option value="planetafetal">???</option>
         </select>
         </div>
         <div class="funcoes">
-            <img src="assets/rollicon.png" alt="Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores"></button>
-            <img src="assets/atributoicon.png" alt="Dados" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores"></button>
-            <img src="assets/sizeicon.png" alt="Dados" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores"></button>
+            <img src="assets/rollicon.png" alt="Ícone de Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores"></button>
+            <img src="assets/atributoicon.png" alt="Ícone de Dado" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores"></button>
+            <img src="assets/sizeicon.png" alt="Ícone de Comparação" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores"></button>
+            <!--<img src="assets/rollicon.png" alt="Ícone de Impacto" width="4%" onclick="funcaoImpacto()" type="button" id="funcao-impacto" class="botoes-superiores"></button>-->
         </div>
         <div class="aparencia">
         <select id="tema-escolha" class="cabecalhos-n" onclick="trocarTema()">
@@ -156,18 +158,53 @@
                 <option value="1.76">Victoria</option>
                 <option value="1.85">Vladimir</option>
                 <option value="45">Rodrigo</option>
+                <option value="5">???</option>
             </select>
             <select id="ele-altura3" class="prc_atr_n">
                 <option value="1.78">Izumi</option>
                 <option value="1.76">Victoria</option>
                 <option value="1.85">Vladimir</option>
                 <option value="45">Rodrigo</option>
+                <option value="5">???</option>
             </select>
         </div>
         <img src="assets/comparador.png" alt="Comparar" width="4%" onclick="iniciarSize()" type="button" id="botao-compararsize" class="botao-n"></button>
         <p id="ataque-vantagem" class="ataquevantagem-n"></p>
         <p id="esquiva-vantagem" class="esquivavantagem-n"></p>
         <p id="dano-adicional" class="danoadicional-n"></p>
+    </section>
+</span>
+<span id="definidorImpacto" class="invisivel">
+    <section id="calculaImpacto" class="testeroll_n">
+        <p id="titulo3" class="rolenoturno">Dano de Impacto</p>
+        <div id="tipo-impacto">
+            <select id="impact-type" class="prc_atr_n" onclick="impactoTipo()">
+                <option value="corpo-a-corpo">Corpo-a-Corpo</option>
+                <option value="queda">Queda</option>
+            </select>
+        </div>
+        <div id="corpoacorpoEscolha">
+            <section id="objetoInfo">
+            <select id="material" class="prc_atr_n" title="Material">
+                <option value="Humano">Humano</option>
+                <option value="Deus">Deus</option>
+                <option value="Madeira">Madeira</option>
+                <option value="Pedra">Pedra</option>
+                <option value="Ferro">Ferro</option>
+                <option value="Diamante">Diamante</option>
+                <option value="Univite">Univite</option>
+                <option value="Titanium">Titanium</option>
+                <option value="Uranium">Uranium</option>
+            </select>
+            <input id="massa" class="prc_atr_n" type="number" min="0" max="9999999999999999999" title="Massa">
+            <input id="objetoAltura" class="prc_atr_n" type="number" min="0" max="9460536207068016" title="Tamanho">
+        </section>
+        <input id="impactadoAltura" class="prc_atr_n" type="number" min="0" max="9460536207068016" title="Sua Altura">
+        </div>
+        <img src="assets/comparador.png" alt="Calcular" width="4%" onclick="iniciarImpacto()" type="button" id="botao-calcularimpacto" class="botao-n"></button>
+        <p id="impacto-esquiva" class="ataquevantagem-n"></p>
+        <p id="impacto-dano" class="esquivavantagem-n"></p>
+    </section>
     </section>
 </span>
     </main>
