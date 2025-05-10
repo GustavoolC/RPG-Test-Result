@@ -5,6 +5,7 @@ let noturno = "true";
 let tema = "cosmo";
 let rolador = document.getElementById("rolador");
 let comparadorSize = document.getElementById("comparadorSize");
+let definidorImpacto = document.getElementById("definidorImpacto");
 let boxRoll = document.getElementById("testeroll");
 let periciaEscolhida = document.getElementById("testeroll__pericia");
 let atributoEscolhido = document.getElementById("testeroll__atributo");
@@ -36,8 +37,8 @@ let atributoAtivo = 0;
 let definirAtributoVtg = document.getElementById("vantagens__atributo");
 
 let perfilEscolha = "izumi"
-ficha = [40,40,50,50,40,35,40,40,40,50,40,40,40,30,30,50,30,30,40,50,50,50,40,0,0,0,0];
-vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+ficha = [60,40,53,50,45,45,45,51,45,50,40,40,49,50,50,60,50,30,55,50,50,50,40,0,0,0,46];
+vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1];
 
 function atualizarPerfil() {
     let perfilImagem = document.getElementById("perfil");
@@ -56,6 +57,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "rodrigo") {
             perfilImagem.setAttribute("src","assets/RodrigoPerfil.png");
             perfilImagem.setAttribute("alt","Ícone do Rodrigo")
+        } else if (perfilEscolha == "planetafetal") {
+            perfilImagem.setAttribute("src","assets/PlanetafetalPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do ???");
         }
     } else if (tema == "cataclismo") {
         if (perfilEscolha == "izumi") {
@@ -70,6 +74,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "rodrigo") {
             perfilImagem.setAttribute("src","assets/RodrigoPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone do Rodrigo");
+        } else if (perfilEscolha == "planetafetal") {
+            perfilImagem.setAttribute("src","assets/PlanetafetalPerfilCataclismo.png");
+            perfilImagem.setAttribute("alt","Ícone do ???");
         }
     } else if (tema == "aquarela") {
         if (perfilEscolha == "izumi") {
@@ -84,20 +91,26 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "rodrigo") {
             perfilImagem.setAttribute("src","assets/RodrigoPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone do Rodrigo");
+        } else if (perfilEscolha == "planetafetal") {
+            perfilImagem.setAttribute("src","assets/PlanetafetalPerfilAquarela.png");
+            perfilImagem.setAttribute("alt","Ícone do ???");
         }
     }
     if (perfilEscolha == "izumi") {
-        ficha = [40,40,50,50,40,35,40,40,40,50,40,40,40,30,30,50,30,30,40,50,50,50,40,0,0,0,0];
-        vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = [60,40,53,50,45,45,45,51,45,50,40,40,49,50,50,60,50,30,55,50,50,50,40,0,0,0,46];
+        vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1];
     } else if (perfilEscolha == "victoria") {
         ficha = [40,50,60,55,0,45,50,50,50,35,55,0,60,0,0,0,50,40,0,0,50,50,60,0,0,0,0];
         vantagens = [2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     } else if (perfilEscolha == "vladimir") {
-        ficha = [30,40,60,60,60,50,25,60,0,0,60,40,0,0,0,0,30,30,60,60,45,30,60,0,0,0,0];
-        vantagens = [0,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = [60,60,60,60,60,60,55,60,0,0,60,40,0,0,0,0,60,30,60,60,45,60,60,0,0,0,17];
+        vantagens = [0,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0];
     } else if (perfilEscolha == "rodrigo") {
         ficha = [170,-100,170,60,0,0,0,0,50,60,70,-100,-100,0,10,150,40,40,30,20,70,50,-100,0,0,0,0];
         vantagens = [1,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    } else if (perfilEscolha == "planetafetal") {
+        ficha = [70,5,70,70,70,70,50,0,20,5,50,-10,15,5,50,15,30,30,70,70,70,0,15,0,0,0,0];
+        vantagens = [2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     }
     
     verificarVantagens();
@@ -274,6 +287,7 @@ function funcaoRolar() {
     atributoSoloVtgSelector.setAttribute("class","invisivel");
     rolador.setAttribute("class","");
     comparadorSize.setAttribute("class","invisivel");
+    definidorImpacto.setAttribute("class","invisivel");
 }
 
 function funcaoAtributo() {
@@ -290,6 +304,7 @@ function funcaoAtributo() {
     atributoVtgSelector.setAttribute("class","invisivel");
     rolador.setAttribute("class","");
     comparadorSize.setAttribute("class","invisivel");
+    definidorImpacto.setAttribute("class","invisivel");
 }
 
 function funcaoSize() {
@@ -302,6 +317,22 @@ function funcaoSize() {
     atributoSoloVtgSelector.setAttribute("class","invisivel");
     rolador.setAttribute("class","invisivel");
     comparadorSize.setAttribute("class","");
+    definidorImpacto.setAttribute("class","invisivel");
+}
+
+function funcaoImpacto () {
+    valoresIniciais1Logica.innerHTML = "";
+    barrinhaLogica.innerHTML = "";
+    valoresIniciais2Logica.innerHTML = "";
+    resultadoInicialLogica.innerHTML = "";
+    resultadoFinalLogica.innerHTML = "";
+    atributoAtivo = 0;
+    definirAtributoVtg.value = atributoSoloVtgSelector.value;
+    trocarTema();
+    atributoSoloVtgSelector.setAttribute("class","invisivel");
+    rolador.setAttribute("class","invisivel");
+    comparadorSize.setAttribute("class","invisivel");
+    definidorImpacto.setAttribute("class","");
 }
 
 function verificarVantagens() {
@@ -319,15 +350,6 @@ function verificarVantagensAtributo() {
 }
 
 function iniciarTeste() {
-    if (personagemEscolhido.value == "izumi") {
-        ficha = [40,40,50,50,40,35,40,40,40,50,40,40,40,30,30,50,30,30,40,50,50,50,40,0,0,0,0];
-    } else if (personagemEscolhido.value == "victoria") {
-        ficha = [40,50,60,55,0,45,50,50,50,35,55,0,60,0,0,0,50,40,0,0,50,50,60,0,0,0,0];
-    } else if (personagemEscolhido.value == "vladimir") {
-        ficha = [30,40,60,60,60,50,25,60,0,0,60,40,0,0,0,0,30,30,60,60,45,30,60,0,0,0,0];
-    } else if (personagemEscolhido.value == "rodrigo") {
-        ficha = [170,-100,170,60,0,0,0,0,50,60,70,-100,-100,0,10,150,40,40,30,20,70,50,-100,0,0,0,0];
-    }
     let periciaVantagens = document.getElementById("vantagens__pericia").value;
     let atributoVantagens = document.getElementById("vantagens__atributo").value;
     if (atributoAtivo == 1) {
@@ -2936,6 +2958,76 @@ function compararAlturas() {
     }
 }
 
+// PARE AGORA! ISSO AQUI AINDA NÃO FOI ADICIONADO NO SITE >:(
+
+function iniciarImpacto() {
+    materialDano = definirDanoMaterial();
+    pesoDano = parseInt(document.getElementById("massa").value);
+    objetoImpacto = parseFloat(document.getElementById("objetoAltura").value);
+    alturaImpacto = parseFloat(document.getElementById("impactadoAltura").value);
+    multiplicador = 0;
+    desvantagemImpacto = definirDesvantagemImpacto();
+    danoImpacto = definirDanoImpacto();
+    console.log(danoImpacto);
+    document.getElementById("impacto-esquiva").innerHTML = desvantagemImpacto;
+    document.getElementById("impacto-dano").innerHTML = danoImpacto;
+}
+
+function definirDanoImpacto() {
+    console.log(materialDano);
+    console.log(pesoDano);
+    console.log(desvantagemImpacto);
+    return materialDano + "+" + parseInt(pesoDano/20);
+}
+
+function definirDanoMaterial() {
+    let material = document.getElementById("material").value;
+    if (material == "Humano") {
+        return "1d2";
+    } else if (material == "Deus") {
+        return "1d3";
+    } else if (material == "Madeira") {
+        return "1d4";
+    } else if (material == "Pedra") {
+        return "1d6";
+    } else if (material == "Ferro") {
+        return "1d10";
+    } else if (material == "Diamante") {
+        return "1d20";
+    } else if (material == "Univite") {
+        return "1d20+1d10+2";
+    } else if (material == "Titanium") {
+        return "2d20+8";
+    } else if (material == "Uranium") {
+        return "2d20+1d10+10";
+    }
+}
+
+function definirDesvantagemImpacto() {
+    if (objetoImpacto <= alturaImpacto / 30) {
+        return "1 Vantagem em Reflexos";
+    } else if (objetoImpacto < alturaImpacto) {
+        return "Nenhuma Vantagem"
+    } else if (objetoImpacto <= alturaImpacto * multiplicador) {
+        if (multiplicador > 1) {
+            palavraDesvantagemImpacto = "Desvantagens"
+        } else {
+            palavraDesvantagemImpacto = "Desvantagem"
+        }
+        return `${multiplicador} ${palavraDesvantagemImpacto} em Reflexos`;
+    } else {
+        multiplicador++;
+        return definirDesvantagemImpacto();
+    }
+}
+
+
+// console.log(`-------------------------------------------------------`);
+// console.log(`Área de Impacto: ${objetoImpacto}`);
+// console.log(`Altura do Esquivante: ${alturaImpacto}`);
+// console.log(`-------------------------------------------------------`);
+// console.log(`O Esquivantem tem ${resultadoImpacto}`);
+
 // console.log(`Pontos na Perícia: ${pericia}`);
 // console.log(`Rolagem da Perícia: ${periciaDado}`);
 // console.log(`Resultado da Perícia: ${periciaResultado}`);
@@ -2955,29 +3047,3 @@ function compararAlturas() {
 // console.log(`Ataque: ${atacar}`);
 // console.log(`Esquiva: ${esquivar}`);
 // console.log(`Dano: ${dano}`);
-
-
-// function calcularImpacto() {
-//     if (objetoImpacto <= alturaImpacto / 30) {
-//         return "1 Vantagem em Reflexos";
-//     } else if (objetoImpacto < alturaImpacto) {
-//         return "Nenhuma Vantagem"
-//     } else if (objetoImpacto <= alturaImpacto * multiplicador) {
-//         if (multiplicador > 1) {
-//             palavraDesvantagemImpacto = "Desvantagens"
-//         } else {
-//             palavraDesvantagemImpacto = "Desvantagem"
-//         }
-//         return `${multiplicador} ${palavraDesvantagemImpacto} em Reflexos`;
-//     } else {
-//         multiplicador++;
-//         return calcularImpacto();
-//     }
-// }
-
-
-// console.log(`-------------------------------------------------------`);
-// console.log(`Área de Impacto: ${objetoImpacto}`);
-// console.log(`Altura do Esquivante: ${alturaImpacto}`);
-// console.log(`-------------------------------------------------------`);
-// console.log(`O Esquivantem tem ${resultadoImpacto}`);
