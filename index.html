@@ -9,16 +9,20 @@
 </head>
 <body class="noturno" id="fundo">
     <header class="cabecalho">
+        <span class="perso-e-codigo">
         <div class="personagem">
             <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
         <select id="personagens-escolha" class="cabecalhos-n" onclick="atualizarPerfil()">
             <option value="izumi">Izumi</option>
-            <option value="victoria">Victoria</option>
+            <option id="victoria" value="victoria">Victoria</option>
+            <option id="victoriaparasitada" value="victoriaparasitada" class="invisivel">Victoria Parasitada</option>
             <option value="vladimir">Vladimir</option>
             <option value="rodrigo">Rodrigo</option>
             <option value="planetafetal">Feto Cósmico</option>
         </select>
         </div>
+        <input id="codigo" class="prc_atr_n" type="text" title="Insira um Código" onkeydown="setTimeout(checarCodigo, 10)">
+        </span>
         <div class="funcoes">
             <img src="assets/rollicon.png" alt="Ícone de Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores"></button>
             <img src="assets/atributoicon.png" alt="Ícone de Dado" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores"></button>

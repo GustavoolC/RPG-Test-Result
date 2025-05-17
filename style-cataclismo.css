@@ -569,3 +569,18 @@ input[type=number] {
     font-family: "avara";
     text-shadow: 3px 1px 0px black;
 }
+
+#codigo {
+    height: 80%;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: -190px;
+}
+
+.perso-e-codigo {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}

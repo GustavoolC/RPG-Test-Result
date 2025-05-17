@@ -562,3 +562,18 @@ input[type=number] {
     font-weight: 600;
     font-family: "Big Shoulders", sans-serif;
 }
+
+#codigo {
+    height: 80%;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: -190px;
+}
+
+.perso-e-codigo {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}

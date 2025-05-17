@@ -591,3 +591,18 @@ input[type=number] {
     font-weight: bold;
     font-family: "cataclism";
 }
+
+#codigo {
+    height: 80%;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: -200px;
+}
+
+.perso-e-codigo {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
