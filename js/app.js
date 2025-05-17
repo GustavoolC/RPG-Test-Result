@@ -51,6 +51,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "victoria") {
             perfilImagem.setAttribute("src","assets/VictoriaPerfil.png");
             perfilImagem.setAttribute("alt","Ícone da Victoria");
+        } else if (perfilEscolha == "victoriaparasitada") {
+            perfilImagem.setAttribute("src","assets/VictoriaParasitadaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Victoria Parasitada");
         } else if (perfilEscolha == "vladimir") {
             perfilImagem.setAttribute("src","assets/VladimirPerfil.png");
             perfilImagem.setAttribute("alt","Ícone do Vladimir");
@@ -68,6 +71,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "victoria") {
             perfilImagem.setAttribute("src","assets/VictoriaPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone da Victoria");
+        } else if (perfilEscolha == "victoriaparasitada") {
+            perfilImagem.setAttribute("src","assets/VictoriaParasitadaPerfilCataclismo.png");
+            perfilImagem.setAttribute("alt","Ícone da Victoria Parasitada");
         } else if (perfilEscolha == "vladimir") {
             perfilImagem.setAttribute("src","assets/VladimirPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone do Vladimir");
@@ -85,6 +91,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "victoria") {
             perfilImagem.setAttribute("src","assets/VictoriaPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone da Victoria");
+        } else if (perfilEscolha == "victoriaparasitada") {
+            perfilImagem.setAttribute("src","assets/VictoriaParasitadaPerfilAquarela.png");
+            perfilImagem.setAttribute("alt","Ícone da Victoria Parasitada");
         } else if (perfilEscolha == "vladimir") {
             perfilImagem.setAttribute("src","assets/VladimirPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone do Vladimir");
@@ -102,6 +111,9 @@ function atualizarPerfil() {
     } else if (perfilEscolha == "victoria") {
         ficha = [40,50,60,55,0,45,50,50,50,35,55,0,60,0,0,0,50,40,0,0,50,50,60,0,0,0,0];
         vantagens = [2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    } else if (perfilEscolha == "victoriaparasitada") {
+        ficha = [80,80,80,55,50,50,50,70,55,35,55,0,70,0,0,0,65,65,0,65,80,50,80,0,0,0,80];
+        vantagens = [2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0];
     } else if (perfilEscolha == "vladimir") {
         ficha = [60,60,60,60,60,60,55,60,0,0,60,40,0,0,0,0,60,30,60,60,45,60,60,0,0,0,17];
         vantagens = [0,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0];
@@ -114,6 +126,14 @@ function atualizarPerfil() {
     }
     
     verificarVantagens();
+}
+
+function checarCodigo() {
+    codigo = document.getElementById("codigo").value;
+    if (codigo == "pou") {
+       document.getElementById("victoria").setAttribute("class","invisivel");
+       document.getElementById("victoriaparasitada").setAttribute("class",""); 
+    }
 }
 
 function trocarTema() {
@@ -141,6 +161,7 @@ function trocarModo() {
     let modo = document.getElementById("modos");
     let background = document.getElementById("fundo");
     let personagensSelector = document.getElementById("personagens-escolha");
+    let codigoSelector = document.getElementById("codigo");
     let titulo = document.getElementById("titulo");
     let titulo2 = document.getElementById("titulo2");
     let atributoSelector = document.getElementById("testeroll__atributo");
@@ -169,6 +190,7 @@ function trocarModo() {
             modo.setAttribute("alt","Ícone do Modo Noturno");
             background.setAttribute("class","claro");
             personagensSelector.setAttribute("class","cabecalhos-c");
+            codigoSelector.setAttribute("class","prc_atr_c");
             temaSelector.setAttribute("class","cabecalhos-c");
             titulo.setAttribute("class","roleclaro");
             titulo2.setAttribute("class","roleclaro");
@@ -226,6 +248,7 @@ function trocarModo() {
             modo.setAttribute("alt","Ícone do Modo Claro");
             background.setAttribute("class","noturno");
             personagensSelector.setAttribute("class","cabecalhos-n");
+            codigoSelector.setAttribute("class","prc_atr_n");
             temaSelector.setAttribute("class","cabecalhos-n");
             titulo.setAttribute("class","rolenoturno");
             titulo2.setAttribute("class","rolenoturno");
