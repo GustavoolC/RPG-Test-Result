@@ -36,9 +36,10 @@ let atributoSoloVtgSelector = document.getElementById("vantagens__atributo-solo"
 let atributoAtivo = 0;
 let definirAtributoVtg = document.getElementById("vantagens__atributo");
 
-let perfilEscolha = "izumi"
-ficha = [60,40,53,50,45,45,45,51,45,50,40,40,49,50,50,60,50,30,55,50,50,50,40,0,0,0,46];
-vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1];
+let perfilEscolha = "izumi";
+    ficha = cdg("☭η∹☾∞∹☭∞∹☭∞∹★☾∹☾∞∹★☾∹☭∞∹★☾∹☾∞∹☾∞∹★∞∹★☠∹☭∞∹☾∞∹☭η∹☾∞∹☀∞∹☾☾∹☾☭∹☾∞∹☾∞∹★η∹∞∹∞∹∞∹☾☾").split(",");
+    vantagens = cdg("∞∹♫∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫").split(",");
+    verificarVantagens();
 
 function atualizarPerfil() {
     let perfilImagem = document.getElementById("perfil");
@@ -51,9 +52,6 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "victoria") {
             perfilImagem.setAttribute("src","assets/VictoriaPerfil.png");
             perfilImagem.setAttribute("alt","Ícone da Victoria");
-        } else if (perfilEscolha == "victoriaparasitada") {
-            perfilImagem.setAttribute("src","assets/VictoriaParasitadaPerfil.png");
-            perfilImagem.setAttribute("alt","Ícone da Victoria Parasitada");
         } else if (perfilEscolha == "vladimir") {
             perfilImagem.setAttribute("src","assets/VladimirPerfil.png");
             perfilImagem.setAttribute("alt","Ícone do Vladimir");
@@ -63,6 +61,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "planetafetal") {
             perfilImagem.setAttribute("src","assets/PlanetafetalPerfil.png");
             perfilImagem.setAttribute("alt","Ícone do ???");
+        } else if (perfilEscolha == "personagem-secreto-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlQKQPTJQNQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     } else if (tema == "cataclismo") {
         if (perfilEscolha == "izumi") {
@@ -71,9 +72,6 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "victoria") {
             perfilImagem.setAttribute("src","assets/VictoriaPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone da Victoria");
-        } else if (perfilEscolha == "victoriaparasitada") {
-            perfilImagem.setAttribute("src","assets/VictoriaParasitadaPerfilCataclismo.png");
-            perfilImagem.setAttribute("alt","Ícone da Victoria Parasitada");
         } else if (perfilEscolha == "vladimir") {
             perfilImagem.setAttribute("src","assets/VladimirPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone do Vladimir");
@@ -83,6 +81,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "planetafetal") {
             perfilImagem.setAttribute("src","assets/PlanetafetalPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone do ???");
+        } else if (perfilEscolha == "personagem-secreto-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlQKQPTJQNQlEKBTXwQJQWXTPUI.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     } else if (tema == "aquarela") {
         if (perfilEscolha == "izumi") {
@@ -91,10 +92,7 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "victoria") {
             perfilImagem.setAttribute("src","assets/VictoriaPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone da Victoria");
-        } else if (perfilEscolha == "victoriaparasitada") {
-            perfilImagem.setAttribute("src","assets/VictoriaParasitadaPerfilAquarela.png");
-            perfilImagem.setAttribute("alt","Ícone da Victoria Parasitada");
-        } else if (perfilEscolha == "vladimir") {
+        }  else if (perfilEscolha == "vladimir") {
             perfilImagem.setAttribute("src","assets/VladimirPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone do Vladimir");
         } else if (perfilEscolha == "rodrigo") {
@@ -103,26 +101,29 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "planetafetal") {
             perfilImagem.setAttribute("src","assets/PlanetafetalPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone do ???");
+        } else if (perfilEscolha == "personagem-secreto-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlQKQPTJQNQlEKBTXqOAQKEXQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     }
     if (perfilEscolha == "izumi") {
-        ficha = [60,40,53,50,45,45,45,51,45,50,40,40,49,50,50,60,50,30,55,50,50,50,40,0,0,0,46];
-        vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1];
+        ficha = cdg("☭η∹☾∞∹☭∞∹☭∞∹★☾∹☾∞∹★☾∹☭∞∹★☾∹☾∞∹☾∞∹★∞∹★☠∹☭∞∹☾∞∹☭η∹☾∞∹☀∞∹☾☾∹☾☭∹☾∞∹☾∞∹★η∹∞∹∞∹∞∹☾☾").split(",");
+        vantagens = cdg("∞∹♫∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫").split(",");
     } else if (perfilEscolha == "victoria") {
-        ficha = [40,50,60,55,0,45,50,50,50,35,55,0,60,0,0,0,50,40,0,0,50,50,60,0,0,0,0];
-        vantagens = [2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-    } else if (perfilEscolha == "victoriaparasitada") {
-        ficha = [80,80,80,55,50,50,50,70,55,35,55,0,70,0,0,0,65,65,0,65,80,50,80,0,0,0,80];
-        vantagens = [2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0];
+        ficha = cdg("★∞∹☾∞∹☭∞∹☾☾∹∞∹★☾∹☾∞∹☾∞∹☾∞∹☀☾∹☾☾∹∞∹☭∞∹∞∹∞∹∞∹☾∞∹★∞∹∞∹∞∹☾∞∹☾∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
     } else if (perfilEscolha == "vladimir") {
-        ficha = [60,60,60,60,60,60,55,60,0,0,60,40,0,0,0,0,60,30,60,60,45,60,60,0,0,0,17];
-        vantagens = [0,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0];
+        ficha = cdg("☭∞∹☭η∹☭η∹☭∞∹☭∞∹☭η∹☾☾∹☭∞∹∞∹∞∹☭∞∹★∞∹∞∹∞∹∞∹∞∹☭∞∹☀∞∹☭η∹☭η∹☾∞∹☭η∹☭∞∹∞∹∞∹∞∹☾★").split(",");
+        vantagens = cdg("∞∹✇∹✇∹♫∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹♫").split(",");
     } else if (perfilEscolha == "rodrigo") {
-        ficha = [170,-100,170,60,0,0,0,0,50,60,70,-100,-100,0,10,150,40,40,30,20,70,50,-100,0,0,0,0];
-        vantagens = [1,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = cdg("♫☹∞∹-♫∞∞∹♫☹∞∹☭∞∹∞∹∞∹∞∹∞∹☾∞∹☭∞∹☹∞∹-♫∞∞∹-♫∞∞∹∞∹♫∞∹♫☾∞∹★∞∹★∞∹☀∞∹✇∞∹☹∞∹☾∞∹-♫∞∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("♫∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
     } else if (perfilEscolha == "planetafetal") {
-        ficha = [70,5,70,70,70,70,50,0,20,5,50,-10,15,5,50,15,30,30,70,70,70,0,15,0,0,0,0];
-        vantagens = [2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = cdg("☹∞∹☾∹☹∞∹☹∞∹☹∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹-♫∞∹♫☾∹☾∹☾∞∹♫☾∹☀∞∹☀∞∹☹∞∹☹∞∹☹∞∹∞∹♫☾∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-1") {
+        ficha = cdg("η∞∹η∞∹η∞∹☾☾∹☾∞∹☾∞∹☾∞∹☹∞∹☾☾∹☀☾∹☾☾∹∞∹☹∞∹∞∹∞∹∞∹☭☾∹☭☾∹∞∹☭☾∹η∞∹☾∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
+        vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
     }
     
     verificarVantagens();
@@ -130,9 +131,10 @@ function atualizarPerfil() {
 
 function checarCodigo() {
     codigo = document.getElementById("codigo").value;
-    if (codigo == "pou") {
-       document.getElementById("victoria").setAttribute("class","invisivel");
-       document.getElementById("victoriaparasitada").setAttribute("class",""); 
+    if (codigo == cdg("LIA")) {
+       document.getElementById(cdg("HTWJIKTQ")).setAttribute("class","invisivel");
+       document.getElementById("personagem-secreto-1").setAttribute("class",""); 
+       document.getElementById("personagem-secreto-1").innerHTML = "Victoria Parasitada";
     }
 }
 
@@ -3070,3 +3072,19 @@ function definirDesvantagemImpacto() {
 // console.log(`Ataque: ${atacar}`);
 // console.log(`Esquiva: ${esquivar}`);
 // console.log(`Dano: ${dano}`);
+
+function cdg(cdginsert) {
+    
+    var betacharlo = ['q','m','w','n','e','b','r','v','t','c','y','x','u','z','i','l','o','k','p','j','a','h','s','g','d','f',"~", " ", "-", "_", ".", "&","?", "!", "@", "#", "/",'Q','M','W','N','E','B','R','V','T','C','Y','X','U','Z','I','L','O','K','P','J','A','H','S','G','D','F',"^","∞","♫","✇","☀","★","☾","☭","☹","η","☠","∹"];
+    var alfabeto =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',"Ç"," ", "-", "_", ".", "&","?", "!", "@", "#", "/","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","ç","0","1","2","3","4","5","6","7","8","9",","];
+
+    var cdgrslt = [];
+    for(let i=0; i<cdginsert.length; i++){
+        for(let j =0; j<betacharlo.length; j++){
+            if(cdginsert[i] === betacharlo[j]){
+            cdgrslt.push(alfabeto[j]);
+            }
+        }
+    }
+    return cdgrslt.join("");
+  }
