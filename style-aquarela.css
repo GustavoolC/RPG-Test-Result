@@ -16,6 +16,10 @@
     font-family: "avara-bolditalic";
     src: url(fonts/Avara-BoldItalic.otf);
 }
+@font-face {
+    font-family: "sylfaen";
+    src: url(fonts/sylfaen.ttf);
+}
 
 body{
     background-repeat: no-repeat;
@@ -27,10 +31,12 @@ body{
 
 .noturno {
     background-image: url(assets/AquarelaFundoNoturno.png);
+    transition: 150ms ease;
 }
 
 .claro {
     background-image: url(assets/AquarelaFundoClaro.png);
+    transition: 150ms ease;
 }
 
 .cabecalho {
@@ -54,6 +60,7 @@ body{
     border-style: dashed;
     appearance: none;
     font-weight:600;
+    transition: 150ms ease;
 }
 
 #cosmo {
@@ -75,6 +82,20 @@ body{
     background-color: rgb(102, 164, 226);
 }
 
+#tormenta {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color:aqua;
+    background-color: rgb(88, 0, 129);
+}
+
+#tema-secreto-1 {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: bold;
+    color:rgb(197, 152, 120);
+    background-color: rgb(0, 96, 0);
+}
+
 #tema-escolha {
     font-size: 20px;
     padding: 10px;
@@ -84,10 +105,17 @@ body{
     border-style: dashed;
     appearance: none;
     font-weight:600;
+    transition: 150ms ease;
+}
+
+#tema-escolha:hover {
+    border-style: solid;
+    cursor: pointer;
 }
 
 #personagens-escolha:hover {
     border-style: solid;
+    cursor: pointer;
 }
 
 #personagens-escolha:focus {
@@ -95,10 +123,11 @@ body{
 }
 
 .cabecalhos-n {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     color:rgb(255, 255, 255);
     background-color: rgb(19, 9, 0);
     box-shadow: 0 10px 25px rgb(0, 0, 0);
+    transition: 150ms ease;
 }
 
 .cabecalhos-n:hover {
@@ -111,6 +140,7 @@ body{
     border-color: rgb(16, 39, 57);
     background-color: rgb(192, 233, 255);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
+    transition: 150ms ease;
 }
 
 .cabecalhos-c:hover {
@@ -121,8 +151,40 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left: 45px;
+    padding-left: 100px;
     gap: 20px;
+}
+
+#funcao-rolar {
+    transition: 150ms ease;
+}
+
+#funcao-rolar:hover {
+    filter:invert();
+}
+
+#funcao-atributo {
+    transition: 150ms ease;
+}
+
+#funcao-atributo:hover {
+    filter:invert();
+}
+
+#funcao-size {
+    transition: 150ms ease;
+}
+
+#funcao-size:hover {
+    filter:invert();
+}
+
+#funcao-mapa {
+    transition: 150ms ease;
+}
+
+#funcao-mapa:hover {
+    filter:invert();
 }
 
 .botoes-superiores {
@@ -140,8 +202,13 @@ body{
     align-items: center;
 }
 
+#modos {
+    transition: 150ms ease;
+}
+
 #modos:hover {
     cursor: pointer;
+    filter:invert();
 }
 
 .invisivel {
@@ -171,16 +238,18 @@ p {
 
 .testeroll_n {
     background-image: url(assets/boxaquarela.png);
+    transition: 150ms ease;
 }
 
 .testeroll_c {
     background-image: url(assets/boxaquareladiurno.png);
+    transition: 150ms ease;
     position: 20px;
 }
 
 .rolenoturno {
-    font-family:'Times New Roman', Times, serif;
-    margin-top: 2.8%;
+    font-family:"sylfaen";
+    margin-top: 2.2%;
     color:#ffe1a8;
     text-shadow: 0px 0px 30px #ffd29f;
 }
@@ -204,10 +273,12 @@ p {
     appearance: none;
     border-style: dashed;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #testeroll__pericia:hover {
     border-style: solid;
+    cursor: pointer;
 }
 
 #testeroll__pericia:focus {
@@ -221,10 +292,12 @@ p {
     appearance: none;
     border-style: dashed;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #testeroll__atributo:hover {
     border-style: solid;
+    cursor: pointer;
 }
 
 #testeroll__atributo:focus {
@@ -250,6 +323,7 @@ input[type=number] {
     appearance: none;
     border-style: solid;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #vantagens__pericia:focus {
@@ -264,6 +338,7 @@ input[type=number] {
     appearance: none;
     border-style: solid;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #vantagens__atributo:focus {
@@ -278,6 +353,7 @@ input[type=number] {
     appearance: none;
     border-style: solid;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #vantagens__atributo-solo:focus {
@@ -286,11 +362,12 @@ input[type=number] {
 
 .prc_atr_n {
     color: #ffe1a8;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     font-style:italic;
     background-color: rgb(23, 11, 0);
     border-color: #6b3400;
     box-shadow: 0 10px 25px black;
+    transition: 150ms ease;
 }
 
 .prc_atr_n:hover {
@@ -306,6 +383,7 @@ input[type=number] {
     background-color: rgb(189, 168, 83);
     border-color: rgb(54, 47, 20);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.745);
+    transition: 150ms ease;
 }
 
 .prc_atr_c:hover {
@@ -317,6 +395,7 @@ input[type=number] {
     border-radius: 10px;
     padding: 0px 40px;
     margin: 1%;
+    transition: 150ms ease;
 }
 
 #botao-rolar:hover {
@@ -329,7 +408,8 @@ input[type=number] {
     border-style: solid;
     background-image: url("assets/botaoaquarela.png");
     background-size:cover;
-    box-shadow: 0px 0px 50px #eeff00e0;
+    box-shadow: 0px 0px 50px #ffe1a8;
+    transition: 150ms ease;
 }
 
 .botao-n:hover {
@@ -344,6 +424,7 @@ input[type=number] {
     border-style: solid;
     background-color: rgba(0, 0, 0, 0.491);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.866);
+    transition: 150ms ease;
 }
 
 .botao-c:hover {
@@ -357,25 +438,26 @@ input[type=number] {
 }
 
 .valoresiniciais-n {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     font-size: 110%;
     font-weight: 300;
     color:#bba170;
 }
 
 .resultadoinicial-n {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     font-size: 160%;
     font-weight: 300;
     color:#dabb82;
 }
 
 .resultadofinal-n {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     color:#ffe1a8;
     font-size: 300%;
     font-weight: bold;
     text-shadow: 0px 0px 30px #ffe1a8;
+    margin-top: -0.2%;
 }
 
 .valoresiniciais-c {
@@ -431,6 +513,7 @@ input[type=number] {
     margin-bottom: 20px;
     border-radius: 5px;
     border-style: dashed;
+    transition: 150ms ease;
 }
 
 #size-type:hover {
@@ -515,6 +598,7 @@ input[type=number] {
     border-radius: 10px;
     padding: 0px 40px;
     margin: 3px;
+    transition: 150ms ease;
 }
 
 #botao-compararsize:hover {
@@ -535,7 +619,7 @@ input[type=number] {
 }
 
 .ataquevantagem-n {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     font-size: 110%;
     font-weight: bold;
     color:#dabb82;
@@ -543,7 +627,7 @@ input[type=number] {
 }
 
 .esquivavantagem-n {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     font-size: 160%;
     font-weight: bold;
     color:#dabb82;
@@ -551,7 +635,7 @@ input[type=number] {
 }
 
 .danoadicional-n {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "sylfaen";
     color:#dabb82;
     font-size: 400;
     font-weight: bold;
@@ -590,4 +674,20 @@ input[type=number] {
     font-size: 100%;
     font-weight: bold;
     font-family: "cataclism";
+}
+
+#codigo {
+    height: 80%;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: -240px;
+    margin-right: 20px;
+}
+
+.perso-e-codigo {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
 }

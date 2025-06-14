@@ -27,10 +27,12 @@ body{
 
 .noturno {
     background-image: url(assets/CataclismoFundoNoturno.png);
+    transition: 150ms ease;
 }
 
 .claro {
     background-image: url(assets/CataclismoFundoClaro.png);
+    transition: 150ms ease;
 }
 
 .cabecalho {
@@ -54,6 +56,7 @@ body{
     border-style: dashed;
     appearance: none;
     font-weight:600;
+    transition: 150ms ease;
 }
 
 #cosmo {
@@ -75,6 +78,20 @@ body{
     background-color: rgb(102, 164, 226);
 }
 
+#tormenta {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color:aqua;
+    background-color: rgb(88, 0, 129);
+}
+
+#tema-secreto-1 {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: bold;
+    color:rgb(197, 152, 120);
+    background-color: rgb(0, 96, 0);
+}
+
 #tema-escolha {
     font-size: 20px;
     padding: 10px;
@@ -84,10 +101,17 @@ body{
     border-style: dashed;
     appearance: none;
     font-weight:600;
+    transition: 150ms ease;
+}
+
+#tema-escolha:hover {
+    border-style: solid;
+    cursor: pointer;
 }
 
 #personagens-escolha:hover {
     border-style: solid;
+    cursor: pointer;
 }
 
 #personagens-escolha:focus {
@@ -99,6 +123,7 @@ body{
     color:rgb(255, 255, 255);
     background-color: rgb(23, 0, 0);
     box-shadow: 0 10px 25px rgb(0, 0, 0);
+    transition: 150ms ease;
 }
 
 .cabecalhos-n:hover {
@@ -112,6 +137,7 @@ body{
     border-color: rgb(16, 39, 57);
     background-color: rgb(161, 197, 217);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
+    transition: 150ms ease;
 }
 
 .cabecalhos-c:hover {
@@ -122,8 +148,40 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left: 150px;
+    padding-left: 210px;
     gap: 20px;
+}
+
+#funcao-rolar {
+    transition: 150ms ease;
+}
+
+#funcao-rolar:hover {
+    filter:invert();
+}
+
+#funcao-atributo {
+    transition: 150ms ease;
+}
+
+#funcao-atributo:hover {
+    filter:invert();
+}
+
+#funcao-size {
+    transition: 150ms ease;
+}
+
+#funcao-size:hover {
+    filter:invert();
+}
+
+#funcao-mapa {
+    transition: 150ms ease;
+}
+
+#funcao-mapa:hover {
+    filter:invert();
 }
 
 .botoes-superiores {
@@ -141,8 +199,13 @@ body{
     align-items: center;
 }
 
+#modos {
+    transition: 150ms ease;
+}
+
 #modos:hover {
     cursor: pointer;
+    filter:invert();
 }
 
 .invisivel {
@@ -172,11 +235,13 @@ p {
 
 .testeroll_n {
     background-image: url(assets/boxcataclismo.png);
+    transition: 150ms ease;
 }
 
 .testeroll_c {
     background-image: url(assets/boxcataclismoclaro.png);
     position: 20px;
+    transition: 150ms ease;
 }
 
 .rolenoturno {
@@ -202,10 +267,12 @@ p {
     appearance: none;
     border-style: dashed;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #testeroll__pericia:hover {
     border-style: solid;
+    cursor: pointer;
 }
 
 #testeroll__pericia:focus {
@@ -219,10 +286,12 @@ p {
     appearance: none;
     border-style: dashed;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #testeroll__atributo:hover {
     border-style: solid;
+    cursor: pointer;
 }
 
 #testeroll__atributo:focus {
@@ -248,6 +317,7 @@ input[type=number] {
     appearance: none;
     border-style: solid;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #vantagens__pericia:focus {
@@ -262,6 +332,7 @@ input[type=number] {
     appearance: none;
     border-style: solid;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #vantagens__atributo:focus {
@@ -276,6 +347,7 @@ input[type=number] {
     appearance: none;
     border-style: solid;
     text-align: center;
+    transition: 150ms ease;
 }
 
 #vantagens__atributo-solo:focus {
@@ -289,6 +361,7 @@ input[type=number] {
     background-color: rgb(23, 0, 0);
     border-color: #5b1717;
     box-shadow: 0 10px 25px black;
+    transition: 150ms ease;
 }
 
 .prc_atr_n:hover {
@@ -303,6 +376,7 @@ input[type=number] {
     background-color: rgb(66, 129, 180);
     border-color: rgb(16, 39, 57);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.745);
+    transition: 150ms ease;
 }
 
 .prc_atr_c:hover {
@@ -314,6 +388,7 @@ input[type=number] {
     border-radius: 10px;
     padding: 0px 40px;
     margin: 1%;
+    transition: 150ms ease;
 }
 
 #botao-rolar:hover {
@@ -326,6 +401,7 @@ input[type=number] {
     border-style: solid;
     background-image: url("assets/botaocataclismo.png");
     box-shadow: 0px 0px 50px #eeff00e0;
+    transition: 150ms ease;
 }
 
 .botao-n:hover {
@@ -338,6 +414,7 @@ input[type=number] {
     border-style: solid;
     background-image: url("assets/botaocataclismoclaro.png");
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.866);
+    transition: 150ms ease;
 }
 
 .botao-c:hover {
@@ -421,6 +498,7 @@ input[type=number] {
     margin-bottom: 20px;
     border-radius: 5px;
     border-style: dashed;
+    transition: 150ms ease;
 }
 
 #size-type:hover {
@@ -505,6 +583,7 @@ input[type=number] {
     border-radius: 10px;
     padding: 0px 40px;
     margin: 3px;
+    transition: 150ms ease;
 }
 
 #botao-compararsize:hover {
@@ -568,4 +647,19 @@ input[type=number] {
     font-size: 100%;
     font-family: "avara";
     text-shadow: 3px 1px 0px black;
+}
+
+#codigo {
+    height: 80%;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: -190px;
+}
+
+.perso-e-codigo {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
 }

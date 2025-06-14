@@ -5,6 +5,7 @@ let noturno = "true";
 let tema = "cosmo";
 let rolador = document.getElementById("rolador");
 let comparadorSize = document.getElementById("comparadorSize");
+let definidorImpacto = document.getElementById("definidorImpacto");
 let boxRoll = document.getElementById("testeroll");
 let periciaEscolhida = document.getElementById("testeroll__pericia");
 let atributoEscolhido = document.getElementById("testeroll__atributo");
@@ -35,15 +36,19 @@ let atributoSoloVtgSelector = document.getElementById("vantagens__atributo-solo"
 let atributoAtivo = 0;
 let definirAtributoVtg = document.getElementById("vantagens__atributo");
 
-let perfilEscolha = "izumi"
-ficha = [40,40,50,50,40,35,40,40,40,50,40,40,40,30,30,50,30,30,40,50,50,50,40,0,0,0,0];
-vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let codigo1descoberto = false;
+let codigo2descoberto = false;
+
+let perfilEscolha = "izumi";
+    ficha = cdg("☭η∹☾∞∹☭∞∹☭∞∹★☾∹☾∞∹★☾∹☭∞∹★☾∹☾∞∹☾∞∹★∞∹★☠∹☭∞∹☾∞∹☭η∹☾∞∹☀∞∹☾☾∹☾☭∹☾∞∹☾∞∹★η∹∞∹∞∹∞∹☾☾").split(",");
+    vantagens = cdg("∞∹♫∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫").split(",");
+    verificarVantagens();
 
 function atualizarPerfil() {
     let perfilImagem = document.getElementById("perfil");
     perfilEscolha = document.getElementById("personagens-escolha").value;
 
-    if (tema == "cosmo") {
+    if (tema == "cosmo" || tema == "secreto-1") {
         if (perfilEscolha == "izumi") {
             perfilImagem.setAttribute("src","assets/IzumiPerfil.png");
             perfilImagem.setAttribute("alt","Ícone do Izumi");
@@ -56,6 +61,12 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "rodrigo") {
             perfilImagem.setAttribute("src","assets/RodrigoPerfil.png");
             perfilImagem.setAttribute("alt","Ícone do Rodrigo")
+        } else if (perfilEscolha == "planetafetal") {
+            perfilImagem.setAttribute("src","assets/PlanetafetalPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do ???");
+        } else if (perfilEscolha == "personagem-secreto-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     } else if (tema == "cataclismo") {
         if (perfilEscolha == "izumi") {
@@ -70,6 +81,12 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "rodrigo") {
             perfilImagem.setAttribute("src","assets/RodrigoPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone do Rodrigo");
+        } else if (perfilEscolha == "planetafetal") {
+            perfilImagem.setAttribute("src","assets/PlanetafetalPerfilCataclismo.png");
+            perfilImagem.setAttribute("alt","Ícone do ???");
+        } else if (perfilEscolha == "personagem-secreto-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXwQJQWXTPUI.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     } else if (tema == "aquarela") {
         if (perfilEscolha == "izumi") {
@@ -78,26 +95,59 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "victoria") {
             perfilImagem.setAttribute("src","assets/VictoriaPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone da Victoria");
-        } else if (perfilEscolha == "vladimir") {
+        }  else if (perfilEscolha == "vladimir") {
             perfilImagem.setAttribute("src","assets/VladimirPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone do Vladimir");
         } else if (perfilEscolha == "rodrigo") {
             perfilImagem.setAttribute("src","assets/RodrigoPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone do Rodrigo");
+        } else if (perfilEscolha == "planetafetal") {
+            perfilImagem.setAttribute("src","assets/PlanetafetalPerfilAquarela.png");
+            perfilImagem.setAttribute("alt","Ícone do ???");
+        } else if (perfilEscolha == "personagem-secreto-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXqOAQKEXQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
+        }
+    } else if (tema == "tormenta") {
+        if (perfilEscolha == "izumi") {
+            perfilImagem.setAttribute("src","assets/IzumiPerfilTormenta.png");
+            perfilImagem.setAttribute("alt","Ícone do Izumi");
+        } else if (perfilEscolha == "victoria") {
+            perfilImagem.setAttribute("src","assets/VictoriaPerfilTormenta.png");
+            perfilImagem.setAttribute("alt","Ícone da Victoria");
+        }  else if (perfilEscolha == "vladimir") {
+            perfilImagem.setAttribute("src","assets/VladimirPerfilTormenta.png");
+            perfilImagem.setAttribute("alt","Ícone do Vladimir");
+        } else if (perfilEscolha == "rodrigo") {
+            perfilImagem.setAttribute("src","assets/RodrigoPerfilTormenta.png");
+            perfilImagem.setAttribute("alt","Ícone do Rodrigo");
+        } else if (perfilEscolha == "planetafetal") {
+            perfilImagem.setAttribute("src","assets/PlanetafetalPerfilTormenta.png");
+            perfilImagem.setAttribute("alt","Ícone do ???");
+        } else if (perfilEscolha == "personagem-secreto-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXjIKUEZJQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     }
+
     if (perfilEscolha == "izumi") {
-        ficha = [40,40,50,50,40,35,40,40,40,50,40,40,40,30,30,50,30,30,40,50,50,50,40,0,0,0,0];
-        vantagens = [0,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = cdg("☭η∹☾∞∹☭∞∹☭∞∹★☾∹☾∞∹★☾∹☭∞∹★☾∹☾∞∹☾∞∹★∞∹★☠∹☭∞∹☾∞∹☭η∹☾∞∹☀∞∹☾☾∹☾☭∹☾∞∹☾∞∹★η∹∞∹∞∹∞∹☾☾").split(",");
+        vantagens = cdg("∞∹♫∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫").split(",");
     } else if (perfilEscolha == "victoria") {
-        ficha = [40,50,60,55,0,45,50,50,50,35,55,0,60,0,0,0,50,40,0,0,50,50,60,0,0,0,0];
-        vantagens = [2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = cdg("★∞∹☾∞∹☭∞∹☾☾∹∞∹★☾∹☾∞∹☾∞∹☾∞∹☀☾∹☾☾∹∞∹☭∞∹∞∹∞∹∞∹☾∞∹★∞∹∞∹∞∹☾∞∹☾∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
     } else if (perfilEscolha == "vladimir") {
-        ficha = [30,40,60,60,60,50,25,60,0,0,60,40,0,0,0,0,30,30,60,60,45,30,60,0,0,0,0];
-        vantagens = [0,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = cdg("☭∞∹☭η∹☭η∹☭∞∹☭∞∹☭η∹☾☾∹☭∞∹∞∹∞∹☭∞∹★∞∹∞∹∞∹∞∹∞∹☭∞∹☀∞∹☭η∹☭η∹☾∞∹☭η∹☭∞∹∞∹∞∹∞∹☾★").split(",");
+        vantagens = cdg("∞∹✇∹✇∹♫∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹♫").split(",");
     } else if (perfilEscolha == "rodrigo") {
-        ficha = [170,-100,170,60,0,0,0,0,50,60,70,-100,-100,0,10,150,40,40,30,20,70,50,-100,0,0,0,0];
-        vantagens = [1,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        ficha = cdg("♫☹∞∹-♫∞∞∹♫☹∞∹☭∞∹∞∹∞∹∞∹∞∹☾∞∹☭∞∹☹∞∹-♫∞∞∹-♫∞∞∹∞∹♫∞∹♫☾∞∹★∞∹★∞∹☀∞∹✇∞∹☹∞∹☾∞∹-♫∞∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("♫∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "planetafetal") {
+        ficha = cdg("☹∞∹☾∹☹∞∹☹∞∹☹∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹-♫∞∹♫☾∹☾∹☾∞∹♫☾∹☀∞∹☀∞∹☹∞∹☹∞∹☹∞∹∞∹♫☾∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-1") {
+        ficha = cdg("η∞∹η∞∹η∞∹☾☾∹☾∞∹☾∞∹☾∞∹☹∞∹☾☾∹☀☾∹☾☾∹∞∹☹∞∹∞∹∞∹∞∹☭☾∹☭☾∹∞∹☭☾∹η∞∹☾∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
+        vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
     }
     
     verificarVantagens();
@@ -105,17 +155,10 @@ function atualizarPerfil() {
 
 function trocarTema() {
     let estilo = document.getElementById("estilo");
-    if (temaSelector.value == "cosmo") {
-        tema = "cosmo";
-        estilo.setAttribute("href","style.css");
-    } else if (temaSelector.value == "cataclismo") {
-        tema = "cataclismo";
-        estilo.setAttribute("href","style-cataclismo.css");
-    } else if (temaSelector.value == "aquarela") {
-        tema = "aquarela";
-        estilo.setAttribute("href","style-aquarela.css");
-    }
-    if (noturno=="true") {
+    tema = temaSelector.value;
+    estilo.setAttribute("href",`style-${temaSelector.value}.css`);
+
+    if (noturno == "true") {
         noturno = "false";
     } else {
         noturno = "true";
@@ -128,6 +171,7 @@ function trocarModo() {
     let modo = document.getElementById("modos");
     let background = document.getElementById("fundo");
     let personagensSelector = document.getElementById("personagens-escolha");
+    let codigoSelector = document.getElementById("codigo");
     let titulo = document.getElementById("titulo");
     let titulo2 = document.getElementById("titulo2");
     let atributoSelector = document.getElementById("testeroll__atributo");
@@ -145,6 +189,7 @@ function trocarModo() {
     let iconRoll = document.getElementById("funcao-rolar");
     let iconAtributo = document.getElementById("funcao-atributo");
     let iconSize = document.getElementById("funcao-size");
+    let iconMapa = document.getElementById("funcao-mapa");
     if (noturno == "true") {
         if (atributoAtivo == 1) {
             atributoSoloVtgSelector.setAttribute("class","prc_atr_c");
@@ -156,6 +201,7 @@ function trocarModo() {
             modo.setAttribute("alt","Ícone do Modo Noturno");
             background.setAttribute("class","claro");
             personagensSelector.setAttribute("class","cabecalhos-c");
+            codigoSelector.setAttribute("class","prc_atr_c");
             temaSelector.setAttribute("class","cabecalhos-c");
             titulo.setAttribute("class","roleclaro");
             titulo2.setAttribute("class","roleclaro");
@@ -184,6 +230,8 @@ function trocarModo() {
                 iconRoll.setAttribute("src","assets/rolliconclaro.png");
                 iconAtributo.setAttribute("src","assets/atributoiconclaro.png");
                 iconSize.setAttribute("src","assets/sizeiconclaro.png");
+                iconMapa.setAttribute("src","assets/mapaiconclaro.png");
+                modo.setAttribute("class","");
                 modo.setAttribute("src","assets/lua.png");
                 botao.setAttribute("src","assets/dicediurno.png");
                 botaoSize.setAttribute("src","assets/comparadorclaro.png");
@@ -191,6 +239,8 @@ function trocarModo() {
                 iconRoll.setAttribute("src","assets/rolliconclarocataclismo.png");
                 iconAtributo.setAttribute("src","assets/atributoiconclarocataclismo.png");
                 iconSize.setAttribute("src","assets/sizeiconclarocataclismo.png");
+                iconMapa.setAttribute("src","assets/mapaiconclarocataclismo.png");
+                modo.setAttribute("class","");
                 modo.setAttribute("src","assets/luacataclismo.png");
                 botao.setAttribute("src","assets/cataclismodiceclaro.png");
                 botaoSize.setAttribute("src","assets/comparadorclarocataclismo.png");
@@ -198,9 +248,28 @@ function trocarModo() {
                 iconRoll.setAttribute("src","assets/rolliconclaroaquarela.png");
                 iconAtributo.setAttribute("src","assets/atributoiconclaroaquarela.png");
                 iconSize.setAttribute("src","assets/sizeiconclaroaquarela.png");
+                iconMapa.setAttribute("src","assets/mapaiconclaroaquarela.png");
+                modo.setAttribute("class","");
                 modo.setAttribute("src","assets/luaaquarela.png");
                 botao.setAttribute("src","assets/aquareladiceclaro.png");
                 botaoSize.setAttribute("src","assets/comparadorclaroaquarela.png");
+            } else if (tema == "tormenta") {
+                iconRoll.setAttribute("src","assets/rolliconclarotormenta.png");
+                iconAtributo.setAttribute("src","assets/atributoiconclarotormenta.png");
+                iconSize.setAttribute("src","assets/sizeiconclarotormenta.png");
+                iconMapa.setAttribute("src","assets/mapaiconclarotormenta.png");
+                modo.setAttribute("class","");
+                modo.setAttribute("src","assets/luatormenta.png");
+                botao.setAttribute("src","assets/tormentadiceclaro.png");
+                botaoSize.setAttribute("src","assets/comparadorclarotormenta.png");
+            } else if (tema == "secreto-1") {
+                modo.setAttribute("class","invisivel");
+                iconRoll.setAttribute("src","assets/rollicon.png");
+                iconAtributo.setAttribute("src","assets/atributoicon.png");
+                iconSize.setAttribute("src","assets/sizeicon.png");
+                iconMapa.setAttribute("src","assets/mapaicon.png");
+                botao.setAttribute("src","assets/dice.png");
+                botaoSize.setAttribute("src","assets/comparador.png");
             }
         } else {
             if (atributoAtivo == 1) {
@@ -213,6 +282,7 @@ function trocarModo() {
             modo.setAttribute("alt","Ícone do Modo Claro");
             background.setAttribute("class","noturno");
             personagensSelector.setAttribute("class","cabecalhos-n");
+            codigoSelector.setAttribute("class","prc_atr_n");
             temaSelector.setAttribute("class","cabecalhos-n");
             titulo.setAttribute("class","rolenoturno");
             titulo2.setAttribute("class","rolenoturno");
@@ -241,6 +311,8 @@ function trocarModo() {
                 iconRoll.setAttribute("src","assets/rollicon.png");
                 iconAtributo.setAttribute("src","assets/atributoicon.png");
                 iconSize.setAttribute("src","assets/sizeicon.png");
+                iconMapa.setAttribute("src","assets/mapaicon.png");
+                modo.setAttribute("class","");
                 modo.setAttribute("src","assets/sol.png");
                 botao.setAttribute("src","assets/dice.png");
                 botaoSize.setAttribute("src","assets/comparador.png");
@@ -248,6 +320,8 @@ function trocarModo() {
                 iconRoll.setAttribute("src","assets/rolliconcataclismo.png");
                 iconAtributo.setAttribute("src","assets/atributoiconcataclismo.png");
                 iconSize.setAttribute("src","assets/sizeiconcataclismo.png");
+                iconMapa.setAttribute("src","assets/mapaiconcataclismo.png");
+                modo.setAttribute("class","");
                 modo.setAttribute("src","assets/solcataclismo.png");
                 botao.setAttribute("src","assets/cataclismodicenoturno.png");
                 botaoSize.setAttribute("src","assets/comparadorcataclismo.png");
@@ -255,9 +329,28 @@ function trocarModo() {
                 iconRoll.setAttribute("src","assets/rolliconaquarela.png");
                 iconAtributo.setAttribute("src","assets/atributoiconaquarela.png");
                 iconSize.setAttribute("src","assets/sizeiconaquarela.png");
+                iconMapa.setAttribute("src","assets/mapaiconaquarela.png");
+                modo.setAttribute("class","");
                 modo.setAttribute("src","assets/solaquarela.png");
                 botao.setAttribute("src","assets/aquareladice.png");
                 botaoSize.setAttribute("src","assets/comparadoraquarela.png");
+            } else if (tema == "tormenta") {
+                iconRoll.setAttribute("src","assets/rollicontormenta.png");
+                iconAtributo.setAttribute("src","assets/atributoicontormenta.png");
+                iconSize.setAttribute("src","assets/sizeicontormenta.png");
+                iconMapa.setAttribute("src","assets/mapaicontormenta.png");
+                modo.setAttribute("class","");
+                modo.setAttribute("src","assets/soltormenta.png");
+                botao.setAttribute("src","assets/tormentadice.png");
+                botaoSize.setAttribute("src","assets/comparadortormenta.png");
+            } else if (tema == "secreto-1") {
+                modo.setAttribute("class","invisivel");
+                iconRoll.setAttribute("src","assets/rollicon.png");
+                iconAtributo.setAttribute("src","assets/atributoicon.png");
+                iconSize.setAttribute("src","assets/sizeicon.png");
+                iconMapa.setAttribute("src","assets/mapaicon.png");
+                botao.setAttribute("src","assets/dice.png");
+                botaoSize.setAttribute("src","assets/comparador.png");
             }
         }
     }
@@ -274,6 +367,7 @@ function funcaoRolar() {
     atributoSoloVtgSelector.setAttribute("class","invisivel");
     rolador.setAttribute("class","");
     comparadorSize.setAttribute("class","invisivel");
+    definidorImpacto.setAttribute("class","invisivel");
 }
 
 function funcaoAtributo() {
@@ -290,6 +384,7 @@ function funcaoAtributo() {
     atributoVtgSelector.setAttribute("class","invisivel");
     rolador.setAttribute("class","");
     comparadorSize.setAttribute("class","invisivel");
+    definidorImpacto.setAttribute("class","invisivel");
 }
 
 function funcaoSize() {
@@ -302,6 +397,22 @@ function funcaoSize() {
     atributoSoloVtgSelector.setAttribute("class","invisivel");
     rolador.setAttribute("class","invisivel");
     comparadorSize.setAttribute("class","");
+    definidorImpacto.setAttribute("class","invisivel");
+}
+
+function funcaoImpacto () {
+    valoresIniciais1Logica.innerHTML = "";
+    barrinhaLogica.innerHTML = "";
+    valoresIniciais2Logica.innerHTML = "";
+    resultadoInicialLogica.innerHTML = "";
+    resultadoFinalLogica.innerHTML = "";
+    atributoAtivo = 0;
+    definirAtributoVtg.value = atributoSoloVtgSelector.value;
+    trocarTema();
+    atributoSoloVtgSelector.setAttribute("class","invisivel");
+    rolador.setAttribute("class","invisivel");
+    comparadorSize.setAttribute("class","invisivel");
+    definidorImpacto.setAttribute("class","");
 }
 
 function verificarVantagens() {
@@ -319,15 +430,6 @@ function verificarVantagensAtributo() {
 }
 
 function iniciarTeste() {
-    if (personagemEscolhido.value == "izumi") {
-        ficha = [40,40,50,50,40,35,40,40,40,50,40,40,40,30,30,50,30,30,40,50,50,50,40,0,0,0,0];
-    } else if (personagemEscolhido.value == "victoria") {
-        ficha = [40,50,60,55,0,45,50,50,50,35,55,0,60,0,0,0,50,40,0,0,50,50,60,0,0,0,0];
-    } else if (personagemEscolhido.value == "vladimir") {
-        ficha = [30,40,60,60,60,50,25,60,0,0,60,40,0,0,0,0,30,30,60,60,45,30,60,0,0,0,0];
-    } else if (personagemEscolhido.value == "rodrigo") {
-        ficha = [170,-100,170,60,0,0,0,0,50,60,70,-100,-100,0,10,150,40,40,30,20,70,50,-100,0,0,0,0];
-    }
     let periciaVantagens = document.getElementById("vantagens__pericia").value;
     let atributoVantagens = document.getElementById("vantagens__atributo").value;
     if (atributoAtivo == 1) {
@@ -2936,6 +3038,76 @@ function compararAlturas() {
     }
 }
 
+// PARE AGORA! ISSO AQUI AINDA NÃO FOI ADICIONADO NO SITE >:(
+
+function iniciarImpacto() {
+    materialDano = definirDanoMaterial();
+    pesoDano = parseInt(document.getElementById("massa").value);
+    objetoImpacto = parseFloat(document.getElementById("objetoAltura").value);
+    alturaImpacto = parseFloat(document.getElementById("impactadoAltura").value);
+    multiplicador = 0;
+    desvantagemImpacto = definirDesvantagemImpacto();
+    danoImpacto = definirDanoImpacto();
+    console.log(danoImpacto);
+    document.getElementById("impacto-esquiva").innerHTML = desvantagemImpacto;
+    document.getElementById("impacto-dano").innerHTML = danoImpacto;
+}
+
+function definirDanoImpacto() {
+    console.log(materialDano);
+    console.log(pesoDano);
+    console.log(desvantagemImpacto);
+    return materialDano + "+" + parseInt(pesoDano/20);
+}
+
+function definirDanoMaterial() {
+    let material = document.getElementById("material").value;
+    if (material == "Humano") {
+        return "1d2";
+    } else if (material == "Deus") {
+        return "1d3";
+    } else if (material == "Madeira") {
+        return "1d4";
+    } else if (material == "Pedra") {
+        return "1d6";
+    } else if (material == "Ferro") {
+        return "1d10";
+    } else if (material == "Diamante") {
+        return "1d20";
+    } else if (material == "Univite") {
+        return "1d20+1d10+2";
+    } else if (material == "Titanium") {
+        return "2d20+8";
+    } else if (material == "Uranium") {
+        return "2d20+1d10+10";
+    }
+}
+
+function definirDesvantagemImpacto() {
+    if (objetoImpacto <= alturaImpacto / 30) {
+        return "1 Vantagem em Reflexos";
+    } else if (objetoImpacto < alturaImpacto) {
+        return "Nenhuma Vantagem"
+    } else if (objetoImpacto <= alturaImpacto * multiplicador) {
+        if (multiplicador > 1) {
+            palavraDesvantagemImpacto = "Desvantagens"
+        } else {
+            palavraDesvantagemImpacto = "Desvantagem"
+        }
+        return `${multiplicador} ${palavraDesvantagemImpacto} em Reflexos`;
+    } else {
+        multiplicador++;
+        return definirDesvantagemImpacto();
+    }
+}
+
+
+// console.log(`-------------------------------------------------------`);
+// console.log(`Área de Impacto: ${objetoImpacto}`);
+// console.log(`Altura do Esquivante: ${alturaImpacto}`);
+// console.log(`-------------------------------------------------------`);
+// console.log(`O Esquivantem tem ${resultadoImpacto}`);
+
 // console.log(`Pontos na Perícia: ${pericia}`);
 // console.log(`Rolagem da Perícia: ${periciaDado}`);
 // console.log(`Resultado da Perícia: ${periciaResultado}`);
@@ -2956,28 +3128,269 @@ function compararAlturas() {
 // console.log(`Esquiva: ${esquivar}`);
 // console.log(`Dano: ${dano}`);
 
+function checarCodigo() {
+    codigo = document.getElementById("codigo").value;
 
-// function calcularImpacto() {
-//     if (objetoImpacto <= alturaImpacto / 30) {
-//         return "1 Vantagem em Reflexos";
-//     } else if (objetoImpacto < alturaImpacto) {
-//         return "Nenhuma Vantagem"
-//     } else if (objetoImpacto <= alturaImpacto * multiplicador) {
-//         if (multiplicador > 1) {
-//             palavraDesvantagemImpacto = "Desvantagens"
-//         } else {
-//             palavraDesvantagemImpacto = "Desvantagem"
-//         }
-//         return `${multiplicador} ${palavraDesvantagemImpacto} em Reflexos`;
-//     } else {
-//         multiplicador++;
-//         return calcularImpacto();
-//     }
-// }
+    //personagem secreto 1
+    if (codigo == cdg("LIA")) {
+       document.getElementById(cdg("HTWJIKTQ")).setAttribute("class","invisivel");
+       document.getElementById("personagem-secreto-1").setAttribute("class",""); 
+       document.getElementById("personagem-secreto-1").innerHTML = cdg("hTWJIKTQ lQKQPTJQNQ");
+       if (codigo1descoberto == false) {
+        somCodigo(1);
+        document.getElementById("codigo").value = "";
+        codigo1descoberto = true;
+       }
+    }
 
+    //tema secreto 1
+    if (codigo == cdg("BETC•I")) {
+       document.getElementById("tema-secreto-1").setAttribute("class",""); 
+       document.getElementById("tema-secreto-1").innerHTML = cdg("cIZQP hTWJIK");
+       if (codigo2descoberto == false) {
+        somCodigo(2);
+        document.getElementById("codigo").value = "";
+        codigo2descoberto = true;
+       }
+    }
 
-// console.log(`-------------------------------------------------------`);
-// console.log(`Área de Impacto: ${objetoImpacto}`);
-// console.log(`Altura do Esquivante: ${alturaImpacto}`);
-// console.log(`-------------------------------------------------------`);
-// console.log(`O Esquivantem tem ${resultadoImpacto}`);
+    //temas secretos do tormenta
+    if (tema == "tormenta") {
+        if (codigo == cdg("∞∞")) {
+            document.getElementById("fundo").setAttribute("class","t0");
+        }
+        if (codigo == cdg("∞♫")) {
+            document.getElementById("fundo").setAttribute("class","t1");
+        }
+        if (codigo == cdg("∞✇")) {
+            document.getElementById("fundo").setAttribute("class","t2");
+        }
+        if (codigo == cdg("∞☀")) {
+            document.getElementById("fundo").setAttribute("class","t3");
+        }
+        if (codigo == cdg("∞★")) {
+            document.getElementById("fundo").setAttribute("class","t4");
+        }
+        if (codigo == cdg("∞☾")) {
+            document.getElementById("fundo").setAttribute("class","t5");
+        }
+        if (codigo == cdg("∞☭")) {
+            document.getElementById("fundo").setAttribute("class","t6");
+        }
+        if (codigo == cdg("∞☹")) {
+            document.getElementById("fundo").setAttribute("class","t7");
+        }
+        if (codigo == cdg("∞η")) {
+            document.getElementById("fundo").setAttribute("class","t8");
+        }
+        if (codigo == cdg("∞☠")) {
+            document.getElementById("fundo").setAttribute("class","t9");
+        }
+        if (codigo == cdg("♫∞")) {
+            document.getElementById("fundo").setAttribute("class","t10");
+        }
+        if (codigo == cdg("♫♫")) {
+            document.getElementById("fundo").setAttribute("class","t11");
+        }
+        if (codigo == cdg("♫✇")) {
+            document.getElementById("fundo").setAttribute("class","t12");
+        }
+        if (codigo == cdg("♫☀")) {
+            document.getElementById("fundo").setAttribute("class","t13");
+        }
+        if (codigo == cdg("♫★")) {
+            document.getElementById("fundo").setAttribute("class","t14");
+        }
+        if (codigo == cdg("♫☾")) {
+            document.getElementById("fundo").setAttribute("class","t15");
+        }
+        if (codigo == cdg("♫☭")) {
+            document.getElementById("fundo").setAttribute("class","t16");
+        }
+        if (codigo == cdg("♫☹")) {
+            document.getElementById("fundo").setAttribute("class","t17");
+        }
+        if (codigo == cdg("♫η")) {
+            document.getElementById("fundo").setAttribute("class","t18");
+        }
+        if (codigo == cdg("♫☠")) {
+            document.getElementById("fundo").setAttribute("class","t19");
+        }
+        if (codigo == cdg("✇∞")) {
+            document.getElementById("fundo").setAttribute("class","t20");
+        }
+        if (codigo == cdg("✇♫")) {
+            document.getElementById("fundo").setAttribute("class","t21");
+        }
+        if (codigo == cdg("✇✇")) {
+            document.getElementById("fundo").setAttribute("class","t22");
+        }
+        if (codigo == cdg("✇☀")) {
+            document.getElementById("fundo").setAttribute("class","t23");
+        }
+        if (codigo == cdg("✇★")) {
+            document.getElementById("fundo").setAttribute("class","t24");
+        }
+        if (codigo == cdg("✇☾")) {
+            document.getElementById("fundo").setAttribute("class","t25");
+        }
+        if (codigo == cdg("✇☭")) {
+            document.getElementById("fundo").setAttribute("class","t26");
+        }
+        if (codigo == cdg("✇☹")) {
+            document.getElementById("fundo").setAttribute("class","t27");
+        }
+        if (codigo == cdg("✇η")) {
+            document.getElementById("fundo").setAttribute("class","t28");
+        }
+        if (codigo == cdg("✇☠")) {
+            document.getElementById("fundo").setAttribute("class","t29");
+        }
+        if (codigo == cdg("☀∞")) {
+            document.getElementById("fundo").setAttribute("class","t30");
+        }
+        if (codigo == cdg("☀♫")) {
+            document.getElementById("fundo").setAttribute("class","t31");
+        }
+        if (codigo == cdg("☀✇")) {
+            document.getElementById("fundo").setAttribute("class","t32");
+        }
+        if (codigo == cdg("☀☀")) {
+            document.getElementById("fundo").setAttribute("class","t33");
+        }
+        if (codigo == cdg("☀★")) {
+            document.getElementById("fundo").setAttribute("class","t34");
+        }
+        if (codigo == cdg("☀☾")) {
+            document.getElementById("fundo").setAttribute("class","t35");
+        }
+        if (codigo == cdg("☀☭")) {
+            document.getElementById("fundo").setAttribute("class","t36");
+        }
+        if (codigo == cdg("☀☹")) {
+            document.getElementById("fundo").setAttribute("class","t37");
+        }
+        if (codigo == cdg("☀η")) {
+            document.getElementById("fundo").setAttribute("class","t38");
+        }
+        if (codigo == cdg("☀☠")) {
+            document.getElementById("fundo").setAttribute("class","t39");
+        }
+        if (codigo == cdg("★∞")) {
+            document.getElementById("fundo").setAttribute("class","t40");
+        }
+        if (codigo == cdg("★♫")) {
+            document.getElementById("fundo").setAttribute("class","t41");
+        }
+        if (codigo == cdg("★✇")) {
+            document.getElementById("fundo").setAttribute("class","t42");
+        }
+        if (codigo == cdg("★☀")) {
+            document.getElementById("fundo").setAttribute("class","t43");
+        }
+        if (codigo == cdg("★★")) {
+            document.getElementById("fundo").setAttribute("class","t44");
+        }
+        if (codigo == cdg("★☾")) {
+            document.getElementById("fundo").setAttribute("class","t45");
+        }
+        if (codigo == cdg("★☭")) {
+            document.getElementById("fundo").setAttribute("class","t46");
+        }
+        if (codigo == cdg("★☹")) {
+            document.getElementById("fundo").setAttribute("class","t47");
+        }
+        if (codigo == cdg("★η")) {
+            document.getElementById("fundo").setAttribute("class","t48");
+        }
+        if (codigo == cdg("★☠")) {
+            document.getElementById("fundo").setAttribute("class","t49");
+        }
+        if (codigo == cdg("☾∞")) {
+            document.getElementById("fundo").setAttribute("class","t50");
+        }
+        if (codigo == cdg("☾♫")) {
+            document.getElementById("fundo").setAttribute("class","t51");
+        }
+        if (codigo == cdg("☾✇")) {
+            document.getElementById("fundo").setAttribute("class","t52");
+        }
+        if (codigo == cdg("☾☀")) {
+            document.getElementById("fundo").setAttribute("class","t53");
+        }
+        if (codigo == cdg("☾★")) {
+            document.getElementById("fundo").setAttribute("class","t54");
+        }
+        if (codigo == cdg("☾☾")) {
+            document.getElementById("fundo").setAttribute("class","t55");
+        }
+        if (codigo == cdg("☾☭")) {
+            document.getElementById("fundo").setAttribute("class","t56");
+        }
+        if (codigo == cdg("☾☹")) {
+            document.getElementById("fundo").setAttribute("class","t57");
+        }
+        if (codigo == cdg("☾η")) {
+            document.getElementById("fundo").setAttribute("class","t58");
+        }
+        if (codigo == cdg("☾☠")) {
+            document.getElementById("fundo").setAttribute("class","t59");
+        }
+        if (codigo == cdg("☭∞")) {
+            document.getElementById("fundo").setAttribute("class","t60");
+        }
+        if (codigo == cdg("☭♫")) {
+            document.getElementById("fundo").setAttribute("class","t61");
+        }
+        if (codigo == cdg("☭✇")) {
+            document.getElementById("fundo").setAttribute("class","t62");
+        }
+        if (codigo == cdg("☭☀")) {
+            document.getElementById("fundo").setAttribute("class","t63");
+        }
+        if (codigo == cdg("☭★")) {
+            document.getElementById("fundo").setAttribute("class","t64");
+        }
+        if (codigo == cdg("☭☾")) {
+            document.getElementById("fundo").setAttribute("class","t65");
+        }
+        if (codigo == cdg("☭☭")) {
+            document.getElementById("fundo").setAttribute("class","t66");
+        }
+        if (codigo == cdg("☭☹")) {
+            document.getElementById("fundo").setAttribute("class","t67");
+        }
+        if (codigo == cdg("☭η")) {
+            document.getElementById("fundo").setAttribute("class","t68");
+        }
+    }
+}
+
+function somCodigo(numero) {
+    if (numero == 1) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso1_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.2;
+    }
+    if (numero == 2) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/tema1_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.8;
+    }
+}
+
+function cdg(cdginsert) {
+    
+    var betacharlo = ['q','m','w','n','e','b','r','v','t','c','y','x','u','z','i','l','o','k','p','j','a','h','s','g','d','f',"~", " ", "-", "_", ".", "&","?", "!", "@", "#", "/",'Q','M','W','N','E','B','R','V','T','C','Y','X','U','Z','I','L','O','K','P','J','A','H','S','G','D','F',"^","∞","♫","✇","☀","★","☾","☭","☹","η","☠","∹","•"];
+    var alfabeto =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',"Ç"," ", "-", "_", ".", "&","?", "!", "@", "#", "/","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","ç","0","1","2","3","4","5","6","7","8","9",",","ã"];
+
+    var cdgrslt = [];
+    for(let i=0; i<cdginsert.length; i++){
+        for(let j =0; j<betacharlo.length; j++){
+            if(cdginsert[i] === betacharlo[j]){
+            cdgrslt.push(alfabeto[j]);
+            }
+        }
+    }
+    return cdgrslt.join("");
+  }

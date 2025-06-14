@@ -5,29 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favela Hub</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link id="estilo" rel="stylesheet" href="style.css">
+    <link id="estilo" rel="stylesheet" href="style-cosmo.css">
 </head>
 <body class="noturno" id="fundo">
     <header class="cabecalho">
+        <span class="perso-e-codigo">
         <div class="personagem">
             <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
         <select id="personagens-escolha" class="cabecalhos-n" onclick="atualizarPerfil()">
+            <optgroup label="Cosmo">
             <option value="izumi">Izumi</option>
-            <option value="victoria">Victoria</option>
+            <option id="victoria" value="victoria">Victoria</option>
+            <option id="personagem-secreto-1" value="personagem-secreto-1" class="invisivel"></option>
             <option value="vladimir">Vladimir</option>
             <option value="rodrigo">Rodrigo</option>
+            <option value="planetafetal">Feto Cósmico</option>
+            </optgroup>
         </select>
         </div>
+        <input id="codigo" class="prc_atr_n" type="text" title="Insira um Código" onkeydown="setTimeout(checarCodigo, 10)">
+        </span>
         <div class="funcoes">
-            <img src="assets/rollicon.png" alt="Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores"></button>
-            <img src="assets/atributoicon.png" alt="Dados" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores"></button>
-            <img src="assets/sizeicon.png" alt="Dados" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores"></button>
+            <img src="assets/rollicon.png" alt="Ícone de Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores">
+            <img src="assets/atributoicon.png" alt="Ícone de Dado" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores">
+            <img src="assets/sizeicon.png" alt="Ícone de Comparação" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores">
+            <a href="mapa.html" target="_blank">
+            <img src="assets/mapaicon.png" alt="Ícone de Mapa" width="4%" id="funcao-mapa" class="botoes-superiores">
+            </a>
+            <!--<img src="assets/rollicon.png" alt="Ícone de Impacto" width="4%" onclick="funcaoImpacto()" type="button" id="funcao-impacto" class="botoes-superiores"></button>-->
         </div>
         <div class="aparencia">
         <select id="tema-escolha" class="cabecalhos-n" onclick="trocarTema()">
             <option value="cosmo" id="cosmo">Cosmo</option>
             <option value="cataclismo" id="cataclismo">Cataclismo</option>
             <option value="aquarela" id="aquarela">Aquarela</option>
+            <option value="tormenta" id="tormenta">Tormenta</option>
+            <option id="tema-secreto-1" value="secreto-1" class="invisivel"></option>
         </select>
         <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos"></button>
         </div>
@@ -152,22 +165,61 @@
         </div>
         <div id="personagemsize-escolha" class="invisivel">
             <select id="eu-altura3" class="prc_atr_n">
+                <optgroup label="Cosmo">
                 <option value="1.78">Izumi</option>
                 <option value="1.76">Victoria</option>
                 <option value="1.85">Vladimir</option>
                 <option value="45">Rodrigo</option>
+                <option value="5">Feto Cósmico</option>
+                </optgroup>
             </select>
             <select id="ele-altura3" class="prc_atr_n">
+                <optgroup label="Cosmo">
                 <option value="1.78">Izumi</option>
                 <option value="1.76">Victoria</option>
                 <option value="1.85">Vladimir</option>
                 <option value="45">Rodrigo</option>
+                <option value="5">Feto Cósmico</option>
+                </optgroup>
             </select>
         </div>
         <img src="assets/comparador.png" alt="Comparar" width="4%" onclick="iniciarSize()" type="button" id="botao-compararsize" class="botao-n"></button>
         <p id="ataque-vantagem" class="ataquevantagem-n"></p>
         <p id="esquiva-vantagem" class="esquivavantagem-n"></p>
         <p id="dano-adicional" class="danoadicional-n"></p>
+    </section>
+</span>
+<span id="definidorImpacto" class="invisivel">
+    <section id="calculaImpacto" class="testeroll_n">
+        <p id="titulo3" class="rolenoturno">Dano de Impacto</p>
+        <div id="tipo-impacto">
+            <select id="impact-type" class="prc_atr_n" onclick="impactoTipo()">
+                <option value="corpo-a-corpo">Corpo-a-Corpo</option>
+                <option value="queda">Queda</option>
+            </select>
+        </div>
+        <div id="corpoacorpoEscolha">
+            <section id="objetoInfo">
+            <select id="material" class="prc_atr_n" title="Material">
+                <option value="Humano">Humano</option>
+                <option value="Deus">Deus</option>
+                <option value="Madeira">Madeira</option>
+                <option value="Pedra">Pedra</option>
+                <option value="Ferro">Ferro</option>
+                <option value="Diamante">Diamante</option>
+                <option value="Univite">Univite</option>
+                <option value="Titanium">Titanium</option>
+                <option value="Uranium">Uranium</option>
+            </select>
+            <input id="massa" class="prc_atr_n" type="number" min="0" max="9999999999999999999" title="Massa">
+            <input id="objetoAltura" class="prc_atr_n" type="number" min="0" max="9460536207068016" title="Tamanho">
+        </section>
+        <input id="impactadoAltura" class="prc_atr_n" type="number" min="0" max="9460536207068016" title="Sua Altura">
+        </div>
+        <img src="assets/comparador.png" alt="Calcular" width="4%" onclick="iniciarImpacto()" type="button" id="botao-calcularimpacto" class="botao-n"></button>
+        <p id="impacto-esquiva" class="ataquevantagem-n"></p>
+        <p id="impacto-dano" class="esquivavantagem-n"></p>
+    </section>
     </section>
 </span>
     </main>
