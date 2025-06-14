@@ -1,7 +1,7 @@
 <h1 align="center"> Analisador de Testes RPG </h1>
 
-Site ainda em desenvolvimento para facilitar a jogabilidade em meu RPG.
-Quando finalizado, o jogador será capaz de escolher seu personagem e rolar dados, obtendo o resultado final instantaneamente de acordo com a Perícia e Atributo escolhidos.
+Nesse site, o jogador poderá escolher seu personagem e o tema (baseado em campanhas passadas e na atual) e em seguinte realizar testes de perícias e atributos sem ter a necessidade de olhar a sua ficha de personagem ou rolar dados físicos.
+O intuito é auxiliar e acelerar o processo de rolagem de dados e testes durante as campanhas de roleplay, para que não consumam muito tempo e não haja tanto esforço.
 
 <h2 align="center"> Como funciona o sistema de testes no RPG? </h2>
 
@@ -17,4 +17,4 @@ Caso o valor escolhido seja 100, o resultado será Desastre.
 Tendo descoberto o resultado real tanto da rolagem da Perícia e do Atributo, o código irá comparar os dois resultados e gerar o resultado final. A comparação é feita analisando se o resultado real do Atributo é melhor ou pior que a da Perícia.
 
 Caso o resultado na Perícia seja pior que o do Atributo, o resultado final será o resultado da perícia uma posição acima. Ou seja, caso o resultado da Perícia seja Normal e o Atributo seja melhor, o resultado final será Bom.
-Existem muitas outras exceções no sistema de rolagens. Para saber mais sobre, é possível ler sobre no [documento do Sistema](https://docs.google.com/document/d/1anr24vyAd1Es7cK5H3Xwdw0ck8d7iCuFS5cBHY1k8V8/edit?usp=sharing) na seção "ROLAGEM".
+Existem muitas outras exceções no sistema de rolagens. Para saber mais sobre, é possível ler sobre no [Documento do Sistema](https://docs.google.com/document/d/1anr24vyAd1Es7cK5H3Xwdw0ck8d7iCuFS5cBHY1k8V8/edit?usp=sharing) na seção "ROLAGEM".
