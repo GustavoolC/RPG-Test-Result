@@ -14,6 +14,7 @@ let barrinhaLogica = document.getElementById("testeroll__barras");
 let valoresIniciais2Logica = document.getElementById("testeroll__valoresiniciais2");
 let resultadoInicialLogica = document.getElementById("testeroll__resultadoinicial");
 let resultadoFinalLogica = document.getElementById("testeroll__resultadofinal");
+let resultadoFinal = "";
 let sizeType = document.getElementById("size-type");
 let metragem = document.getElementById("metragem-escolha");
 let nomenclatura = document.getElementById("nomenclatura-escolha");
@@ -38,18 +39,86 @@ let definirAtributoVtg = document.getElementById("vantagens__atributo");
 
 let codigo1descoberto = false;
 let codigo2descoberto = false;
+let codigo3descoberto = false;
+let codigo4descoberto = false;
+let codigo5descoberto = false;
+let codigo6descoberto = false;
+let codigo7descoberto = false;
 
-let perfilEscolha = "izumi";
-    ficha = cdg("☭η∹☾∞∹☭∞∹☭∞∹★☾∹☾∞∹★☾∹☭∞∹★☾∹☾∞∹☾∞∹★∞∹★☠∹☭∞∹☾∞∹☭η∹☾∞∹☀∞∹☾☾∹☾☭∹☾∞∹☾∞∹★η∹∞∹∞∹∞∹☾☾").split(",");
-    vantagens = cdg("∞∹♫∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫").split(",");
+let perfilEscolha = "zadiel";
+    ficha = cdg("☠☾∹η☾∹☠☾∹☠∞∹☠∞∹☹∞∹☾∞∹☭∞∹☾∞∹★∞∹∞∹☾∹★☾∹☾∞∹♫∞∹♫☾∹☭∞∹☠∞∹☠∞∹☠∞∹☠∞∹η☾∹∞∹∞∹∞∹η☠").split(",");
+    vantagens = cdg("♫∹♫∹♫∹♫∹♫∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹♫∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
     verificarVantagens();
 
 function atualizarPerfil() {
     let perfilImagem = document.getElementById("perfil");
     perfilEscolha = document.getElementById("personagens-escolha").value;
 
-    if (tema == "cosmo" || tema == "secreto-1") {
-        if (perfilEscolha == "izumi") {
+    if (tema == "cosmo" || tema == "secreto-1" || tema == "apocalipse") {
+        if (perfilEscolha == "zadiel") {
+            perfilImagem.setAttribute("src","assets/ZadielPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Zadiel");
+        } else if (perfilEscolha == "artrodea") {
+            perfilImagem.setAttribute("src","assets/ArtrodeaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Artrodea");
+        } else if (perfilEscolha == "shaka") {
+            perfilImagem.setAttribute("src","assets/ShakaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Shaka");
+        } else if (perfilEscolha == "kyomi") {
+            perfilImagem.setAttribute("src","assets/KyomiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Kyomi");
+        } else if (perfilEscolha == "lux") {
+            perfilImagem.setAttribute("src","assets/LuxPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Lux");
+        } else if (perfilEscolha == "mabel") {
+            perfilImagem.setAttribute("src","assets/MabelPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Mabel");
+        } else if (perfilEscolha == "yukkimi") {
+            perfilImagem.setAttribute("src","assets/YukkimiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Yukkimi");
+        } else if (perfilEscolha == "anagi") {
+            perfilImagem.setAttribute("src","assets/AnagiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Anagi");
+        } else if (perfilEscolha == "personagem-secreto-2-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHEPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP qHEP"));
+        } else if (perfilEscolha == "personagem-secreto-2-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-6") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hEPLQPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP hEPLQP"));
+        } else if (perfilEscolha == "personagem-secreto-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xIMTPIUEUlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xIMTPIUEU"));
+        } else if (perfilEscolha == "personagem-secreto-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/nQJAKQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ nQJAKQ"));
+        } else if (perfilEscolha == "personagem-secreto-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/uTZTqKJKINEQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI uTZT qKJKINEQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHQKEFQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI qHQKEFQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/tZHECQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI tZHECQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xAGAKTQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xAGAKTQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/rAXQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI rAXQ"));
+        } else if (perfilEscolha == "izumi") {
             perfilImagem.setAttribute("src","assets/IzumiPerfil.png");
             perfilImagem.setAttribute("alt","Ícone do Izumi");
         } else if (perfilEscolha == "victoria") {
@@ -63,13 +132,76 @@ function atualizarPerfil() {
             perfilImagem.setAttribute("alt","Ícone do Rodrigo")
         } else if (perfilEscolha == "planetafetal") {
             perfilImagem.setAttribute("src","assets/PlanetafetalPerfil.png");
-            perfilImagem.setAttribute("alt","Ícone do ???");
+            perfilImagem.setAttribute("alt","Ícone do Feto Cósmico");
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     } else if (tema == "cataclismo") {
-        if (perfilEscolha == "izumi") {
+        if (perfilEscolha == "zadiel") {
+            perfilImagem.setAttribute("src","assets/ZadielPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Zadiel");
+        } else if (perfilEscolha == "artrodea") {
+            perfilImagem.setAttribute("src","assets/ArtrodeaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Artrodea");
+        } else if (perfilEscolha == "shaka") {
+            perfilImagem.setAttribute("src","assets/ShakaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Shaka");
+        } else if (perfilEscolha == "kyomi") {
+            perfilImagem.setAttribute("src","assets/KyomiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Kyomi");
+        } else if (perfilEscolha == "lux") {
+            perfilImagem.setAttribute("src","assets/LuxPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Lux");
+        } else if (perfilEscolha == "mabel") {
+            perfilImagem.setAttribute("src","assets/MabelPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Mabel");
+        } else if (perfilEscolha == "yukkimi") {
+            perfilImagem.setAttribute("src","assets/YukkimiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Yukkimi");
+        } else if (perfilEscolha == "anagi") {
+            perfilImagem.setAttribute("src","assets/AnagiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Anagi");
+        } else if (perfilEscolha == "personagem-secreto-2-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHEPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP qHEP"));
+        } else if (perfilEscolha == "personagem-secreto-2-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-6") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hEPLQPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP hEPLQP"));
+        } else if (perfilEscolha == "personagem-secreto-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xIMTPIUEUlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xIMTPIUEU"));
+        } else if (perfilEscolha == "personagem-secreto-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/nQJAKQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ nQJAKQ"));
+        } else if (perfilEscolha == "personagem-secreto-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/uTZTqKJKINEQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI uTZT qKJKINEQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHQKEFQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI qHQKEFQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/tZHECQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI tZHECQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xAGAKTQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xAGAKTQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/rAXQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI rAXQ"));
+        } else if (perfilEscolha == "izumi") {
             perfilImagem.setAttribute("src","assets/IzumiPerfilCataclismo.png");
             perfilImagem.setAttribute("alt","Ícone do Izumi");
         } else if (perfilEscolha == "victoria") {
@@ -83,13 +215,76 @@ function atualizarPerfil() {
             perfilImagem.setAttribute("alt","Ícone do Rodrigo");
         } else if (perfilEscolha == "planetafetal") {
             perfilImagem.setAttribute("src","assets/PlanetafetalPerfilCataclismo.png");
-            perfilImagem.setAttribute("alt","Ícone do ???");
+            perfilImagem.setAttribute("alt","Ícone do Feto Cósmico");
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXwQJQWXTPUI.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     } else if (tema == "aquarela") {
-        if (perfilEscolha == "izumi") {
+        if (perfilEscolha == "zadiel") {
+            perfilImagem.setAttribute("src","assets/ZadielPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Zadiel");
+        } else if (perfilEscolha == "artrodea") {
+            perfilImagem.setAttribute("src","assets/ArtrodeaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Artrodea");
+        } else if (perfilEscolha == "shaka") {
+            perfilImagem.setAttribute("src","assets/ShakaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Shaka");
+        } else if (perfilEscolha == "kyomi") {
+            perfilImagem.setAttribute("src","assets/KyomiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Kyomi");
+        } else if (perfilEscolha == "lux") {
+            perfilImagem.setAttribute("src","assets/LuxPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Lux");
+        } else if (perfilEscolha == "mabel") {
+            perfilImagem.setAttribute("src","assets/MabelPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Mabel");
+        } else if (perfilEscolha == "yukkimi") {
+            perfilImagem.setAttribute("src","assets/YukkimiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Yukkimi");
+        } else if (perfilEscolha == "anagi") {
+            perfilImagem.setAttribute("src","assets/AnagiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Anagi");
+        } else if (perfilEscolha == "personagem-secreto-2-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHEPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP qHEP"));
+        } else if (perfilEscolha == "personagem-secreto-2-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-6") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hEPLQPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP hEPLQP"));
+        } else if (perfilEscolha == "personagem-secreto-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xIMTPIUEUlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xIMTPIUEU"));
+        } else if (perfilEscolha == "personagem-secreto-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/nQJAKQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ nQJAKQ"));
+        } else if (perfilEscolha == "personagem-secreto-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/uTZTqKJKINEQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI uTZT qKJKINEQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHQKEFQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI qHQKEFQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/tZHECQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI tZHECQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xAGAKTQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xAGAKTQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/rAXQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI rAXQ"));
+        } else if (perfilEscolha == "izumi") {
             perfilImagem.setAttribute("src","assets/IzumiPerfilAquarela.png");
             perfilImagem.setAttribute("alt","Ícone do Izumi");
         } else if (perfilEscolha == "victoria") {
@@ -103,13 +298,76 @@ function atualizarPerfil() {
             perfilImagem.setAttribute("alt","Ícone do Rodrigo");
         } else if (perfilEscolha == "planetafetal") {
             perfilImagem.setAttribute("src","assets/PlanetafetalPerfilAquarela.png");
-            perfilImagem.setAttribute("alt","Ícone do ???");
+            perfilImagem.setAttribute("alt","Ícone do Feto Cósmico");
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXqOAQKEXQ.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
     } else if (tema == "tormenta") {
-        if (perfilEscolha == "izumi") {
+        if (perfilEscolha == "zadiel") {
+            perfilImagem.setAttribute("src","assets/ZadielPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Zadiel");
+        } else if (perfilEscolha == "artrodea") {
+            perfilImagem.setAttribute("src","assets/ArtrodeaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Artrodea");
+        } else if (perfilEscolha == "shaka") {
+            perfilImagem.setAttribute("src","assets/ShakaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Shaka");
+        } else if (perfilEscolha == "kyomi") {
+            perfilImagem.setAttribute("src","assets/KyomiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Kyomi");
+        } else if (perfilEscolha == "lux") {
+            perfilImagem.setAttribute("src","assets/LuxPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Lux");
+        } else if (perfilEscolha == "mabel") {
+            perfilImagem.setAttribute("src","assets/MabelPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Mabel");
+        } else if (perfilEscolha == "yukkimi") {
+            perfilImagem.setAttribute("src","assets/YukkimiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Yukkimi");
+        } else if (perfilEscolha == "anagi") {
+            perfilImagem.setAttribute("src","assets/AnagiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Anagi");
+        } else if (perfilEscolha == "personagem-secreto-2-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHEPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP qHEP"));
+        } else if (perfilEscolha == "personagem-secreto-2-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-6") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hEPLQPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP hEPLQP"));
+        } else if (perfilEscolha == "personagem-secreto-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xIMTPIUEUlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xIMTPIUEU"));
+        } else if (perfilEscolha == "personagem-secreto-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/nQJAKQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ nQJAKQ"));
+        } else if (perfilEscolha == "personagem-secreto-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/uTZTqKJKINEQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI uTZT qKJKINEQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHQKEFQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI qHQKEFQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/tZHECQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI tZHECQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xAGAKTQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xAGAKTQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/rAXQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI rAXQ"));
+        } else if (perfilEscolha == "izumi") {
             perfilImagem.setAttribute("src","assets/IzumiPerfilTormenta.png");
             perfilImagem.setAttribute("alt","Ícone do Izumi");
         } else if (perfilEscolha == "victoria") {
@@ -123,14 +381,142 @@ function atualizarPerfil() {
             perfilImagem.setAttribute("alt","Ícone do Rodrigo");
         } else if (perfilEscolha == "planetafetal") {
             perfilImagem.setAttribute("src","assets/PlanetafetalPerfilTormenta.png");
-            perfilImagem.setAttribute("alt","Ícone do ???");
+            perfilImagem.setAttribute("alt","Ícone do Feto Cósmico");
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXjIKUEZJQ.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
         }
+    } else if (tema == "apocalipse") {
+               if (perfilEscolha == "zadiel") {
+            perfilImagem.setAttribute("src","assets/ZadielPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Zadiel");
+        } else if (perfilEscolha == "artrodea") {
+            perfilImagem.setAttribute("src","assets/ArtrodeaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Artrodea");
+        } else if (perfilEscolha == "shaka") {
+            perfilImagem.setAttribute("src","assets/ShakaPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Shaka");
+        } else if (perfilEscolha == "kyomi") {
+            perfilImagem.setAttribute("src","assets/KyomiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Kyomi");
+        } else if (perfilEscolha == "lux") {
+            perfilImagem.setAttribute("src","assets/LuxPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Lux");
+        } else if (perfilEscolha == "mabel") {
+            perfilImagem.setAttribute("src","assets/MabelPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Mabel");
+        } else if (perfilEscolha == "yukkimi") {
+            perfilImagem.setAttribute("src","assets/YukkimiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone da Yukkimi");
+        } else if (perfilEscolha == "anagi") {
+            perfilImagem.setAttribute("src","assets/AnagiPerfil.png");
+            perfilImagem.setAttribute("alt","Ícone do Anagi");
+        } else if (perfilEscolha == "personagem-secreto-2-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHEPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP qHEP"));
+        } else if (perfilEscolha == "personagem-secreto-2-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE"));
+        } else if (perfilEscolha == "personagem-secreto-2-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/bTXVIJEkEPTPJEZJEqNAXJIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI bTXVIJE kEPTPJEZJE qNAXJI"));
+        } else if (perfilEscolha == "personagem-secreto-2-6") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/hEPLQPlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQP hEPLQP"));
+        } else if (perfilEscolha == "personagem-secreto-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xIMTPIUEUlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xIMTPIUEU"));
+        } else if (perfilEscolha == "personagem-secreto-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/nQJAKQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NQ nQJAKQ"));
+        } else if (perfilEscolha == "personagem-secreto-5") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/uTZTqKJKINEQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI uTZT qKJKINEQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/qHQKEFQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI qHQKEFQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/tZHECQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI tZHECQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xAGAKTQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xAGAKTQ"));
+        } else if (perfilEscolha == "personagem-secreto-6-4") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/rAXQlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI rAXQ"));
+        }
     }
 
-    if (perfilEscolha == "izumi") {
+    if (perfilEscolha == "zadiel") {
+        ficha = cdg("☠☾∹η☾∹☠☾∹☠∞∹☠∞∹☹∞∹☾∞∹☭∞∹☾∞∹★∞∹∞∹☾∹★☾∹☾∞∹♫∞∹♫☾∹☭∞∹☠∞∹☠∞∹☠∞∹☠∞∹η☾∹∞∹∞∹∞∹η☠").split(",");
+        vantagens = cdg("♫∹♫∹♫∹♫∹♫∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹♫∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "artrodea") {
+        ficha = cdg("η☭∹η☭∹η∞∹η☭∹η☭∹☾☾∹☀∞∹☀♫∹★∞∹☭∞∹♫∞∹η☭∹☾∞∹☾∞∹η☭∹η∞∹✇☾∹✇☾∹★∞∹☹∞∹η☭∹☾∞∹η☭∹∞∹∞∹∞∹η☭").split(",");
+        vantagens = cdg("✇∹∞∹∞∹♫∹☀∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹♫∹♫∹∞∹∞∹♫∹∞∹★∹∞∹✇∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "shaka") {
+        ficha = cdg("☭∞∹☭∞∹☭∞∹☾∞∹♫∞∹★∞∹★∞∹★∞∹★∞∹♫∞∹♫∞∹♫∞∹☾∞∹♫∞∹♫∞∹♫∞∹♫∞∹♫∞∹☾∞∹☾∞∹☭∞∹☾∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "kyomi") {
+        ficha = cdg("η∞∹☭☭∹☹☭∹☾☾∹☾♫∹☹☾∹☹☾∹☾∞∹☹∞∹☹∞∹♫∞∹☾∹✇∞∹☾∞∹☹☾∹η∞∹☀☾∹✇∞∹☹∞∹ηη∹η☾∹✇∞∹☹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("♫∹✇∹✇∹♫∹♫∹✇∹∞∹∞∹∹☀∹☀∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "lux") {
+        ficha = cdg("☹♫∹☹★∹☹★∹☾∞∹☹★∹☹★∹∞∹∞∹☾∞∹★∞∹∞∹∞∹∞∹☭∞∹☹★∹∞∹☹★∹☹★∹☹★∹☹★∹☹♫∹☹★∹☹★∹∞∹∞∹∞∹☹★").split(",");
+        vantagens = cdg("♫∹♫∹✇∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "mabel") {
+        ficha = cdg("☭∞∹☾∞∹☾∞∹★∞∹✇∞∹✇∞∹☾☾∹☀∞∹☀∞∹☀∞∹✇☾∹✇∞∹☀∞∹♫☾∹☀∞∹☾∞∹★∞∹☾∞∹∞∹✇☾∹☭∞∹★∞∹☀∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹∞∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "yukkimi") {
+        ficha = cdg("☾∞∹☾∞∹☭∞∹☹∞∹☹∞∹☾∞∹☾∞∹☾∞∹★∞∹☾☾∹♫∹★∞∹✇∞∹♫∹☾∞∹★∞∹♫∹♫∹☹∞∹☹∞∹♫∞∹♫∹☾∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹✇∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "anagi") {
+        ficha = cdg("☀☀∹☾☾∹☾★∹☾☾∹☀☀∹☾∞∹☀∞∹☀∞∹☭∞∹☾∞∹∞∹☀∞∹☭∞∹∞∹∞∹∞∹∞∹☀∞∹☾∞∹☭∞∹☀∞∹☀∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-2-1") {
+        ficha = cdg("☭∞∹☭∞∹☭∞∹☀∞∹☭∞∹★∞∹★∞∹☭∞∹☀∞∹✇∞∹∞∹∞∹∞∹☾∹∞∹♫∞∹♫∞∹♫∞∹∞∹★∞∹☭∞∹✇∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-2-2") {
+        ficha = cdg("★∞∹★∞∹★∞∹♫∞∹★∞∹♫∞∹✇∞∹☀∞∹♫∞∹♫∞∹∞∹★∞∹☀∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∞∹☀∞∹☾∹★∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-2-3") {
+        ficha = cdg("☭∞∹☭∞∹☭∞∹✇∞∹★∞∹★∞∹☀∞∹☾∞∹☀∞∹★∞∹∞∹★∞∹★∞∹∞∹∞∹✇∞∹♫∞∹♫∞∹∞∹★∞∹☭∞∹♫∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-2-4") {
+        ficha = cdg("☭∞∹☀∞∹☭∞∹☀∞∹☭∞∹☀∞∹☀∞∹★∞∹☀∞∹★∞∹∞∹✇∞∹★∞∹∞∹∞∹★∞∹♫∞∹♫∞∹∞∹★∞∹☾∞∹♫∞∹☾∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-2-5") {
+        ficha = cdg("☹✇∹☭∞∹☹✇∹☾∞∹☹✇∹☭∞∹☾∞∹☾∞∹☾∞∹☭∞∹∞∹✇∞∹☾∞∹∞∹∞∹☭∞∹★∞∹★∞∹∞∹☭∞∹☹✇∹☀∞∹☹✇∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-2-6") {
+        ficha = cdg("∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹☾∞∹✇∞∹∞∹☭∞∹∞∹∞∹∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-3") {
+        ficha = cdg("η☾∹η☾∹η☾∹★∞∹✇∞∹✇∞∹☾☾∹☹∞∹η☾∹☭∞∹✇☾∹☾∹☹∞∹♫☾∹☀∞∹η☾∹★∞∹☾∞∹∞∹★☾∹η☾∹★∞∹☹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹∞∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-4") {
+        ficha = cdg("η∞∹η∞∹η∞∹☾∞∹∞∹η∞∹∞∹∞∹✇∞∹♫∞∹∞∹∞∹∞∹∞∹∞∹★∞∹☭∞∹☀∞∹η∞∹η∞∹η∞∹∞∹☹∞∹∞∹∞∹∞∹☭∞").split(",");
+        vantagens = cdg("♫∹✇∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-5") {
+        ficha = cdg("♫∞∹η☭∹♫∞∹η☭∹η☭∹☾☾∹☀∞∹☀♫∹★∞∹☭∞∹♫∞∹η☭∹η☭∹✇∞∹η☭∹♫∹✇☾∹✇☾∹★∞∹☹∞∹η☭∹☾∞∹η☭∹∞∹∞∹∞∹η☭").split(",");
+        vantagens = cdg("∞∹✇∹∞∹♫∹☀∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-6-1") {
+        ficha = cdg("☹☾∹η☀∹☠☀∹☭∞∹☀☾∹ηη∹☹∞∹☹∞∹☭∞∹☀★∹☀∞∹✇∞∹☀☾∹♫☾∹☾∞∹☀∞∹✇☾∹♫☾∹ηη∹ηη∹ηη∹☭∞∹η☀∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹✇∹✇∹♫∹∞∹✇∹♫∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹✇∹✇∹♫∹✇∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-6-2") {
+        ficha = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-6-3") {
+        ficha = cdg("♫∞∹ηη∹ηη∹ηη∹✇☀∹☾∹☹∞∹ηη∹☭☾∹☭☭∹∞∹ηη∹☭☀∹∞∹ηη∹ηη∹♫☾∹♫☭∹☭☠∹☹∞∹☭☾∹☭☠∹ηη∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹✇∹☀∹✇∹∞∹☾∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹☀∹☀∹∞∹∞∹∞∹∞∹☀∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "personagem-secreto-6-4") {
+        ficha = cdg("η∞∹☾∹η∞∹✇☾∹☾∞∹☭∹☹∞∹☹∞∹☀∞∹★∞∹☭∞∹-♫∞∹-♫∞∹☀∞∹✇∞∹☀✇∹✇☀∹✇✇∹☹∞∹☹∞∹☹∞∹☹∞∹-♫∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹∞∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+    } else if (perfilEscolha == "izumi") {
         ficha = cdg("☭η∹☾∞∹☭∞∹☭∞∹★☾∹☾∞∹★☾∹☭∞∹★☾∹☾∞∹☾∞∹★∞∹★☠∹☭∞∹☾∞∹☭η∹☾∞∹☀∞∹☾☾∹☾☭∹☾∞∹☾∞∹★η∹∞∹∞∹∞∹☾☾").split(",");
         vantagens = cdg("∞∹♫∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫").split(",");
     } else if (perfilEscolha == "victoria") {
@@ -198,6 +584,7 @@ function trocarModo() {
             atributoVtgSelector.setAttribute("class","prc_atr_c");
             periciaSelector.setAttribute("class","prc_atr_c");
         }
+            noturno = "false";
             modo.setAttribute("alt","Ícone do Modo Noturno");
             background.setAttribute("class","claro");
             personagensSelector.setAttribute("class","cabecalhos-c");
@@ -212,7 +599,6 @@ function trocarModo() {
             barrinhaLogica.setAttribute("class","valoresiniciais-c");
             valoresIniciais2Logica.setAttribute("class","valoresiniciais-c");
             resultadoInicialLogica.setAttribute("class","resultadoinicial-c");
-            resultadoFinalLogica.setAttribute("class","resultadofinal-c");
             ataqueVantagem.setAttribute("class","ataquevantagem-c");
             reflexosVantagem.setAttribute("class","esquivavantagem-c");
             danoAdicional.setAttribute("class","danoadicional-c");
@@ -225,8 +611,15 @@ function trocarModo() {
             eleAlturaNomenclatura.setAttribute("class","prc_atr_c");
             eleAlturaPersonagem.setAttribute("class","prc_atr_c");
             botaoSize.setAttribute("class","botao-c");
-            noturno = "false";
-            if (tema == "cosmo") {
+            if (tema == "apocalipse") {
+                iconRoll.setAttribute("src","assets/rollicon.png");
+                iconAtributo.setAttribute("src","assets/atributoicon.png");
+                iconSize.setAttribute("src","assets/sizeicon.png");
+                iconMapa.setAttribute("src","assets/mapaicon.png");
+                modo.setAttribute("class","invisivel");
+                botao.setAttribute("src","assets/apocalipsedice.png");
+                botaoSize.setAttribute("src","assets/comparadorapocalipse.png");
+            } else if (tema == "cosmo") {
                 iconRoll.setAttribute("src","assets/rolliconclaro.png");
                 iconAtributo.setAttribute("src","assets/atributoiconclaro.png");
                 iconSize.setAttribute("src","assets/sizeiconclaro.png");
@@ -271,6 +664,7 @@ function trocarModo() {
                 botao.setAttribute("src","assets/dice.png");
                 botaoSize.setAttribute("src","assets/comparador.png");
             }
+        alterarCorResultado();
         } else {
             if (atributoAtivo == 1) {
                 atributoSoloVtgSelector.setAttribute("class","prc_atr_n");
@@ -279,6 +673,7 @@ function trocarModo() {
                 atributoVtgSelector.setAttribute("class","prc_atr_n");
                 periciaSelector.setAttribute("class","prc_atr_n");
             }
+            noturno = "true";
             modo.setAttribute("alt","Ícone do Modo Claro");
             background.setAttribute("class","noturno");
             personagensSelector.setAttribute("class","cabecalhos-n");
@@ -293,7 +688,6 @@ function trocarModo() {
             barrinhaLogica.setAttribute("class","valoresiniciais-n");
             valoresIniciais2Logica.setAttribute("class","valoresiniciais-n");
             resultadoInicialLogica.setAttribute("class","resultadoinicial-n");
-            resultadoFinalLogica.setAttribute("class","resultadofinal-n");
             ataqueVantagem.setAttribute("class","ataquevantagem-n");
             reflexosVantagem.setAttribute("class","esquivavantagem-n");
             danoAdicional.setAttribute("class","danoadicional-n");
@@ -306,8 +700,15 @@ function trocarModo() {
             eleAlturaNomenclatura.setAttribute("class","prc_atr_n");
             eleAlturaPersonagem.setAttribute("class","prc_atr_n");
             botaoSize.setAttribute("class","botao-n");
-            noturno = "true";
-            if (tema == "cosmo") {
+            if (tema == "apocalipse") {
+                iconRoll.setAttribute("src","assets/rollicon.png");
+                iconAtributo.setAttribute("src","assets/atributoicon.png");
+                iconSize.setAttribute("src","assets/sizeicon.png");
+                iconMapa.setAttribute("src","assets/mapaicon.png");
+                modo.setAttribute("class","invisivel");
+                botao.setAttribute("src","assets/apocalipsedice.png");
+                botaoSize.setAttribute("src","assets/comparadorapocalipse.png");
+            } else if (tema == "cosmo") {
                 iconRoll.setAttribute("src","assets/rollicon.png");
                 iconAtributo.setAttribute("src","assets/atributoicon.png");
                 iconSize.setAttribute("src","assets/sizeicon.png");
@@ -352,6 +753,7 @@ function trocarModo() {
                 botao.setAttribute("src","assets/dice.png");
                 botaoSize.setAttribute("src","assets/comparador.png");
             }
+        alterarCorResultado();
         }
     }
 
@@ -512,7 +914,8 @@ function iniciarTeste() {
     
     let periciaResultado = analisarResultadoInicial(pericia,periciaDado);
     let atributoResultado = analisarResultadoInicial(atributo,atributoDado);
-    let resultadoFinal = analisarResultadoFinal(periciaResultado,atributoResultado);
+    resultadoFinal = analisarResultadoFinal(periciaResultado,atributoResultado);
+    alterarCorResultado();
     
     if (atributoAtivo == 1) {
         valoresIniciais2Logica.innerHTML = atributoDado + " (" + atributo + ")";
@@ -645,6 +1048,40 @@ function analisarResultadoFinal(periciaResultado,atributoResultado) {
             return "Super Desastre";
         } else {
             return "Falha";
+        }
+    }
+}
+
+function alterarCorResultado() {
+    if (resultadoFinal == "Super Crítico") {
+        if (noturno == "true") {
+        resultadoFinalLogica.setAttribute("class","super-critico-n resultadofinal-n");
+        } else {
+        resultadoFinalLogica.setAttribute("class","super-critico-c resultadofinal-c");
+        }
+    } else if (resultadoFinal == "Crítico") {
+        if (noturno == "true") {
+        resultadoFinalLogica.setAttribute("class","critico-n resultadofinal-n");
+        } else {
+        resultadoFinalLogica.setAttribute("class","critico-c resultadofinal-c");
+        }
+    } else if (resultadoFinal == "Desastre") {
+        if (noturno == "true") {
+        resultadoFinalLogica.setAttribute("class","desastre-n resultadofinal-n");
+        } else {
+        resultadoFinalLogica.setAttribute("class","desastre-c resultadofinal-c");
+        }
+    } else if (resultadoFinal == "Super Desastre") {
+        if (noturno == "true") {
+        resultadoFinalLogica.setAttribute("class","super-desastre-n resultadofinal-n");
+        } else {
+        resultadoFinalLogica.setAttribute("class","super-desastre-c resultadofinal-c");
+        }
+    } else {
+        if (noturno == "true") {
+        resultadoFinalLogica.setAttribute("class","resultadofinal-n");
+        } else {
+        resultadoFinalLogica.setAttribute("class","resultadofinal-c");
         }
     }
 }
@@ -3143,14 +3580,94 @@ function checarCodigo() {
        }
     }
 
+        //personagem secreto 2
+    if (codigo == cdg("QKJKIBIBAKQ")) {
+        document.getElementById("apocalipse-plus").setAttribute("class",""); 
+        document.getElementById("personagem-secreto-2-1").setAttribute("class",""); 
+        document.getElementById("personagem-secreto-2-2").setAttribute("class","");
+        document.getElementById("personagem-secreto-2-3").setAttribute("class","");
+        document.getElementById("personagem-secreto-2-4").setAttribute("class","");
+        document.getElementById("personagem-secreto-2-5").setAttribute("class","");
+        document.getElementById("personagem-secreto-2-6").setAttribute("class","");
+        document.getElementById("personagem-secreto-2-1").innerHTML = cdg("qHEP");
+        document.getElementById("personagem-secreto-2-2").innerHTML = cdg("bTXVIJE");
+        document.getElementById("personagem-secreto-2-3").innerHTML = cdg("bTXVIJE kEPTPJEZJE");
+        document.getElementById("personagem-secreto-2-4").innerHTML = cdg("bTXVIJE qNAXJI");
+        document.getElementById("personagem-secreto-2-5").innerHTML = cdg("bTXVIJE k. qNAXJI");
+        document.getElementById("personagem-secreto-2-6").innerHTML = cdg("hEPLQP");
+        if (codigo2descoberto == false) {
+        somCodigo(2);
+        document.getElementById("codigo").value = "";
+        codigo2descoberto = true;
+       }
+    }
+
+        //personagem secreto 3
+    if (codigo == cdg("QA QA")) {
+       document.getElementById("apocalipse-plus").setAttribute("class","");
+       document.getElementById("personagem-secreto-3").setAttribute("class","");
+       document.getElementById("personagem-secreto-3").innerHTML = cdg("xIMTPIUEU");
+       if (codigo3descoberto == false) {
+        somCodigo(3);
+        document.getElementById("codigo").value = "";
+        codigo3descoberto = true;
+       }
+    }
+
+        //personagem secreto 4
+    if (codigo == cdg("EPUQRQK")) {
+       document.getElementById("apocalipse-plus").setAttribute("class","");
+       document.getElementById("personagem-secreto-4").setAttribute("class","");
+       document.getElementById("personagem-secreto-4").innerHTML = cdg("nQJAKQ");
+       if (codigo4descoberto == false) {
+        somCodigo(4);
+        document.getElementById("codigo").value = "";
+        codigo4descoberto = true;
+       }
+    }
+
+            //personagem secreto 5
+    if (codigo == cdg("SQZNEK")) {
+       document.getElementById(cdg("QKJKINEQ")).setAttribute("class","invisivel");
+       document.getElementById("personagem-secreto-5").setAttribute("class","");
+       document.getElementById("personagem-secreto-5").innerHTML = cdg("uTZT qKJKINEQ");
+       if (codigo5descoberto == false) {
+        somCodigo(5);
+        document.getElementById("codigo").value = "";
+        codigo5descoberto = true;
+       }
+    }
+
+                //personagem secreto 6
+    if (codigo == cdg("MEK^I")) {
+       document.getElementById("personagem-secreto-6-1").setAttribute("class","");
+       document.getElementById("personagem-secreto-6-2").setAttribute("class","");
+       document.getElementById("personagem-secreto-6-3").setAttribute("class","");
+       document.getElementById("personagem-secreto-6-4").setAttribute("class","");
+       document.getElementById("personagem-secreto-6-1").innerHTML = cdg("qHQKEFQ");
+       document.getElementById("personagem-secreto-6-2").innerHTML = cdg("tZHECQ");
+       document.getElementById("personagem-secreto-6-3").innerHTML = cdg("xAGAKTQ");
+       document.getElementById("personagem-secreto-6-4").innerHTML = cdg("rAXQ");
+
+        estilo.setAttribute("href",`style-apocalipse.css`);
+        trocarModo();
+        atualizarPerfil();
+       document.getElementById("fundo").setAttribute("class","noturno-2");
+       if (codigo6descoberto == false) {
+        somCodigo(6);
+        document.getElementById("codigo").value = "";
+        codigo6descoberto = true;
+       }
+    }
+
     //tema secreto 1
     if (codigo == cdg("BETC•I")) {
        document.getElementById("tema-secreto-1").setAttribute("class",""); 
        document.getElementById("tema-secreto-1").innerHTML = cdg("cIZQP hTWJIK");
-       if (codigo2descoberto == false) {
-        somCodigo(2);
+       if (codigo5descoberto == false) {
+        somCodigo(7);
         document.getElementById("codigo").value = "";
-        codigo2descoberto = true;
+        codigo5descoberto = true;
        }
     }
 
@@ -3373,6 +3890,31 @@ function somCodigo(numero) {
     audio.volume = 0.2;
     }
     if (numero == 2) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso2_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.4;
+    }
+    if (numero == 3) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso3_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.8;
+    }
+    if (numero == 4) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso4_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.8;
+    }
+    if (numero == 5) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso5_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.4;
+    }
+    if (numero == 6) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso6_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 1.0;
+    }
+    if (numero == 7) {
     document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/tema1_unlocked.mp3" id="advinhou-${numero}"></audio>`;
     audio = document.getElementById(`advinhou-${numero}`);
     audio.volume = 0.8;
