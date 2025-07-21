@@ -2,7 +2,7 @@ let personagemEscolhido = document.getElementById("personagens-escolha");
 let vantagens;
 let temaSelector = document.getElementById("tema-escolha");
 let noturno = "true";
-let tema = "cosmo";
+let tema = "apocalipse";
 let rolador = document.getElementById("rolador");
 let comparadorSize = document.getElementById("comparadorSize");
 let definidorImpacto = document.getElementById("definidorImpacto");
