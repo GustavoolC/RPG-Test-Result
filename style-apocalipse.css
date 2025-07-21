@@ -30,12 +30,17 @@ body{
 }
 
 .noturno {
-    background-image: url(assets/CataclismoFundoNoturno.png);
+    background-image: url(assets/ApocalipseFundo.png);
     transition: 150ms ease;
 }
 
 .claro {
-    background-image: url(assets/CataclismoFundoClaro.png);
+    background-image: url(assets/ApocalipseFundo.png);
+    transition: 150ms ease;
+}
+
+.noturno-2 {
+    background-image: url(assets/ApocalipseFundo2.png);
     transition: 150ms ease;
 }
 
@@ -52,8 +57,9 @@ body{
 }
 
 #personagens-escolha {
-    font-size: 20px;
+    font-size: 9px;
     padding: 10px;
+    line-height: 25px;
     padding-left: 34px;
     padding-right: 34px;
     border-radius: 10px;
@@ -72,18 +78,21 @@ body{
 }
 
 #cosmo {
+    font-size: 20px;
     font-family: "Doto", sans-serif;
     background-color: rgb(0, 17, 26);
     color: #00ff95;
 }
 
 #cataclismo {
+    font-size: 20px;
     font-family: "cataclism";
     background-color: rgb(67, 0, 0);
     color: #f6ff00;
 }
 
 #aquarela {
+    font-size: 20px;
     font-family: "cataclism";
     font-weight: bold;
     color:rgb(255, 225, 0);
@@ -91,6 +100,7 @@ body{
 }
 
 #tormenta {
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
     color:aqua;
@@ -98,6 +108,7 @@ body{
 }
 
 #tema-secreto-1 {
+    font-size: 20px;
     font-family: "Big Shoulders", sans-serif;
     font-weight: bold;
     color:rgb(197, 152, 120);
@@ -105,8 +116,9 @@ body{
 }
 
 #tema-escolha {
-    font-size: 20px;
+    font-size: 9px;
     padding: 10px;
+    line-height: 25px;
     padding-right: 34px;
     border-radius: 10px;
     border-radius: 10px;
@@ -131,37 +143,36 @@ body{
 }
 
 .cabecalhos-n {
-    font-family: "cataclism";
-    color:rgb(255, 255, 255);
-    background-color: rgb(23, 0, 0);
+    font-family: "apocalipsis";
+    color:rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0);
     box-shadow: 0 10px 25px rgb(0, 0, 0);
     transition: 150ms ease;
 }
 
 .cabecalhos-n:hover {
-    background-color: rgb(34, 1, 1);
+    background-color: rgb(17, 0, 24);
 }
 
 .cabecalhos-c {
-    font-family: "avara";
-    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.662);
-    color:rgb(0, 0, 0);
-    border-color: rgb(16, 39, 57);
-    background-color: rgb(161, 197, 217);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
+    font-family: "apocalipsis";
+    color:rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
     transition: 150ms ease;
 }
 
 .cabecalhos-c:hover {
-    background-color: rgb(207, 231, 246);
+    background-color: rgb(17, 0, 24);
 }
 
 .funcoes {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left: 210px;
+    margin-left: -10.5%;
     gap: 20px;
+    filter: hue-rotate(220deg);
 }
 
 #funcao-rolar {
@@ -235,7 +246,7 @@ p {
     align-items: center;
     justify-content: center;
     align-content: center;
-    margin-top: 0%;
+    margin-top: -0.7%;
     gap: 5px;
     background-size: 580px;
     background-repeat: no-repeat;
@@ -246,35 +257,35 @@ p {
 }
 
 .testeroll_n {
-    background-image: url(assets/boxcataclismo.png);
+    background-image: url(assets/boxapocalipse.png);
     transition: 150ms ease;
 }
 
 .testeroll_c {
-    background-image: url(assets/boxcataclismoclaro.png);
-    position: 20px;
+    background-image: url(assets/boxapocalipse.png);
     transition: 150ms ease;
 }
 
 .rolenoturno {
-    font-family: "cataclism";
+    font-family: "apocalipsis";
+    font-size: 25px;
     margin-top: 4.8%;
-    color:#eeff00;
-    text-shadow: 0px 0px 30px #eeff00;
+    color:#ff0000;
+    text-shadow: 0px 0px 30px #ff0000;
 }
 
 .roleclaro {
-    font-weight: 600;
-    margin-top: 5.6%;
-    color: #d81300;
-    text-shadow: 2px 1px 0px black;
-    font-size: 300%;
-    font-family: "avara";
+    font-family: "apocalipsis";
+    font-size: 25px;
+    margin-top: 4.8%;
+    color:#ff0000;
+    text-shadow: 0px 0px 30px #ff0000;
 }
 
 #testeroll__pericia {
-    font-size: 22px;
+    font-size: 9px;
     padding: 10px;
+    line-height: 25px;
     border-radius: 50px;
     appearance: none;
     border-style: dashed;
@@ -292,8 +303,9 @@ p {
 }
 
 #testeroll__atributo {
-    font-size: 22px;
+    font-size: 9px;
     padding: 10px;
+    line-height: 25px;
     border-radius: 50px;
     appearance: none;
     border-style: dashed;
@@ -322,7 +334,7 @@ input[type=number] {
 }
 
 #vantagens__pericia {
-    font-size: 15px;
+    font-size: 9px;
     font-style: normal;
     padding: 5px;
     border-radius: 50px;
@@ -337,7 +349,7 @@ input[type=number] {
 }
 
 #vantagens__atributo {
-    font-size: 15px;
+    font-size: 9px;
     font-style: normal;
     padding: 5px;
     border-radius: 50px;
@@ -352,7 +364,7 @@ input[type=number] {
 }
 
 #vantagens__atributo-solo {
-    font-size: 15px;
+    font-size: 9px;
     font-style: normal;
     padding: 5px;
     border-radius: 50px;
@@ -367,32 +379,31 @@ input[type=number] {
 }
 
 .prc_atr_n {
-    color: #eeff00;
-    font-family: "cataclism";
+    color: #ff0051;
+    font-family: "apocalipsis";
     font-style:italic;
-    background-color: rgb(23, 0, 0);
-    border-color: #5b1717;
+    background-color: rgb(23, 0, 7);
+    border-color: #5b1729;
     box-shadow: 0 10px 25px black;
     transition: 150ms ease;
 }
 
 .prc_atr_n:hover {
-    background-color: rgb(34, 1, 1);
+    background-color: rgb(41, 1, 12);
 }
 
 .prc_atr_c {
-    color: #001234;
-    font-family: "avara";
+    color: #ff0051;
+    font-family: "apocalipsis";
     font-style:italic;
-    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.48);
-    background-color: rgb(66, 129, 180);
-    border-color: rgb(16, 39, 57);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.745);
+    background-color: rgb(23, 0, 7);
+    border-color: #5b1729;
+    box-shadow: 0 10px 25px black;
     transition: 150ms ease;
 }
 
 .prc_atr_c:hover {
-    background-color: rgb(80, 143, 195);
+    background-color: rgb(41, 1, 12);
 }
 
 #botao-rolar {
@@ -409,28 +420,28 @@ input[type=number] {
 }
 
 .botao-n {
-    border-color: #eeff00e0;
+    border-color: #ff0080e0;
     border-style: solid;
-    background-image: url("assets/botaocataclismo.png");
-    box-shadow: 0px 0px 50px #eeff00e0;
+    background-color:#2e0017;
+    box-shadow: 0px 0px 50px #ff0080e0;
     transition: 150ms ease;
 }
 
 .botao-n:hover {
-    background-image: url("assets/botaocataclismohover.png");
+    background-color: #4e0027;
     border-style: solid;
 }
 
 .botao-c {
-    border-color: #153c4a;
+    border-color: #ff0080e0;
     border-style: solid;
-    background-image: url("assets/botaocataclismoclaro.png");
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.866);
+    background-color:#2e0017;
+    box-shadow: 0px 0px 50px #ff0080e0;
     transition: 150ms ease;
 }
 
 .botao-c:hover {
-    background-image: url("assets/botaocataclismoclarohover.png");
+    background-color: #4e0027;
     border-style: solid;
 }
 
@@ -440,48 +451,49 @@ input[type=number] {
 }
 
 .valoresiniciais-n {
-    font-family: "cataclism";
-    font-size: 110%;
-    font-weight: 300;
-    color: rgb(255, 0, 0);
+    font-family: "apocalipsis";
+    font-size: 10px;
+    font-weight: 100;
+    color: rgb(255, 0, 157);
 }
 
 .resultadoinicial-n {
-    font-family: "cataclism";
-    font-size: 160%;
-    font-weight: 300;
-    color:rgb(170, 0, 255);
+    font-family: "apocalipsis";
+    font-size: 12px;
+    font-weight: 100;
+    color:rgb(255, 0, 81);
 }
 
 .resultadofinal-n {
-    font-family: "cataclism";
-    color:rgb(251, 255, 0);
-    font-size: 300%;
-    font-weight: bold;
-    text-shadow: 0px 0px 30px rgb(251, 255, 0);
+    font-family: "apocalipsis";
+    margin-top: -0.5%;
+    color:rgb(255, 0, 0);
+    font-size: 25px;
+    font-weight: normal;
+    text-shadow: 0px 0px 30px rgb(255, 0, 0);
 }
 
 .valoresiniciais-c {
-    font-family: "avara";
-    font-size: 100%;
-    font-weight: 800;
-    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.617);
-    color: rgb(14, 69, 69);
+    font-family: "apocalipsis";
+    font-size: 10px;
+    font-weight: 100;
+    color: rgb(255, 0, 157);
 }
 
 .resultadoinicial-c {
-    font-family: "avara";
-    font-size: 140%;
-    font-weight: 600;
-    text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.617);
-    color:rgb(11, 70, 45);
+    font-family: "apocalipsis";
+    font-size: 12px;
+    font-weight: 100;
+    color:rgb(255, 0, 81);
 }
 
 .resultadofinal-c {
-    color:rgb(0, 22, 191);
-    font-size: 270%;
-    font-family: "avara-bold";
-    text-shadow: 3px 1px 0px black;
+    font-family: "apocalipsis";
+    margin-top: -0.5%;
+    color:rgb(255, 0, 0);
+    font-size: 25px;
+    font-weight: normal;
+    text-shadow: 0px 0px 30px rgb(255, 0, 0);
 }
 
 .super-critico-n {
@@ -490,7 +502,7 @@ input[type=number] {
 }
 
 .super-critico-c {
-    color:rgb(0, 155, 155);
+    color:cyan;
     animation: super-critico-glow 0.3s ease-in-out infinite alternate;
 }
 
@@ -500,7 +512,7 @@ input[type=number] {
 }
 
 .critico-c {
-    color:rgb(0, 169, 8);
+    color:rgb(0, 255, 13);
     animation: critico-glow 0.5s ease-in-out infinite alternate;
 }
 
@@ -510,7 +522,7 @@ input[type=number] {
 }
 
 .desastre-c {
-    color:rgb(155, 0, 0);
+    color:rgb(255, 0, 0);
     animation: desastre-glow 0.5s ease-in-out infinite alternate;
 }
 
@@ -520,7 +532,7 @@ input[type=number] {
 }
 
 .super-desastre-c {
-    color:rgb(109, 0, 145);
+    color:rgb(191, 0, 255);
     animation: super-desastre-glow 0.3s ease-in-out infinite alternate;
 }
 
@@ -561,7 +573,7 @@ input[type=number] {
 }
 
 #titulo2 {
-    margin-top:110px;
+    margin-top:80px;
 }
 
 #comparaSize {
@@ -570,7 +582,7 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     align-content: center;
-    margin-top: 0%;
+    margin-top: 0.7%;
     gap: 5px;
     background-size: 610px;
     background-repeat: no-repeat;
@@ -581,9 +593,9 @@ input[type=number] {
 }
 
 #size-type {
-    font-size: 18px;
+    font-size: 9px;
     font-style: normal;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-radius: 5px;
     border-style: dashed;
     transition: 150ms ease;
@@ -605,7 +617,7 @@ input[type=number] {
 }
 
 #eu-altura {
-    font-size: 20px;
+    font-size: 9px;
     font-style: normal;
     border-radius: 20px;
     appearance: none;
@@ -616,7 +628,7 @@ input[type=number] {
 }
 
 #ele-altura {
-    font-size: 20px;
+    font-size: 9px;
     font-style: normal;
     border-radius: 20px;
     appearance: none;
@@ -627,7 +639,7 @@ input[type=number] {
 }
 
 #eu-altura2 {
-    font-size: 22px;
+    font-size: 9px;
     padding: 10px;
     border-radius: 50px;
     appearance: none;
@@ -637,7 +649,7 @@ input[type=number] {
 }
 
 #ele-altura2 {
-    font-size: 22px;
+    font-size: 9px;
     padding: 10px;
     border-radius: 50px;
     appearance: none;
@@ -647,7 +659,7 @@ input[type=number] {
 }
 
 #eu-altura3 {
-    font-size: 22px;
+    font-size: 9px;
     padding: 10px;
     border-radius: 50px;
     appearance: none;
@@ -657,7 +669,7 @@ input[type=number] {
 }
 
 #ele-altura3 {
-    font-size: 22px;
+    font-size: 9px;
     padding: 10px;
     border-radius: 50px;
     appearance: none;
@@ -680,64 +692,55 @@ input[type=number] {
 }
 
 #ataque-vantagem {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 #esquiva-vantagem {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 #dano-adicional {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .ataquevantagem-n {
-    font-family: "cataclism";
-    font-size: 110%;
-    font-weight: bold;
-    color: rgb(255, 0, 0);
-    text-shadow: 0px 0px 30px rgb(255, 0, 0);
+    font-family: "apocalipsis";
+    color: rgb(255, 0, 157);
+    text-shadow: 0px 0px 30px rgb(255, 0, 157);
 }
 
 .esquivavantagem-n {
-    font-family: "cataclism";
-    font-size: 160%;
-    font-weight: bold;
-    color:rgb(170, 0, 255);
-    text-shadow: 0px 0px 30px rgb(170, 0, 255);
+    font-family: "apocalipsis";
+    color:rgb(255, 0, 81);
+    text-shadow: 0px 0px 30px rgb(255, 0, 81);
 }
 
 .danoadicional-n {
-    font-family: "cataclism";
-    color:rgb(251, 255, 0);
-    font-size: 400;
-    font-weight: bold;
-    text-shadow: 0px 0px 30px rgb(251, 255, 0);
+    font-family: "apocalipsis";
+    color:rgb(255, 0, 0);
+    text-shadow: 0px 0px 30px rgb(255, 0, 0);
 }
 
 .ataquevantagem-c {
-    padding-top: 10px;
-    font-family: "avara";
-    font-size: 100%;
-    text-shadow: 3px 1px 0px black;
-    color:rgb(0, 156, 191);
+    font-family: "apocalipsis";
+    color: rgb(255, 0, 157);
+    text-shadow: 0px 0px 30px rgb(255, 0, 157);
 }
 
 .esquivavantagem-c {
-    font-family: "avara";
-    font-size: 100%;
-    text-shadow: 3px 1px 0px black;
-    color:rgb(0, 105, 191);
+    font-family: "apocalipsis";
+    color:rgb(255, 0, 81);
+    text-shadow: 0px 0px 30px rgb(255, 0, 81);
 }
 
 .danoadicional-c {
-    color:rgb(0, 22, 191);
-    font-size: 100%;
-    font-family: "avara";
-    text-shadow: 3px 1px 0px black;
+    font-family: "apocalipsis";
+    color:rgb(255, 0, 0);
+    text-shadow: 0px 0px 30px rgb(255, 0, 0);
 }
 
 #codigo {
+    font-size: 7px;
     height: 80%;
     width: 40%;
     padding: 10px;
