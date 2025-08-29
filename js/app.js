@@ -124,7 +124,7 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-7") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/bEZTGlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NI bEZTG"));
-        } else if (perfilEscolha == "personagem-secreto-8") {
+        } else if (perfilEscolha == "personagem-secreto-8-1" || perfilEscolha == "personagem-secreto-8-2") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/jQUTEXlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NQ jQUTEX"));
         } else if (perfilEscolha == "izumi") {
@@ -213,7 +213,7 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-7") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/bEZTGlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NI bEZTG"));
-        } else if (perfilEscolha == "personagem-secreto-8") {
+        } else if (perfilEscolha == "personagem-secreto-8-1" || perfilEscolha == "personagem-secreto-8-2") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/jQUTEXlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NQ jQUTEX"));
         } else if (perfilEscolha == "izumi") {
@@ -302,7 +302,7 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-7") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/bEZTGlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NI bEZTG"));
-        } else if (perfilEscolha == "personagem-secreto-8") {
+        } else if (perfilEscolha == "personagem-secreto-8-1" || perfilEscolha == "personagem-secreto-8-2") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/jQUTEXlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NQ jQUTEX"));
         } else if (perfilEscolha == "izumi") {
@@ -391,7 +391,7 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-7") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/bEZTGlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NI bEZTG"));
-        } else if (perfilEscolha == "personagem-secreto-8") {
+        } else if (perfilEscolha == "personagem-secreto-8-1" || perfilEscolha == "personagem-secreto-8-2") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/jQUTEXlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("tWIZE NQ jQUTEX"));
         } else if (perfilEscolha == "izumi") {
@@ -503,8 +503,12 @@ function atualizarPerfil() {
         ficha = cdg("♫∞✇∞∹♫∞✇∞∹♫∞★∞∹♫∞♫☾∹♫∞∞☀∹♫∞∞✇∹♫∞∞♫∹♫∞∞♫∹♫∞∞♫∹♫∞∞♫∹♫∞∞∞∹♫∞∞♫∹♫∞∞♫∹♫∞∞♫∹♫∞∞♫∹♫∞∞♫∹♫∞∞♫∹♫∞∞♫∹♫∞☀☀∹♫∞♫☾∹♫∞✇∞∹♫∞∞♫∹♫∞✇∞∹∞∹∞∹∞∹∞").split(",");
         vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
         entidade = true;
-    } else if (perfilEscolha == "personagem-secreto-8") {
+    } else if (perfilEscolha == "personagem-secreto-8-1") {
         ficha = cdg("η☾∹☹☠∹♫∞☀∹☾∞∹♫∞∹η∞∹η∞∹η∞∹η∞∹★∞∹∞∹☀☾∹☹☾∹✇∹✇∹☾∹η∞∹η∞∹η∞∹☠η∹☠η∹☭∞∹☠☀∹∞∹∞∹η☾∹☭∞").split(",");
+        vantagens = cdg("✇∹✇∹☀∹∞∹∞∹☾∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹☾∹∞∹✇∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-8-2") {
+        ficha = cdg("☀η∞∹-✇♫☭∹☀☠η∹☾∞∹♫∞∹η∞∹η∞∹η∞∹★∞∹∞∹-✇☭∞∹-✇✇∞∹✇∹✇∹☀∞∞∹η∞∹η∞∹η∞∹☠η∹☠η∹☭∞∹-✇∞✇∹∞∹∞∹η☾∹☭∞").split(",");
         vantagens = cdg("✇∹✇∹☀∹∞∹∞∹☾∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹☾∹∞∹✇∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     } else if (perfilEscolha == "izumi") {
@@ -3777,9 +3781,12 @@ function checarCodigo() {
 
                     //personagem secreto 8
     if (codigo == cdg("KEUTEX")) {
-       document.getElementById("personagem-secreto-8").setAttribute("class","");
-       document.getElementById("personagem-secreto-8").innerHTML = cdg("jQUTEX");
-       if (codigo7descoberto == false) {
+       document.getElementById("apocalipse-plus").setAttribute("class","");
+       document.getElementById("personagem-secreto-8-1").setAttribute("class","");
+       document.getElementById("personagem-secreto-8-2").setAttribute("class","");
+       document.getElementById("personagem-secreto-8-1").innerHTML = cdg("jQUTEX");
+       document.getElementById("personagem-secreto-8-2").innerHTML = cdg("jQUTEX jTJ•");
+       if (codigo8descoberto == false) {
         somCodigo(8);
         document.getElementById("codigo").value = "";
         codigo8descoberto = true;
