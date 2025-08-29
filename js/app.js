@@ -508,7 +508,7 @@ function atualizarPerfil() {
         vantagens = cdg("✇∹✇∹☀∹∞∹∞∹☾∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹☾∹∞∹✇∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     } else if (perfilEscolha == "personagem-secreto-8-2") {
-        ficha = cdg("☀η∞∹-✇♫☭∹☀☠η∹☾∞∹♫∞∹η∞∹η∞∹η∞∹★∞∹∞∹-✇☭∞∹-✇✇∞∹✇∹✇∹☀∞∞∹η∞∹η∞∹η∞∹☠η∹☠η∹☭∞∹-✇∞✇∹∞∹∞∹η☾∹☭∞").split(",");
+        ficha = cdg("☀η∞∹-✇♫☭∹☀☠η∹☾∞∹♫∞∹η∞∹η∞∹η∞∹η∞∹★∞∹∞∹-✇☭∞∹-✇✇∞∹✇∹✇∹☀∞∞∹η∞∹η∞∹η∞∹☠η∹☠η∹☭∞∹-✇∞✇∹∞∹∞∹η☾∹☭∞").split(",");
         vantagens = cdg("✇∹✇∹☀∹∞∹∞∹☾∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹☾∹∞∹✇∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     } else if (perfilEscolha == "izumi") {
