@@ -10,14 +10,6 @@ body{
     display:none;
 }
 
-.fundo-apocalipse {
-    background-image: url(assets/MapaApocalipse.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size:cover;
-}
-
 .fundo-1 {
     background-image: url(assets/Mapa.png);
     background-repeat: no-repeat;

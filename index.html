@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favela Hub</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link id="estilo" rel="stylesheet" href="style-apocalipse.css">
+    <link id="estilo" rel="stylesheet" href="style-cosmo.css">
 </head>
 <body class="noturno" id="fundo">
     <header class="cabecalho">
         <span class="perso-e-codigo">
         <div class="personagem">
-            <img src="assets/ZadielPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
+            <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
         <select id="personagens-escolha" class="cabecalhos-n" onclick="atualizarPerfil()">
+            <optgroup label="Cosmo">
+            <option value="izumi">Izumi</option>
+            <option id="victoria" value="victoria">Victoria</option>
+            <option id="personagem-secreto-1" value="personagem-secreto-1" class="invisivel"></option>
+            <option value="vladimir">Vladimir</option>
+            <option value="rodrigo">Rodrigo</option>
+            <option value="planetafetal">Feto Cósmico</option>
+            <option value="teco">Teco</option>
+            </optgroup>
             <optgroup label="Apocalipse">
             <option value="zadiel">Zadiel</option>
             <option id="artrodea" value="artrodea">Artrodea</option>
@@ -41,14 +50,6 @@
             <option id="personagem-secreto-4" class="invisivel" value="personagem-secreto-4"></option>
             <option id="personagem-secreto-8-2" class="invisivel" value="personagem-secreto-8-2"></option>
             </optgroup>
-            <optgroup label="Cosmo">
-            <option value="izumi">Izumi</option>
-            <option id="victoria" value="victoria">Victoria</option>
-            <option id="personagem-secreto-1" value="personagem-secreto-1" class="invisivel"></option>
-            <option value="vladimir">Vladimir</option>
-            <option value="rodrigo">Rodrigo</option>
-            <option value="planetafetal">Feto Cósmico</option>
-            </optgroup>
         </select>
         </div>
         <input id="codigo" class="prc_atr_n" type="text" title="Insira um Código" onkeydown="setTimeout(checarCodigo, 10)">
@@ -64,14 +65,14 @@
         </div>
         <div class="aparencia">
         <select id="tema-escolha" class="cabecalhos-n" onclick="trocarTema()">
-            <option value="apocalipse" id="apocalipse">Apocalipse</option>
             <option value="cosmo" id="cosmo">Cosmo</option>
+            <option value="apocalipse" id="apocalipse">Apocalipse</option>
             <option value="cataclismo" id="cataclismo">Cataclismo</option>
             <option value="aquarela" id="aquarela">Aquarela</option>
             <option value="tormenta" id="tormenta">Tormenta</option>
             <option id="tema-secreto-1" value="secreto-1" class="invisivel"></option>
         </select>
-        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos" class="invisivel"></button>
+        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos" class=""></button>
         </div>
     </header>
     <main>
@@ -114,7 +115,7 @@
            <input id="vantagens__atributo" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
        </div>
        <input id="vantagens__atributo-solo" class="invisivel" type="number" min="-999" max="999" title="Vantagens">
-       <img src="assets/apocalipsedice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n"></button>
+       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n"></button>
        <div class="valores-iniciais">
        <p id="testeroll__valoresiniciais1" class="valoresiniciais-n"></p>
        <p id="testeroll__barras" class="valoresiniciais-n"></p>
@@ -194,6 +195,14 @@
         </div>
         <div id="personagemsize-escolha" class="invisivel">
             <select id="eu-altura3" class="prc_atr_n">
+                <optgroup label="Cosmo">
+                <option value="1.78">Izumi</option>
+                <option value="1.76">Victoria</option>
+                <option value="1.85">Vladimir</option>
+                <option value="45">Rodrigo</option>
+                <option value="5">Feto Cósmico</option>
+                <option value="2.1556">Teco</option>
+                </optgroup>
                 <optgroup label="Apocalipse">
                 <option value="1.99">Zadiel</option>
                 <option value="2.00">Artrodea</option>
@@ -204,15 +213,16 @@
                 <option value="1.72">Yukkimi</option>
                 <option value="1.82">Anagi</option>
                 </optgroup>               
+            </select>
+            <select id="ele-altura3" class="prc_atr_n">
                 <optgroup label="Cosmo">
                 <option value="1.78">Izumi</option>
                 <option value="1.76">Victoria</option>
                 <option value="1.85">Vladimir</option>
                 <option value="45">Rodrigo</option>
                 <option value="5">Feto Cósmico</option>
+                <option value="2.1556">Teco</option>
                 </optgroup>
-            </select>
-            <select id="ele-altura3" class="prc_atr_n">
                 <optgroup label="Apocalipse">
                 <option value="1.99">Zadiel</option>
                 <option value="2.00">Artrodea</option>
@@ -222,13 +232,6 @@
                 <option value="1.90">Mabel</option>
                 <option value="1.72">Yukkimi</option>
                 <option value="1.82">Anagi</option>
-                </optgroup>
-                <optgroup label="Cosmo">
-                <option value="1.78">Izumi</option>
-                <option value="1.76">Victoria</option>
-                <option value="1.85">Vladimir</option>
-                <option value="45">Rodrigo</option>
-                <option value="5">Feto Cósmico</option>
                 </optgroup>
             </select>
         </div>
