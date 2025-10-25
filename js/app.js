@@ -46,6 +46,7 @@ let codigo6descoberto = false;
 let codigo7descoberto = false;
 let codigo8descoberto = false;
 let codigo9descoberto = false;
+let codigo10descoberto = false;
 
 let perfilEscolha = "izumi";
     ficha = cdg("☭η∹☾∞∹☭∞∹☭∞∹★☾∹☾∞∹★☾∹☭∞∹★☾∹☾∞∹☾∞∹★∞∹★☠∹☭∞∹☾∞∹☭η∹☾∞∹☀∞∹☾☾∹☾☭∹☾∞∹☾∞∹★η∹∞∹∞∹∞∹☾☾").split(",");
@@ -148,6 +149,15 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
+        } else if (perfilEscolha == "personagem-secreto-9-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKNElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKNE"));
+        } else if (perfilEscolha == "personagem-secreto-9-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIqFAXlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI qFAX"));
+        } else if (perfilEscolha == "personagem-secreto-9-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKUEXVIlEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKUEXVI"));
         }
     } else if (tema == "cataclismo") {
         if (perfilEscolha == "zadiel") {
@@ -240,6 +250,15 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXwQJQWXTPUI.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
+        } else if (perfilEscolha == "personagem-secreto-9-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKNElEKBTXwQJQWXTPUI.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKNE"));
+        } else if (perfilEscolha == "personagem-secreto-9-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIqFAXlEKBTXwQJQWXTPUI.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI qFAX"));
+        } else if (perfilEscolha == "personagem-secreto-9-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKUEXVIlEKBTXwQJQWXTPUI.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKUEXVI"));
         }
     } else if (tema == "aquarela") {
         if (perfilEscolha == "zadiel") {
@@ -332,6 +351,15 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXqOAQKEXQ.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
+        } else if (perfilEscolha == "personagem-secreto-9-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKNElEKBTXqOAQKEXQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKNE"));
+        } else if (perfilEscolha == "personagem-secreto-9-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIqFAXlEKBTXqOAQKEXQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI qFAX"));
+        } else if (perfilEscolha == "personagem-secreto-9-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKUEXVIlEKBTXqOAQKEXQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKUEXVI"));
         }
     } else if (tema == "tormenta") {
         if (perfilEscolha == "zadiel") {
@@ -424,6 +452,15 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-1") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/hTWJIKTQlEKBTXjIKUEZJQ.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NQ hTWJIKTQ lQKQPTJQNQ"));
+        } else if (perfilEscolha == "personagem-secreto-9-1") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKNElEKBTXjIKUEZJQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKNE"));
+        } else if (perfilEscolha == "personagem-secreto-9-2") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIqFAXlEKBTXjIKUEZJQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI qFAX"));
+        } else if (perfilEscolha == "personagem-secreto-9-3") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/wQKKIhEKUEXVIlEKBTXjIKUEZJQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI wQKKI hEKUEXVI"));
         }
 }
 
@@ -550,6 +587,18 @@ function atualizarPerfil() {
     } else if (perfilEscolha == "personagem-secreto-1") {
         ficha = cdg("η∞∹η∞∹η∞∹☾☾∹☾∞∹☾∞∹☾∞∹☹∞∹☾☾∹☀☾∹☾☾∹∞∹☹∞∹∞∹∞∹∞∹☭☾∹☭☾∹∞∹☭☾∹η∞∹☾∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
         vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-9-1") {
+        ficha = cdg("☭∞∹☠∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-9-2") {
+        ficha = cdg("☭∞∹☭∞∹☠∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-9-3") {
+        ficha = cdg("☠∞∹☭∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     }
     
@@ -3809,14 +3858,29 @@ function checarCodigo() {
        }
     }
 
-    //tema secreto 1
-    if (codigo == cdg("BETC•I")) {
-       document.getElementById("tema-secreto-1").setAttribute("class",""); 
-       document.getElementById("tema-secreto-1").innerHTML = cdg("cIZQP hTWJIK");
+                    //personagem secreto 9
+    if (codigo == cdg("JEWVMDJE")) {
+       document.getElementById("personagem-secreto-9-1").setAttribute("class","");
+       document.getElementById("personagem-secreto-9-2").setAttribute("class","");
+       document.getElementById("personagem-secreto-9-3").setAttribute("class","");
+       document.getElementById("personagem-secreto-9-1").innerHTML = cdg("wQKKI hEKNE");
+       document.getElementById("personagem-secreto-9-2").innerHTML = cdg("wQKKI qFAX");
+       document.getElementById("personagem-secreto-9-3").innerHTML = cdg("wQKKI hEKUEXVI");
        if (codigo9descoberto == false) {
         somCodigo(9);
         document.getElementById("codigo").value = "";
         codigo9descoberto = true;
+       }
+    }
+
+    //tema secreto 1
+    if (codigo == cdg("BETC•I")) {
+       document.getElementById("tema-secreto-1").setAttribute("class",""); 
+       document.getElementById("tema-secreto-1").innerHTML = cdg("cIZQP hTWJIK");
+       if (codigo10descoberto == false) {
+        somCodigo(10);
+        document.getElementById("codigo").value = "";
+        codigo10descoberto = true;
        }
     }
 
@@ -4068,12 +4132,17 @@ function somCodigo(numero) {
     audio = document.getElementById(`advinhou-${numero}`);
     audio.volume = 0.8;
     }
-        if (numero == 8) {
+    if (numero == 8) {
     document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso8_unlocked.mp3" id="advinhou-${numero}"></audio>`;
     audio = document.getElementById(`advinhou-${numero}`);
     audio.volume = 0.4;
     }
     if (numero == 9) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso9_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.4;
+    }
+    if (numero == 10) {
     document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/tema1_unlocked.mp3" id="advinhou-${numero}"></audio>`;
     audio = document.getElementById(`advinhou-${numero}`);
     audio.volume = 0.8;
