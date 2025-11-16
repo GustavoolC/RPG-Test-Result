@@ -42,6 +42,14 @@ body{
     background-size:cover;
 }
 
+.fundo--1 {
+    background-image: url(assets/Mapa-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
 .mapa-display {
     display: flex;
     flex-direction: column;
@@ -289,6 +297,44 @@ body{
     padding: 1%;
 }
 
+.info-techbyte {
+    margin-top: -6.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(0, 11, 4);
+    border-radius: 20px;
+    border-style: solid;
+    box-shadow: 0px 0px 20px rgb(79, 173, 255);
+    border-color: rgb(79, 173, 255);
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 1%;
+}
+
+.info-falha {
+    margin-top: -6.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(0, 11, 4);
+    border-radius: 20px;
+    border-style: solid;
+    box-shadow: 0px 0px 20px rgb(255, 0, 0);
+    border-color: rgb(255, 0, 0);
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 1%;
+}
+
 .xizinho {
     margin-left: 95.5%;
     margin-top: 2.2%;
@@ -357,6 +403,30 @@ body{
     user-select: none;
 }
 
+.titulo-techbyte {
+    padding-left: 2%;
+    color:rgb(79, 173, 255);
+    font-size: 400%;
+    text-shadow: 0px 0px 60px rgb(79, 173, 255);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.titulo-falha {
+    padding-left: 2%;
+    color:rgb(255, 0, 0);
+    font-size: 400%;
+    text-shadow: 0px 0px 60px rgb(255, 0, 0);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
 .texto-planeta {
     padding-left: 2%;
     font-weight: 100;
@@ -402,6 +472,32 @@ body{
     color: rgb(255, 252, 190);
     font-size: 150%;
     text-shadow: 0px 0px 10px rgb(255, 252, 190);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.texto-techbyte {
+    padding-left: 2%;
+    font-weight: 100;
+    color: rgb(206, 232, 255);
+    font-size: 150%;
+    text-shadow: 0px 0px 10px rgb(206, 232, 255);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.texto-falha {
+    padding-left: 2%;
+    font-weight: 100;
+    color: rgb(255, 193, 193);
+    font-size: 150%;
+    text-shadow: 0px 0px 10px rgb(255, 193, 193);
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -527,6 +623,46 @@ body{
     scale: 1.19;
 }
 
+.xizinho-7 {
+    margin-left: 95.5%;
+    margin-top: 12.5%;
+    color:red;
+    font-size: 600%;
+    text-shadow: 0px 0px 10px red;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.xizinho-7:hover {
+    cursor: pointer;
+    scale: 1.19;
+}
+
+.xizinho-8 {
+    margin-left: 95.5%;
+    margin-top: -0.9%;
+    color:red;
+    font-size: 600%;
+    text-shadow: 0px 0px 10px red;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.xizinho-8:hover {
+    cursor: pointer;
+    scale: 1.19;
+}
+
 .fenda {
     transition: 150ms ease;
 }
@@ -626,11 +762,209 @@ body{
     cursor: pointer;
 }
 
-#mapa-balao {
+#mapa-favella-2 {
     margin-left: 3%;
-    margin-top: 4.6%;
-    width: 9%;
-    height: 9%;
+    margin-top: 1.5%;
+    width: 6.5%;
+    height: 6.5%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-favella-2:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-technite-2 {
+    margin-left: 12.3%;
+    margin-top: 6%;
+    width: 6.2%;
+    height: 6.2%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-technite-2:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-serra-2 {
+    margin-left: 32.8%;
+    margin-top: 2%;
+    width: 4.8%;
+    height: 4.8%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-serra-2:hover {
+    scale: 1.7;
+    cursor: pointer;
+}
+
+#mapa-techbyte {
+    margin-left: 2.8%;
+    margin-top: 9.3%;
+    width: 6.5%;
+    height: 6.5%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-techbyte:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-estellar-2 {
+    margin-left: 7%;
+    margin-top: 1%;
+    width: 8%;
+    height: 8%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-estellar-2:hover {
+    scale: 1.3;
+    cursor: pointer;
+}
+
+#mapa-saturno {
+    margin-left: 0.7%;
+    margin-top: 3.6%;
+    width: 11%;
+    height: 11%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-saturno:hover {
+    scale: 1.3;
+    cursor: pointer;
+}
+
+#mapa-terra-fantasma {
+    margin-left: 9.8%;
+    margin-top: 5.8%;
+    width: 6.5%;
+    height: 6.5%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-terra-fantasma:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-marte {
+    margin-left: 3.1%;
+    margin-top: 0.7%;
+    width: 5%;
+    height: 5%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-marte:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-sol-2 {
+    margin-left: 1.3%;
+    margin-top: -5.3%;
+    width: 25%;
+    height: 25%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-sol-2:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+#mapa-mirai {
+    margin-left: 15.57%;
+    margin-top: -1.8%;
+    width: 5%;
+    height: 5%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-mirai:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-urano {
+    margin-left: 1.8%;
+    margin-top: 2%;
+    width: 6.3%;
+    height: 6.3%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-urano:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-balao {
+    margin-left: 20%;
+    margin-top: -2%;
+    width: 6%;
+    height: 6%;
     transition: 150ms ease;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -640,7 +974,43 @@ body{
 }
 
 #mapa-balao:hover {
-    scale: 1.2;
+    scale: 1.5;
+    cursor: pointer;
+}
+
+#mapa-jupiter {
+    margin-left: 34.8%;
+    margin-top: -2%;
+    width: 10%;
+    height: 10%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-jupiter:hover {
+    scale: 1.3;
+    cursor: pointer;
+}
+
+#mapa-hidropia {
+    margin-left: 2%;
+    margin-top: -9%;
+    width: 6%;
+    height: 6%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-hidropia:hover {
+    scale: 1.5;
     cursor: pointer;
 }
 
@@ -694,6 +1064,24 @@ body{
 }
 
 #mapa-prisao-3:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+#mapa-falha {
+    margin-left: 70%;
+    margin-top: 20%;
+    width: 12%;
+    height: 12%;
+    transition: 150ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#mapa-falha:hover {
     scale: 1.2;
     cursor: pointer;
 }
