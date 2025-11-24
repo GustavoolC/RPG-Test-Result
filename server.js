@@ -11,16 +11,18 @@ app.set('views', path.join(__dirname, 'public'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index.html');
-})
+});
 
 io.on('connection', socket => {
-    console.log(`Socket conectado: ${socket.id})`);
+    console.log(`Socket conectado: ${socket.id}`);
 
     socket.on('sendResult', data => {
         console.log(data);
     });
 });
 
-server.listen(3000);
+server.listen(port, () => {
+    console.log("Servidor rodando na porta " + port);
+});
