@@ -21,3 +21,4 @@ io.on('connection', socket => {
     socket.on('sendResult', data => {
         console.log(data);
     });
+});
