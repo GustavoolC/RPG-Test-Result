@@ -4247,4 +4247,4 @@ function cdg(cdginsert) {
     return cdgrslt.join("");
   }
 
-var socket = io('http://localhost:3000');
+var socket = io();
