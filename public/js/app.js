@@ -1046,9 +1046,9 @@ function iniciarTeste() {
 var resultObject = {
     perso: perfilEscolha,
     prc: pericia + " -- " + periciaEscolhida.selectedOptions[0].textContent,
-    prc_vtg: periciaVantagens,
+    prc_vtg: document.getElementById("vantagens__pericia").value,
     atr: atributo + " -- " + atributoEscolhido.selectedOptions[0].textContent,
-    atr_vtg: atributoVantagens,
+    atr_vtg: document.getElementById("vantagens__atributo").value,
     res: resultadoFinal,
 };
 
