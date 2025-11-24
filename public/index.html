@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favela Hub</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <link id="estilo" rel="stylesheet" href="style-cosmo.css">
+</head>
+<body class="noturno" id="fundo">
+    <header class="cabecalho">
+        <span class="perso-e-codigo">
+        <div class="personagem">
+            <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
+        <select id="personagens-escolha" class="cabecalhos-n" onclick="atualizarPerfil()">
+            <optgroup label="Cosmo">
+            <option value="izumi">Izumi</option>
+            <option id="victoria" value="victoria">Victoria</option>
+            <option id="personagem-secreto-1" value="personagem-secreto-1" class="invisivel"></option>
+            <option value="vladimir">Vladimir</option>
+            <option value="rodrigo">Rodrigo</option>
+            <option value="planetafetal">Feto Cósmico</option>
+            <option value="teco">Teco</option>
+            </optgroup>
+            <optgroup label="Cosmo+" id="cosmo-plus" class="invisivel">
+            <option id="personagem-secreto-10-1" value="personagem-secreto-10-1" class="invisivel"></option>
+            <option id="personagem-secreto-10-2" value="personagem-secreto-10-2" class="invisivel"></option>
+            <option id="personagem-secreto-10-3" value="personagem-secreto-10-3" class="invisivel"></option>
+            </optgroup>
+            <optgroup label="Apocalipse">
+            <option value="zadiel">Zadiel</option>
+            <option id="artrodea" value="artrodea">Artrodea</option>
+            <option id="personagem-secreto-5" class="invisivel" value="personagem-secreto-5"></option>
+            <option value="shaka">Shaka</option>
+            <option value="kyomi">Kyomi</option>
+            <option value="lux">Lux</option>
+            <option value="mabel">Mabel</option>
+            <option value="yukkimi">Yukkimi</option>
+            <option value="anagi">Anagi</option>
+            <option id="personagem-secreto-6-1" class="invisivel" value="personagem-secreto-6-1"></option>
+            <option id="personagem-secreto-6-2" class="invisivel" value="personagem-secreto-6-2"></option>
+            <option id="personagem-secreto-6-3" class="invisivel" value="personagem-secreto-6-3"></option>
+            <option id="personagem-secreto-6-4" class="invisivel" value="personagem-secreto-6-4"></option>
+            <option id="personagem-secreto-7" class="invisivel" value="personagem-secreto-7"></option>
+            <option id="personagem-secreto-8-1" class="invisivel" value="personagem-secreto-8-1"></option>
+            </optgroup>
+            <optgroup label="Apocalipse+" id="apocalipse-plus" class="invisivel">
+            <option id="personagem-secreto-2-1" class="invisivel" value="personagem-secreto-2-1"></option>
+            <option id="personagem-secreto-2-2" class="invisivel" value="personagem-secreto-2-2"></option>
+            <option id="personagem-secreto-2-3" class="invisivel" value="personagem-secreto-2-3"></option>
+            <option id="personagem-secreto-2-4" class="invisivel" value="personagem-secreto-2-4"></option>
+            <option id="personagem-secreto-2-5" class="invisivel" value="personagem-secreto-2-5"></option>
+            <option id="personagem-secreto-2-6" class="invisivel" value="personagem-secreto-2-6"></option>
+            <option id="personagem-secreto-3" class="invisivel" value="personagem-secreto-3"></option>
+            <option id="personagem-secreto-4" class="invisivel" value="personagem-secreto-4"></option>
+            <option id="personagem-secreto-8-2" class="invisivel" value="personagem-secreto-8-2"></option>
+            </optgroup>
+        </select>
+        </div>
+        <input id="codigo" class="prc_atr_n" type="text" title="Insira um Código" onkeydown="setTimeout(checarCodigo, 10)">
+        </span>
+        <div class="funcoes">
+            <img src="assets/rollicon.png" alt="Ícone de Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores">
+            <img src="assets/atributoicon.png" alt="Ícone de Dado" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores">
+            <img src="assets/sizeicon.png" alt="Ícone de Comparação" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores">
+            <a href="mapa.html" target="_blank">
+            <img src="assets/mapaicon.png" alt="Ícone de Mapa" width="4%" id="funcao-mapa" class="botoes-superiores">
+            </a>
+            <!--<img src="assets/rollicon.png" alt="Ícone de Impacto" width="4%" onclick="funcaoImpacto()" type="button" id="funcao-impacto" class="botoes-superiores"></button>-->
+        </div>
+        <div class="aparencia">
+        <select id="tema-escolha" class="cabecalhos-n" onclick="trocarTema()">
+            <option value="cosmo" id="cosmo">Cosmo</option>
+            <option value="apocalipse" id="apocalipse">Apocalipse</option>
+            <option value="cataclismo" id="cataclismo">Cataclismo</option>
+            <option value="aquarela" id="aquarela">Aquarela</option>
+            <option value="tormenta" id="tormenta">Tormenta</option>
+            <option id="tema-secreto-1" value="secreto-1" class="invisivel"></option>
+        </select>
+        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos" class=""></button>
+        </div>
+    </header>
+    <main>
+    <span id="rolador">
+    <section id="testeroll" class="testeroll_n">
+        <p id="titulo" class="rolenoturno">Escolha e Role</p>
+        <div class="testeroll__escolha">
+            <input id="vantagens__pericia" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
+            <select id="testeroll__pericia" class="prc_atr_n" onclick="verificarVantagensPericia()">
+                <option value="5">Sanidade</option>
+                <option value="6">Imunidade</option>
+                <option value="7">Fôlego</option>
+                <option value="8">Percepção</option>
+                <option value="9">Intuição</option>
+                <option value="10">Tecnologia</option>
+                <option value="11">Furtividade</option>
+                <option value="12">Acrobacia</option>
+                <option value="13">Adestramento</option>
+                <option value="14">Lábia</option>
+                <option value="15">Intimidação</option>
+                <option value="16">Medicina</option>
+                <option value="17">Primeiros-Socorros</option>
+                <option value="18">Misticismo</option>
+                <option value="19">Poder</option>
+                <option value="20">Corpo-a-Corpo</option>
+                <option value="21">Mira</option>
+                <option value="22">Reflexos</option>
+                <option value="23">Música</option>
+                <option value="24">Culinária</option>
+                <option value="25">Resistência</option>
+                <option value="26">Existência</option>
+               </select>
+           <select id="testeroll__atributo" class="prc_atr_n" onclick="verificarVantagensAtributo()">
+               <option value="0">Força</option>
+               <option value="1">Destreza</option>
+               <option value="2">Constituição</option>
+               <option value="3">Intelecto</option>
+               <option value="4">Carisma</option>
+           </select>
+           <input id="vantagens__atributo" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
+       </div>
+       <input id="vantagens__atributo-solo" class="invisivel" type="number" min="-999" max="999" title="Vantagens">
+       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n">
+       <div class="valores-iniciais">
+       <p id="testeroll__valoresiniciais1" class="valoresiniciais-n"></p>
+       <p id="testeroll__barras" class="valoresiniciais-n"></p>
+       <p id="testeroll__valoresiniciais2" class="valoresiniciais-n"></p>
+       </div>
+       <p id="testeroll__resultadoinicial" class="resultadoinicial-n"></p>
+       <p id="testeroll__resultadofinal" class="resultadofinal-n"></p>
+</section>
+</span>
+<span id="comparadorSize" class="invisivel">
+    <section id="comparaSize" class="testeroll_n">
+        <p id="titulo2" class="rolenoturno">Compare Alturas</p>
+        <div id="size-buttons">
+            <select id="size-type" class="prc_atr_n" onclick="sizeTipo()">
+                <option value="metragem">Metragem</option>
+                <option value="nomenclatura">Nomenclatura</option>
+                <option value="personagemsize">Personagem</option>
+            </select>
+        </div>
+        <div id="metragem-escolha">
+            <input id="eu-altura" class="prc_atr_n" type="number" min="0.000000001" max="9460536207068016" title="Sua Altura">
+            <input id="ele-altura" class="prc_atr_n" type="number" min="0.000000001" max="9460536207068016" title="Altura do Oponente">
+        </div>
+        <div id="nomenclatura-escolha" class="invisivel">
+            <select id="eu-altura2" class="prc_atr_n">
+                <option value="Microscópico">Microscópico</option>
+                <option value="Ínfimo">Ínfimo</option>
+                <option value="Minúsculo">Minúsculo</option>
+                <option value="Pequeno">Pequeno</option>
+                <option value="Anão">Anão</option>
+                <option value="Comum">Comum</option>
+                <option value="Grande">Grande</option>
+                <option value="Enorme">Enorme</option>
+                <option value="Gigante">Gigante</option>
+                <option value="Colossal">Colossal</option>
+                <option value="Super Colossal">Super Colossal</option>
+                <option value="Ultra Colossal">Ultra Colossal</option>
+                <option value="Hiper Colossal">Hiper Colossal</option>
+                <option value="Titã Menor">Titã Menor</option>
+                <option value="Titã Médio">Titã Médio</option>
+                <option value="Titã Maior">Titã Maior</option>
+                <option value="Titã Máximo">Titã Máximo</option>
+                <option value="Troposférico">Troposférico</option>
+                <option value="Estratosférico">Estratosférico</option>
+                <option value="Mesosférico">Mesosférico</option>
+                <option value="Termosférico">Termosférico</option>
+                <option value="Exosférico">Exosférico</option>
+                <option value="Sobrenatural">Sobrenatural</option>
+                <option value="Limite">Limite</option>
+            </select>
+            <select id="ele-altura2" class="prc_atr_n">
+                <option value="Microscópico">Microscópico</option>
+                <option value="Ínfimo">Ínfimo</option>
+                <option value="Minúsculo">Minúsculo</option>
+                <option value="Pequeno">Pequeno</option>
+                <option value="Anão">Anão</option>
+                <option value="Comum">Comum</option>
+                <option value="Grande">Grande</option>
+                <option value="Enorme">Enorme</option>
+                <option value="Gigante">Gigante</option>
+                <option value="Colossal">Colossal</option>
+                <option value="Super Colossal">Super Colossal</option>
+                <option value="Ultra Colossal">Ultra Colossal</option>
+                <option value="Hiper Colossal">Hiper Colossal</option>
+                <option value="Titã Menor">Titã Menor</option>
+                <option value="Titã Médio">Titã Médio</option>
+                <option value="Titã Maior">Titã Maior</option>
+                <option value="Titã Máximo">Titã Máximo</option>
+                <option value="Troposférico">Troposférico</option>
+                <option value="Estratosférico">Estratosférico</option>
+                <option value="Mesosférico">Mesosférico</option>
+                <option value="Termosférico">Termosférico</option>
+                <option value="Exosférico">Exosférico</option>
+                <option value="Sobrenatural">Sobrenatural</option>
+                <option value="Limite">Limite</option>
+            </select>
+        </div>
+        <div id="personagemsize-escolha" class="invisivel">
+            <select id="eu-altura3" class="prc_atr_n">
+                <optgroup label="Cosmo">
+                <option value="1.78">Izumi</option>
+                <option value="1.76">Victoria</option>
+                <option value="1.85">Vladimir</option>
+                <option value="65">Rodrigo</option>
+                <option value="5">Feto Cósmico</option>
+                <option value="2.1556">Teco</option>
+                <option value="5">Mecha-Izumi</option>
+                <option value="5">Mecha-Victoria</option>
+                <option value="8">Mecha-Feto</option>
+                </optgroup>
+                <optgroup label="Apocalipse">
+                <option value="1.99">Zadiel</option>
+                <option value="2.00">Artrodea</option>
+                <option value="1.80">Shaka</option>
+                <option value="2.55">Kyomi</option>
+                <option value="1.30">Lux</option>
+                <option value="1.90">Mabel</option>
+                <option value="1.72">Yukkimi</option>
+                <option value="1.82">Anagi</option>
+                </optgroup>               
+            </select>
+            <select id="ele-altura3" class="prc_atr_n">
+                <optgroup label="Cosmo">
+                <option value="1.78">Izumi</option>
+                <option value="1.76">Victoria</option>
+                <option value="1.85">Vladimir</option>
+                <option value="65">Rodrigo</option>
+                <option value="5">Feto Cósmico</option>
+                <option value="2.1556">Teco</option>
+                <option value="5">Mecha-Izumi</option>
+                <option value="5">Mecha-Victoria</option>
+                <option value="8">Mecha-Feto</option>
+                </optgroup>
+                <optgroup label="Apocalipse">
+                <option value="1.99">Zadiel</option>
+                <option value="2.00">Artrodea</option>
+                <option value="1.80">Shaka</option>
+                <option value="2.55">Kyomi</option>
+                <option value="1.30">Lux</option>
+                <option value="1.90">Mabel</option>
+                <option value="1.72">Yukkimi</option>
+                <option value="1.82">Anagi</option>
+                </optgroup>
+            </select>
+        </div>
+        <img src="assets/comparadorapocalipse.png" alt="Comparar" width="4%" onclick="iniciarSize()" type="button" id="botao-compararsize" class="botao-n"></button>
+        <p id="ataque-vantagem" class="ataquevantagem-n"></p>
+        <p id="esquiva-vantagem" class="esquivavantagem-n"></p>
+        <p id="dano-adicional" class="danoadicional-n"></p>
+    </section>
+</span>
+<span id="definidorImpacto" class="invisivel">
+    <section id="calculaImpacto" class="testeroll_n">
+        <p id="titulo3" class="rolenoturno">Dano de Impacto</p>
+        <div id="tipo-impacto">
+            <select id="impact-type" class="prc_atr_n" onclick="impactoTipo()">
+                <option value="corpo-a-corpo">Corpo-a-Corpo</option>
+                <option value="queda">Queda</option>
+            </select>
+        </div>
+        <div id="corpoacorpoEscolha">
+            <section id="objetoInfo">
+            <select id="material" class="prc_atr_n" title="Material">
+                <option value="Humano">Humano</option>
+                <option value="Deus">Deus</option>
+                <option value="Madeira">Madeira</option>
+                <option value="Pedra">Pedra</option>
+                <option value="Ferro">Ferro</option>
+                <option value="Diamante">Diamante</option>
+                <option value="Univite">Univite</option>
+                <option value="Titanium">Titanium</option>
+                <option value="Uranium">Uranium</option>
+            </select>
+            <input id="massa" class="prc_atr_n" type="number" min="0" max="9999999999999999999" title="Massa">
+            <input id="objetoAltura" class="prc_atr_n" type="number" min="0" max="9460536207068016" title="Tamanho">
+        </section>
+        <input id="impactadoAltura" class="prc_atr_n" type="number" min="0" max="9460536207068016" title="Sua Altura">
+        </div>
+        <img src="assets/comparador.png" alt="Calcular" width="4%" onclick="iniciarImpacto()" type="button" id="botao-calcularimpacto" class="botao-n"></button>
+        <p id="impacto-esquiva" class="ataquevantagem-n"></p>
+        <p id="impacto-dano" class="esquivavantagem-n"></p>
+    </section>
+    </section>
+</span>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
