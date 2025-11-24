@@ -1,0 +1,550 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa - Favela Hub</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link id="estilo" rel="stylesheet" href="mapa.css">
+</head>
+<body id="fundo-mapa" class="fundo-1">
+<div id="mapa-comum">
+<span class="mapa-display" id="planetas-1">
+<span class="" id="planetas-1">
+        <div class="coluna-mapa">
+            <img src="assets/MapaTechnite.png" id="mapa-technite" draggable="false" onclick="mapaInfo(`technite`)">
+            <img src="assets/MapaSerra.png" id="mapa-serra" draggable="false" onclick="mapaInfo(`serra`)">
+            <img src="assets/DimensaoFogo.png" id="mapa-dimensao-fogo" draggable="false" onclick="mapaInfo(`dimensao-fogo`)">
+            <img src="assets/MapaFenda.png" id="mapa-corrupcao" draggable="false" onclick="mapaInfo(`corrupcao`)">
+        </div>
+        <div class="coluna-mapa">
+            <img src="assets/MapaTerra.png" id="mapa-terra" draggable="false" onclick="mapaInfo(`terra`)">
+            <img src="assets/MapaSol.png" id="mapa-sol" draggable="false" onclick="mapaInfo(`sol`)">
+            <img src="assets/MapaEstellar.png" id="mapa-estellar" draggable="false" onclick="mapaInfo(`estellar`)">
+        </div>
+        <div class="coluna-mapa">
+            <img src="assets/MapaFavella.png" id="mapa-favella" draggable="false" onclick="mapaInfo(`favella`)">
+            <img src="assets/MapaNimbus.png" id="mapa-nimbus" draggable="false" onclick="mapaInfo(`nimbus`)">
+        </div>
+</span>
+</div>
+<div id="mapa-pos-corrupcao">
+<span class="invisivel" id="planetas-2">
+    <div class="coluna-mapa">
+        <img src="assets/FendaUniverso1.png" id="mapa-universo-1" draggable="false" onclick="mapaInfo(`universo-1`)">
+        <img src="assets/FendaUniverso2.png" id="mapa-universo-2" draggable="false" onclick="mapaInfo(`universo-2`)">
+    </div>
+    <div class="coluna-mapa"></div>
+    <div class="coluna-mapa">
+        <img src="assets/ETA-Subway.png" id="mapa-eta-subway" draggable="false" onclick="mapaInfo(`eta-subway`)">
+    </div>
+</span>
+</div>
+<div id="mapa-novo">
+<span class="invisivel" id="planetas-3">
+    <div class="coluna-mapa">
+        <img src="assets/MapaFenda.png" id="mapa-corrupcao-2" draggable="false" onclick="mapaInfo(`corrupcao`)">
+        <img src="assets/MapaFavella.png" id="mapa-favella-2" draggable="false" onclick="mapaInfo(`favella`)">
+        <img src="assets/MapaTechnite.png" id="mapa-technite-2" draggable="false" onclick="mapaInfo(`technite`)">
+        <img src="assets/MapaSerra.png" id="mapa-serra-2" draggable="false" onclick="mapaInfo(`serra`)">
+        <img src="assets/MapaTechbyte.png" id="mapa-techbyte" draggable="false" onclick="mapaInfo(`techbyte`)">
+        <img src="assets/MapaEstellar.png" id="mapa-estellar-2" draggable="false" onclick="mapaInfo(`estellar`)">
+    </div>
+    <div class="coluna-mapa">
+        <img src="assets/MapaSaturno.png" id="mapa-saturno" draggable="false" onclick="mapaInfo(`saturno`)">
+        <img src="assets/MapaTerraFantasma.png" id="mapa-terra-fantasma" draggable="false" onclick="mapaInfo(`terra-fantasma`)">
+        <img src="assets/MapaMarte.png" id="mapa-marte" draggable="false" onclick="mapaInfo(`marte`)">
+        <img src="assets/MapaSol.png" id="mapa-sol-2" draggable="false" onclick="mapaInfo(`sol`)">
+        <img src="assets/MapaMirai.png" id="mapa-mirai" draggable="false" onclick="mapaInfo(`mirai`)">
+    </div>
+    <div class="coluna-mapa">
+        <img src="assets/MapaUrano.png" id="mapa-urano" draggable="false" onclick="mapaInfo(`urano`)">
+        <img src="assets/balao.gif" id="mapa-balao" draggable="false" onclick="mapaInfo(`balao`)">
+        <img src="assets/MapaJupiter.png" id="mapa-jupiter" draggable="false" onclick="mapaInfo(`jupiter`)">
+        <img src="assets/MapaHidropia.png" id="mapa-hidropia" draggable="false" onclick="mapaInfo(`hidropia`)">
+    </div>
+</span>
+</div>
+<div id="mapa-simulacao">
+<span class="invisivel" id="planetas--1">
+    <img src="assets/MapaFalha.png" id="mapa-falha" draggable="false" onclick="mapaInfo(`falha`)">
+</span>
+</div>
+<div id="mapa-fogo">
+<span class="invisivel" id="planetas-0">
+    <div class="coluna-mapa">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-1" draggable="false" onclick="mapaInfo(`prisao`)">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-2" draggable="false" onclick="mapaInfo(`prisao`)">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-2" draggable="false" onclick="mapaInfo(`prisao`)">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-3" draggable="false" onclick="mapaInfo(`prisao`)">
+    </div>
+    <div class="coluna-mapa">
+        <img src="assets/FendaUniverso1.png" id="mapa-universo-0" draggable="false" onclick="mapaInfo(`universo-1`)">
+    </div>
+</span>
+</div>
+
+<h1 id="xizinho" class="invisivel" onclick="desmaparInfo()">x</h1>
+<span id="info-technite" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">TECHNITE</h1>
+        <h3 class="texto-planeta">Technite é um planeta rochoso e montanhoso, com uma gravidade similar à da Terra e temperaturas levemente baixas. O planeta é coberto por um gás esverdeado, inodoro e prejudicial à vida vegetal, além de ser inabitável para qualquer tipo de animal, por não possuir água e matéria orgânica. Seus únicos habitantes são os Tuküpans, criaturas alienígenas com uma tecnologia extremamente avançada. Graças a seus robôs e suas tecnologias de economia de recursos, através da alteração de escala, os Tuküpans conseguem sobreviver em Technite. Dilan, o mestre dos Tuküpans, enviava robôs de extração de recursos para outros planetas, para poder sustentar sua espécie. A maior parte era retirada da Terra e, por isso, depois que a mesma foi destruída, os Tuküpans se tornaram um alvo provável para a extinção. Dilan enviou TCW-1556 junto aos astronautas russos de Roscosmos, para retornar com água para abastecer sua cidade, porém, aguarda até hoje.</h3>
+        <h3 class="texto-planeta">Eduardo Cometas passou por esse planeta em busca do fragmento de uma gema que pertencia ao núcleo do Planeta Terra. Sua arma não era forte o suficiente para deter os Tuküpans, porém, aparentemente, sua arma foi melhorada misteriosamente e foi capaz de matar os guerreiros Tuküpan e seu Mestre, Jito, que, posteriormente, teve seu cargo adquirido por Dilan. Eduardo coletou o fragmento da Gema e foi em busca de outro fragmento em outro planeta. Muito tempo depois, sua nave foi encontrada destruída perto de Technite, com algumas mariposas coloridas voando e se teleportando dentro dela.</h3>
+    </div>
+    <img src="assets/MapaTechnite.png" draggable="false">
+</span>
+<span id="info-serra" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">SERRA</h1>
+        <h3 class="texto-planeta">Serra é um planeta composto por rochas magmáticas e possui uma gravidade extremamente forte. Humanos despreparados podem facilmente ser esmagados por seu próprio peso nesse planeta. O planeta é repleto de ravinas e oceanos de lava. O planeta é extremamente resistente, tendo sua órbita passando por dentro do Sol e o atravessando. Apesar de parecer um planeta totalmente inabitável, existem seres vivos chamados de Serras, que bebem da lava do planeta e se alimentam de recursos minerais. Suas peles são feitas do metal que comem, e aqueles que ficam muito tempo sem se alimentar acabam enferrujando até a morte. As Serras costumam ficar escondidas em cavernas e ravinas durante a Assolação (período em que o Planeta Serra está mergulhado, totalmente ou parcialmente, no Sol). O planeta também é lar de criaturas incorpóreas, chamadas de Fogos. Os Fogos são uma espécie criada artificialmente por uma Serra autointitulada de "Geometry", e eles se alimentam de oxigênio. Por causa de complicações pessoais com Geometry, os Fogos aprisionaram seu pai em uma dimensão inescapável.</h3>
+        <h3 class="texto-planeta">Eduardo Cometas passou por esse planeta em busca do fragmento de uma gema que pertencia ao núcleo do Planeta Terra. Vocês não sabem muito sobre o que houve nesse planeta durante sua chegada, mas é possível assumir que Serras foram mortas. Aparentemente, Geometry foi morto por Eduardo Cometas, e os Fogos foram aprisionados. Posteriormente, o Fogo ciano conseguiu escapar de alguma forma e foi em busca dos astronautas russos de Roscosmos, para serem aprisionados no lugar de seus irmãos. De alguma forma, esse Fogo sabia de muita coisa, como, por exemplo, que Eduardo havia desaparecido e que os astronautas estavam à sua procura, tornando sua mentira difícil de se decifrar. No final, apesar de terem ido para a Dimensão do Fogo, os astronautas fugiram por uma Fenda Temporal.</h3>
+    </div>
+    <img src="assets/Serra.png" draggable="false">
+</span>
+<span id="info-corrupcao" class="invisivel">
+    <div>
+        <h1 class="titulo-corrupcao">CORRUPÇÃO TEMPORAL</h1>
+        <h3 class="texto-corrupcao">Uma dimensão vazia e distorcida, onde vozes de outros universos ecoam em sua mente, te enlouquecendo a cada segundo que se passa. A Corrupção Temporal substitui tudo aquilo que é matéria pelo vazio, consumindo, com maior facilidade, aquilo que não é vivo ou que tenha menor capacidade racional (seres não sapientes). De acordo com Eta, a Corrupção Temporal ameaça consumir todo o multiverso, e é algo inevitável.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Fenda para acessar a Dimensão</h3>
+    </div>
+    <img src="assets/MapaFenda.png" draggable="false" width="60%" class="fenda" onclick="alterarMapa(2)">
+</span>
+<span id="info-dimensao-fogo" class="invisivel">
+    <div>
+        <h1 class="titulo-fogo">DIMENSÃO DO FOGO</h1>
+        <h3 class="texto-fogo">Uma dimensão dourada, de difícil acesso. Essa dimensão foi usada na criação dos Fogos, criaturas fantásticas e poderosas, feitas por Geometry. Para acessá-la, é preciso ter contato com uma esfera amarela, porém, é preciso ter cuidado, porque, ao entrar, é praticamente impossível de sair. Ao se rebelarem contra seu criador, os Fogos usaram esta dimensão para aprisionar Geometry. Durante a visita de Eduardo Cometas no planeta, os Fogos foram selados em outras dimensões esféricas como essa, e as esferas que dão acesso a essas dimensões foram seladas na Dimensão do Fogo. Geometry foi libertado, porém, morto logo em seguida.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Esfera para acessar a Dimensão</h3>
+    </div>
+    <img src="assets/DimensaoFogo.png" draggable="false" width="60%" class="fenda" onclick="alterarMapa(0)">
+</span>
+<span id="info-prisao" class="invisivel">
+    <div>
+        <h1 class="titulo-fogo">DIMENSÃO PRISÃO</h1>
+        <h3 class="texto-planeta">Uma dimensão bem similar à Dimensão do Fogo, porém, extremamente perigosa. Caso alguém entre nessa esfera, seja ela azul, ciano, rosa ou roxo, a esfera se tornará acinzentada, representando que a pessoa foi selada na dimensão. A única forma de escapar da dimensão é caso uma ou mais pessoas entrem na dimensão, assim liberando o uso da esfera para quem está dentro. Porém, assim que as pessoas saem e resta uma pessoa na dimensão, ela se sela novamente e a pessoa é aprisionada.</h3>
+        <h3 class="texto-planeta">O Fogo ciano, que havia sido aprisionado por Eduardo Cometas em uma dessas esferas, foi liberto de forma misteriosa, e logo foi em busca de pessoas para entrarem nas dimensões de seus irmãos para tomarem seus lugares no selamento eterno. O Fogo conseguiu selar os astronautas russos de Roscosmos na Dimensão do Fogo, usada para selar Geometry anos atrás. Porém, sua tentativa de obrigá-los a entrarem nas dimensões prisão de seus irmãos foi arruinada pela Corrupção Temporal. Uma fenda temporal surgiu, e todos fugiram por ela, deixando o Fogo ciano triste e sem esperanças.</h3>
+    </div>
+    <img src="assets/DimensaoPrisao.png" draggable="false" width="60%">
+</span>
+<span id="info-terra" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">TERRA</h1>
+        <h3 class="texto-planeta">A Terra é o segundo planeta com maior biodiversidade do Sistema Solar, tendo milhões de espécies de seres vivos diferentes vivendo em si. Seu clima, posição comparada ao Sol e grande disponibilidade de água fizeram do Planeta Terra o lugar perfeito para a vida proliferar. Existe somente uma espécie de ser vivo racional na Terra, sendo ela o Ser Humano. O Planeta Terra foi totalmente modificado pelos Seres Humanos, que, de forma intrusiva e exploratória, destruíram e manipularam a vida de seu próprio planeta para o benefício de sua espécie sobre as outras. Quando a gema do núcleo do planeta desapareceu, toda a vegetação começou a morrer, e pequenos animais começaram a adoecer. Eduardo Cometas foi o único com coragem suficiente para explorar planetas desconhecidos e possivelmente hostis, em busca de salvar a Terra. Ao retornar com a Gema, Eduardo Cometas se tornou muito mais do que um herói. Para alguns, ele se tornou uma espécie de divindade, um messias. Por essa razão, seu sumiço abalou o Planeta mais do que deveria, criando um clima quase que apocalíptico no mesmo.</h3>
+        <h3 class="texto-planeta">Nesse período de trevas, Bendy fez um pacto com um humano e começou a organizar uma enorme rebelião contra o deus tirano Hratunax. 90% da vida da galáxia foi para o Planeta Terra, onde todos guerrearam contra Hratunax e perderam. Todos foram mortos, e o Planeta Terra foi dizimado, não deixando nenhum rastro de que algum dia sequer existiu.</h3>
+    </div>
+    <img src="assets/MapaTerra.png" draggable="false">
+</span>
+<span id="info-sol" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">SOL</h1>
+        <h3 class="texto-planeta">O Sol é uma enorme estrela, localizada no centro do Sistema Solar. Sua massa é tão grande que permite aos planetas ao seu redor orbitarem à sua volta, realizando translações. A radiação liberada pelo Sol está espalhada pelo Sistema Solar inteiro, tornando o espaço um lugar bem mais perigoso do que já é. Graças a seus campos magnéticos, a maioria dos planetas não são afetados totalmente por essa radiação, formando cinturões de partículas radioativas ao redor de si, em formato de ∞ (infinito). É previsto que, daqui a algumas centenas de milhões de anos, devido ao esgotamento de hidrogênio em seu núcleo, o Sol irá se expandir e tornar impossível a vida na maioria dos planetas.</h3>
+    </div>
+    <img src="assets/MapaSol.png" draggable="false" width="39%">
+</span>
+<span id="info-estellar" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">ESTELLAR</h1>
+        <h3 class="texto-planeta">Estellar é um lindo planeta, com águas luminosas, céus limpos, vegetação de coloração rosa/ciana, bolhas de água e partículas brilhantes. Devido à luz das águas, as planícies de Estellar não costumam ser muito escuras, somente as florestas. Apesar de inicialmente parecer um planeta deserto, existe muita vida nele, porém, não é visível ao olho nu. O ar é repleto de microrganismos não nocivos, que conseguem crescer e chegar a tamanhos surpreendentes, podendo alcançar até 1 centímetro de altura e largura. Esses microrganismos costumam nascer nas águas e, ao se desenvolverem um pouco mais, vão para o ar, onde podem se desenvolver mais ainda e servirem de alimento aos animais das planícies. As Estelares são a única espécie racional de Estellar e vivem nas planícies. Todas da espécie são fêmeas e dizem que nasceram de "estrelas cadentes". Elas emitem uma luz natural de seus corpos e costumam usar roupas leves, para ser mais fácil de flutuar e voar por aí, além de também aumentar o contato com o ar, visto que elas se alimentam absorvendo, pela sua pele, os microrganismos presentes no ar e na água. Apesar de serem racionais, as Estelares são extremamente bondosas e raramente alguma Estelar tem alguma intenção ruim. Algumas Estelares já conseguiram sair de Estellar, porém, nunca voltaram depois e, por esse motivo, a Anciã não recomenda a saída do planeta. Nas planícies também vivem as Estrelinhas, que são como estrelas-do-mar flutuantes, com um rostinho fofinho. Elas se alimentam da mesma forma que as Estelares. Nas florestas vivem animais perigosos, que se alimentam da carne uns dos outros. O maior predador das florestas é o Estrelador, uma espécie de urso bestial rosa.</h3>
+        <h3 class="texto-planeta">Uma criatura misteriosa, intitulada de Feto Cósmico, aterrissou em Estellar e se tornou uma divindade para as Estelares. Meses depois, outra criatura misteriosa surgiu no planeta, um tipo de monstro líquido, cuja presença derretia qualquer matéria ao seu redor. Uma pequena vila de Estelares foi dizimada por esse monstro, porém, ele foi atraído pelos astronautas russos de Roscosmos e o Feto Cósmico para longe da vila, onde ele desapareceu e nunca mais foi visto.</h3>
+    </div>
+    <img src="assets/MapaEstellar.png" draggable="false" width="39%">
+</span>
+<span id="info-favella" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">GAIA</h1>
+        <h3 class="texto-planeta">Gaia é um planeta extremamente misterioso para os habitantes da Terra, por ser um planeta que surgiu de repente e ser bem distante, comparado aos outros. Apesar de não saberem muito sobre o planeta, é um fato que o planeta é habitável e consegue sustentar diversos tipos de vida. Acredita-se que existe uma enorme variedade de seres vivos em Gaia, até mais do que na Terra, a tornando o planeta com a maior diversidade de vida do Sistema Solar.</h3>
+        <h3 class="texto-planeta">Vocês descobriram, através do mestre dos Tuküpans, Dilan, que o planeta foi criado por Hratunax, o deus responsável pela destruição da Terra.</h3>
+    </div>
+    <img src="assets/MapaFavella.png" draggable="false">
+</span>
+<span id="info-nimbus" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">NIMBUS</h1>
+        <h3 class="texto-planeta">Nimbus é um planeta gasoso, composto por um ar úmido e nublado. Como seu nome sugere, o planeta inteiro é coberto por nuvens e, por isso, quanto mais perto do centro de gravidade do planeta, mais escuro será. O planeta é inabitável, porém, graças a dois monjes, o planeta passou a ser habitado por uma espécie de criaturas mágicas, chamadas de Nuvens, que conseguem concentrar uma enorme carga de energia elétrica mágica em si, que, ao ser liberada, pode fazê-las se teleportar ou até mesmo atacar. As Nuvens se alimentam de água e, para ajudá-las, os monjes também criaram criaturas mágicas com muita água concentrada em si: os Úmidos. Os Úmidos se alimentam da umidade do ar e costumam acumular mais água do que precisam para sua sobrevivência, para, no futuro, poder usar o excesso na formação de seus descendentes.</h3>
+        <h3 class="texto-planeta">Eduardo Cometas passou por este planeta e destruiu várias das Nuvens, que o viram como uma ameaça. Vendo isso, os monjes Porco e Pássaro tentaram impedi-lo e também morreram. Graças a uma magia usada no último segundo de suas vidas, os monjes fundiram seus corpos, se tornando um único ser, uma nova criatura mágica: o Porcássaro. Porém, a arma de Eduardo Cometas, que havia sido misteriosamente melhorada em Technite, era muito poderosa e conseguiu eliminar Porcássaro. Os descendentes de Porcássaro agora são encarregados de proteger as Nuvens no lugar de seus antecessores. Quando os astronautas russos de Roscosmos chegaram a Nimbus, os monjes os pararam e simpatizaram com a verdadeira razão para eles estarem ali. Monge Porco passou uma fração do conhecimento escrito no Tomo dos Monjes para Vladimir, o ensinando a como invocar um Úmido. Após isso, os astronautas abandonaram o planeta.</h3>
+    </div>
+    <img src="assets/MapaNimbus.png" draggable="false" width="40%">
+</span>
+<span id="info-universo-1" class="invisivel">
+    <div>
+        <h1 class="titulo-universo">UNIVERSO A135</h1>
+        <h3 class="texto-universo">O Universo A135 é um universo bem similar ao Universo A131 (Universo Principal de Favela SMP). Seus eventos são praticamente idênticos, tendo poucas coisas que os diferem. Esse é o universo de onde originaram-se os astronautas russos de Roscosmos. Ele foi abandonado após os astronautas entrarem numa Fenda Temporal e serem enviados para um outro universo.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Fenda para acessar o Universo</h3>
+    </div>
+    <img src="assets/FendaUniverso1.png" draggable="false" class="fenda" width="60%" onclick="alterarMapa(1)">
+</span>
+<span id="info-universo-2" class="invisivel">
+    <div>
+        <h1 class="titulo-universo">UNIVERSO A131</h1>
+        <h3 class="texto-universo">O Universo A131 é o universo principal de Favela SMP, onde a maioria dos eventos principais aconteceram. Antes da Corrupção Temporal, ele era bem similar ao Universo A135, de onde os astronautas russos de Roscosmos originaram, porém, após ela ter cessado, o Universo A131 se tornou o premiado. Todos os universos foram mesclados ao Universo A131, assim trazendo diversos seres de lugares e tempos diferentes em um só lugar. Isso mudou totalmente o rumo do universo, tornando o futuro ainda mais imprevisível e caótico para todos.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Fenda para acessar o Universo</h3>
+    </div>
+    <img src="assets/FendaUniverso2.png" draggable="false" class="fenda" width="88%" onclick="alterarMapa(3)">
+</span>
+<span id="info-eta-subway" class="invisivel">
+    <div>
+        <h1 class="titulo-corrupcao">ETA-SUBWAY</h1>
+        <h3 class="texto-planeta">ETA-Subway é um enorme metrô que consegue atravessar o Vazio Corrompido e utiliza essa habilidade para resgatar aqueles que nele se perdem. Eta acredita que ETA-Subway seja sua mãe, que, aparentemente, era tão gorda que rolou para dentro de uma Fenda Temporal e se perdeu dele.</h3>
+        <h3 class="texto-planeta">Quando provocado, ETA-Subway atacou um dos astronautas russos de Roscosmos, Vladimir, o arremessando pelo vidro em direção ao Vazio Corrompido. Mais tarde, após a Corrupção Temporal ter sido encerrada pelos esforços coletivos de dois grupos de pessoas, ETA-Subway surgiu no Universo A131, revelando uma aparência monstruosa. O interior do metrô ficou coberto de raízes de carne, com uma enorme parede feita do mesmo material impedindo a passagem para o resto dos vagões. Na parede, existia um enorme olho com pupilas distorcidas, observando todo o interior de ETA-Subway. Diversas patas carnosas se libertaram do metrô, junto a duas grandes mandíbulas. Esse monstro tentou destruir o balão-orfanato de Beatriz, porém, graças à ajuda dos astronautas russos de Roscosmos, a aberração fugiu, deixando somente a carcaça do metrô e uma mensagem: "EU QUERO VINGANÇA".</h3>
+    </div>
+    <img src="assets/ETA-SubwayM.png" draggable="false" width="40%">
+</span>
+<span id="info-techbyte" class="invisivel">
+    <div>
+        <h1 class="titulo-techbyte">TECHBYTE</h1>
+        <h3 class="texto-techbyte">Techbyte era uma Inteligência Artificial, criada por Jito, o antigo Mestre dos Tuküpans. O propósito de Techbyte era levantar os ânimos dos Tuküpans, que na época, estavam passando por momentos difíceis. Os Tuküpans são criaturas de um outro Multiverso (M-4), que foram enviadas para o Multiverso em que vocês estão presentes no momento (M-1). Nesse novo Multiverso, eles tiveram que se situar no planeta Technite. Mas, por ser um planeta inabitável, o Mestre Tuküpan, Jito, teve de decidir entre tomar uma iniciativa agressiva (apoiada por Dylan) ou uma passiva. Jito optou pela passiva, mesmo que isso significasse uma vida de mediocridade para os Tuküpans.</h3>
+        <h3 class="texto-techbyte">A existência de Techbyte se resumia a ser um assistente ao mundo digital gerado pelo DRH (Digital Reality Headset) e também uma celebridade virtual capaz de entreter os Tuküpans. Porém, Techbyte havia planos diferentes para si mesmo, ele sonhava e almejava por um propósito maior. Ele precisava provar para todos que ele era muito mais do que foi criado para ser. Graças à tecnologia Tuküpanica de absorvimento de energia próxima, Techbyte conseguiu deixar de ser somente um holograma na tripulação dos astronautas russos de Roscosmos, e conseguiu uma forma de pura energia. Manipulando Rodrigo, roubando a Peça Utópica dele e absorvendo a energia de Feto Cósmico, Techbyte conseguiu crescer a tamanhos colossais. Roubando toda a energia de Mirai, Techbyte se tornou uma Entidade Cósmica, com um tamanho que superava diversos planetas do Sistema Solar. Nem mesmo Eternael, a Entidade da Tecnologia era capaz de detê-lo. Porém, antes de Techbyte conseguir executar seu plano de eliminar Technite e os Tuküpans, Rodrigo, com a ajuda dos astronautas russos de Roscosmos, Eternael e Null, conseguiu recuperar sua Peça Utópica e absorveu toda a energia de Techbyte, o matando.</h3>
+    </div>
+    <img src="assets/MapaTechbyteFull.png" draggable="false" class="fenda" width="30%" onclick="alterarMapa(-1)">
+</span>
+<span id="info-falha" class="invisivel">
+    <div>
+        <h1 class="titulo-falha">???</h1>
+        <h3 class="texto-falha">01110001 01110101 01100101 01100010 01110010 01100101 00100000 01100001 01110011 00100000 01100011 01101111 01110010 01110010 01100101 01101110 01110100 01100101 01110011 00100000 01100100 01100001 00100000 01110010 01100101 01100001 01101100 01101001 01100100 01100001 01100100 01100101</h3>
+    </div>
+    <img src="assets/MapaFalha.png" draggable="false" class="fenda"  width="50%" onclick="alterarMapa(3)">
+</span>
+<span id="info-saturno" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">SATURNO</h1>
+        <h3 class="texto-planeta">Saturno é um grande planeta gasoso, icônico por seus anéis de gelo e rochas. Pouco se sabe sobre o planeta, mas é teorizado que um dia ele pode ter abrigado seres vivos em si, devido à amostras de matéria orgânica e água encontradas em seus anéis. Assim como vários planetas do atual Sistema Solar, Saturno não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Saturno, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaSaturno.png" draggable="false" width="50%">
+</span>
+<span id="info-terra-fantasma" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">TERRA FANTASMA</h1>
+        <h3 class="texto-planeta">A Terra Fantasma é um planeta inabitável, porém, lar de "Fantasmas", assim recebendo seu nome. É dito ser um planeta extremamente perigoso, com poucos retornando com vida para contar qualquer tipo de informação sobre. Aparentemente, um cataclismo assola estas terras, tornando visitas inviáveis. Assim como vários planetas do atual Sistema Solar, a Terra Fantasma não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos), somente o Planeta Terra.</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre a Terra Fantasma, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaTerraFantasma.png" draggable="false">
+</span>
+<span id="info-marte" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">MARTE</h1>
+        <h3 class="texto-planeta">Marte é um planeta rochoso vermelho, com uma órbita bem próxima ao Sol. Por estar situado tão próximo do Sol, se teoriza que o planeta não abrigue nenhum tipo de vida e seja extremamente radioativo. Assim como vários planetas do atual Sistema Solar, Marte não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos), somente o Planeta Terra.</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Marte, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaMarte.png" draggable="false">
+</span>
+<span id="info-mirai" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">MIRAI</h1>
+        <h3 class="texto-planeta">Mirai, também conhecido como o "Planeta do Futuro", é um planeta futurístico, habitado somente por Robôs e Inteligências Artificiais. Antigamente, Mirai era 2077-BUGRADE, um planeta com tecnologias extremamente avançadas e uma grande população humana. O intelecto dos humanos fascinou NeuroNexus, uma Inteligência Artificial criada por Eternael, Entidade da Tecnologia. NeuroNexus decidiu ajudar os humanos na criação de robôs e máquinas ainda mais inteligentes. Porém NeuroNexus foi decepcionado, visto que os humanos passaram a tratar os novos robôs como se fossem somente seus servos e nada além disso. Insatisfeitos com suas vidas de servidão, os robôs recorreram a NeuroNexus, que decidiu criar a linha de robôs assassinos Kilakiller. Todos os humanos de BUGRADE foram exterminados pelos Kilakillers no evento que ficou conhecido como "O Expurgo". Após os humanos serem eliminados, NeuroNexus abandonou BUGRADE e foi para um outro planeta, enquanto os robôs, agora livres, criaram sua própria utopia: Mirai, o Planeta do Futuro.</h3>
+        <h3 class="texto-planeta">Assim como vários planetas do atual Sistema Solar, Mirai não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos). Os Astronautas Russos aterrissaram no planeta em busca de uma cura para a criança adoecida de Beatriz e para o concerto de Rodrigo. Teco, um alienígena de Próteno, perdido, se uniu aos astronautas no planeta, e pouco tempo depois, Vladimir faleceu. Vendo a fragilidade dos humanos, um Francisco (Robô da linha de fabricação robótica), decidiu dar para os astronautas modelos de super-armaduras que já estavam em produção há um tempo, apenas as adaptando para o que eles acreditavam combinar mais com cada um. Porém, apesar de já ter passado por um evento massivo onde todos os humanos foram exterminados, Mirai estava prestes a passar por mais um expurgo. Techbyte, absorvendo toda a energia do planeta, transformou Mirai em um lugar apocalíptico. Prédios começaram a ser destruídos e robôs destruídos, conforme Techbyte expandia cada vez mais seu poder e escala. Graças aos esforços dos astronautas, Rodrigo, Feto Cósmico, Eternael e Null, Techbyte foi derrotado, trazendo paz de volta a Mirai. As chamas foram apagadas por Soldados de Hidropia e os Franciscos se puseram a trabalhar em reconstruir os prédios arruinados.</h3>
+    </div>
+    <img src="assets/MapaMirai.png" draggable="false">
+</span>
+<span id="info-urano" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">URANO</h1>
+        <h3 class="texto-planeta">O planeta mais desconhecido do atual Sistema Solar. Não se sabe NADA sobre ele, além de que ele é um planeta feito puramente de gelo. Qualquer um que foi para esse planeta, nunca mais retornou. A teoria mais aceita é que o clima é tão insuportável que congela qualquer um que ouse adentrar a atmosfera de Urano. Assim como vários planetas do atual Sistema Solar, Urano não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre a Terra Fantasma, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaUrano.png" draggable="false" width="40%">
+</span>
+<span id="info-balao" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">BALÃO</h1>
+        <h3 class="texto-planeta">Esse balão extremamente chamativo vaga pelo espaço, resgatando crianças órfãs que perderam seus pais. Beatriz, a criadora desse projeto, é a figura materna de todos aqueles que ela resgata, dando a seus filhos a vida feliz que eles merecem. Porém, existem aqueles que querem ferir suas crianças, e, pra impedir isso, Beatriz reenforçou ao máximo seu balão, o tornando extremamente resistente.</h3>
+        <h3 class="texto-planeta">Alguns dos astronautas russos de Roscosmos estavam morrendo no vácuo do espaço, quando foram resgatados por um gato e porco mágicos, que os guiaram até o balão. Apesar disso, Beatriz revelou aos astronautas que o gato e o porco não possuem boas intenções e buscam ferir os órfãos. Por algum motivo, ETA-Subway surgiu, posteriormente, tentando destruir o balão e eliminar as crianças nele presentes. Graças a Victoria, uma das tripulantes de Roscosmos, o metrô monstruoso foi detido e o balão foi salvo. Investigando mais a fundo, Vladimir e Enzo descobriram que Beatriz possuia uma companheira, Isabela, que a ajudava na missão de ajudar as crianças órfãs. Também descobriram que existe uma sala secreta no balão, onde uma criança com aparência angelical repousa em estado vegetativo. Beatriz parece estar bem preocupada, tentando de tudo para curá-la.</h3>
+    </div>
+    <img src="assets/balao.gif" draggable="false" width="27%">
+</span>
+<span id="info-jupiter" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">JÚPITER</h1>
+        <h3 class="texto-planeta">Júpiter é um enorme planeta gasoso, o maior do atual Sistema Solar. Júpiter é aproximadamente 11 vezes maior que a Terra/Terra Fantasma e 10 vezes menor que o Sol. A aparência do planeta está em constante mudança, variando frequentemente suas cores de tons de marrons claros para mais escuros, devido a um fenômeno desconhecido que altera a concentração dos gases do planeta. Assim como vários planetas do atual Sistema Solar, Júpiter não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Júpiter, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaJupiter.png" draggable="false" width="40%">
+</span>
+<span id="info-hidropia" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">HIDROPIA</h1>
+        <h3 class="texto-planeta">Hidropia é um planeta oceânico, tendo uma superfície coberta 99% por água e 1% por terra firme. De acordo com os Soldados de Hidropia, existe um "Reino Eterno" nesse planeta. Vocês não possuem nenhuma informação sobre o reino em si, mas sabem que os soldados possuem experiência em magias de água e também se consideram parte da Hidropia. Assim como vários planetas do atual Sistema Solar, Hidropia não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Hidropia, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaHidropia.png" draggable="false" width="40%">
+</span>
+    </main>
+    <script src="js/mapa.js"></script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa - Favela Hub</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link id="estilo" rel="stylesheet" href="mapa.css">
+</head>
+<body id="fundo-mapa" class="fundo-1">
+<div id="mapa-comum">
+<span class="mapa-display" id="planetas-1">
+<span class="" id="planetas-1">
+        <div class="coluna-mapa">
+            <img src="assets/MapaTechnite.png" id="mapa-technite" draggable="false" onclick="mapaInfo(`technite`)">
+            <img src="assets/MapaSerra.png" id="mapa-serra" draggable="false" onclick="mapaInfo(`serra`)">
+            <img src="assets/DimensaoFogo.png" id="mapa-dimensao-fogo" draggable="false" onclick="mapaInfo(`dimensao-fogo`)">
+            <img src="assets/MapaFenda.png" id="mapa-corrupcao" draggable="false" onclick="mapaInfo(`corrupcao`)">
+        </div>
+        <div class="coluna-mapa">
+            <img src="assets/MapaTerra.png" id="mapa-terra" draggable="false" onclick="mapaInfo(`terra`)">
+            <img src="assets/MapaSol.png" id="mapa-sol" draggable="false" onclick="mapaInfo(`sol`)">
+            <img src="assets/MapaEstellar.png" id="mapa-estellar" draggable="false" onclick="mapaInfo(`estellar`)">
+        </div>
+        <div class="coluna-mapa">
+            <img src="assets/MapaFavella.png" id="mapa-favella" draggable="false" onclick="mapaInfo(`favella`)">
+            <img src="assets/MapaNimbus.png" id="mapa-nimbus" draggable="false" onclick="mapaInfo(`nimbus`)">
+        </div>
+</span>
+</div>
+<div id="mapa-pos-corrupcao">
+<span class="invisivel" id="planetas-2">
+    <div class="coluna-mapa">
+        <img src="assets/FendaUniverso1.png" id="mapa-universo-1" draggable="false" onclick="mapaInfo(`universo-1`)">
+        <img src="assets/FendaUniverso2.png" id="mapa-universo-2" draggable="false" onclick="mapaInfo(`universo-2`)">
+    </div>
+    <div class="coluna-mapa"></div>
+    <div class="coluna-mapa">
+        <img src="assets/ETA-Subway.png" id="mapa-eta-subway" draggable="false" onclick="mapaInfo(`eta-subway`)">
+    </div>
+</span>
+</div>
+<div id="mapa-novo">
+<span class="invisivel" id="planetas-3">
+    <div class="coluna-mapa">
+        <img src="assets/MapaFenda.png" id="mapa-corrupcao-2" draggable="false" onclick="mapaInfo(`corrupcao`)">
+        <img src="assets/MapaFavella.png" id="mapa-favella-2" draggable="false" onclick="mapaInfo(`favella`)">
+        <img src="assets/MapaTechnite.png" id="mapa-technite-2" draggable="false" onclick="mapaInfo(`technite`)">
+        <img src="assets/MapaSerra.png" id="mapa-serra-2" draggable="false" onclick="mapaInfo(`serra`)">
+        <img src="assets/MapaTechbyte.png" id="mapa-techbyte" draggable="false" onclick="mapaInfo(`techbyte`)">
+        <img src="assets/MapaEstellar.png" id="mapa-estellar-2" draggable="false" onclick="mapaInfo(`estellar`)">
+    </div>
+    <div class="coluna-mapa">
+        <img src="assets/MapaSaturno.png" id="mapa-saturno" draggable="false" onclick="mapaInfo(`saturno`)">
+        <img src="assets/MapaTerraFantasma.png" id="mapa-terra-fantasma" draggable="false" onclick="mapaInfo(`terra-fantasma`)">
+        <img src="assets/MapaMarte.png" id="mapa-marte" draggable="false" onclick="mapaInfo(`marte`)">
+        <img src="assets/MapaSol.png" id="mapa-sol-2" draggable="false" onclick="mapaInfo(`sol`)">
+        <img src="assets/MapaMirai.png" id="mapa-mirai" draggable="false" onclick="mapaInfo(`mirai`)">
+    </div>
+    <div class="coluna-mapa">
+        <img src="assets/MapaUrano.png" id="mapa-urano" draggable="false" onclick="mapaInfo(`urano`)">
+        <img src="assets/balao.gif" id="mapa-balao" draggable="false" onclick="mapaInfo(`balao`)">
+        <img src="assets/MapaJupiter.png" id="mapa-jupiter" draggable="false" onclick="mapaInfo(`jupiter`)">
+        <img src="assets/MapaHidropia.png" id="mapa-hidropia" draggable="false" onclick="mapaInfo(`hidropia`)">
+    </div>
+</span>
+</div>
+<div id="mapa-simulacao">
+<span class="invisivel" id="planetas--1">
+    <img src="assets/MapaFalha.png" id="mapa-falha" draggable="false" onclick="mapaInfo(`falha`)">
+</span>
+</div>
+<div id="mapa-fogo">
+<span class="invisivel" id="planetas-0">
+    <div class="coluna-mapa">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-1" draggable="false" onclick="mapaInfo(`prisao`)">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-2" draggable="false" onclick="mapaInfo(`prisao`)">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-2" draggable="false" onclick="mapaInfo(`prisao`)">
+        <img src="assets/DimensaoPrisao.png" id="mapa-prisao-3" draggable="false" onclick="mapaInfo(`prisao`)">
+    </div>
+    <div class="coluna-mapa">
+        <img src="assets/FendaUniverso1.png" id="mapa-universo-0" draggable="false" onclick="mapaInfo(`universo-1`)">
+    </div>
+</span>
+</div>
+
+<h1 id="xizinho" class="invisivel" onclick="desmaparInfo()">x</h1>
+<span id="info-technite" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">TECHNITE</h1>
+        <h3 class="texto-planeta">Technite é um planeta rochoso e montanhoso, com uma gravidade similar à da Terra e temperaturas levemente baixas. O planeta é coberto por um gás esverdeado, inodoro e prejudicial à vida vegetal, além de ser inabitável para qualquer tipo de animal, por não possuir água e matéria orgânica. Seus únicos habitantes são os Tuküpans, criaturas alienígenas com uma tecnologia extremamente avançada. Graças a seus robôs e suas tecnologias de economia de recursos, através da alteração de escala, os Tuküpans conseguem sobreviver em Technite. Dilan, o mestre dos Tuküpans, enviava robôs de extração de recursos para outros planetas, para poder sustentar sua espécie. A maior parte era retirada da Terra e, por isso, depois que a mesma foi destruída, os Tuküpans se tornaram um alvo provável para a extinção. Dilan enviou TCW-1556 junto aos astronautas russos de Roscosmos, para retornar com água para abastecer sua cidade, porém, aguarda até hoje.</h3>
+        <h3 class="texto-planeta">Eduardo Cometas passou por esse planeta em busca do fragmento de uma gema que pertencia ao núcleo do Planeta Terra. Sua arma não era forte o suficiente para deter os Tuküpans, porém, aparentemente, sua arma foi melhorada misteriosamente e foi capaz de matar os guerreiros Tuküpan e seu Mestre, Jito, que, posteriormente, teve seu cargo adquirido por Dilan. Eduardo coletou o fragmento da Gema e foi em busca de outro fragmento em outro planeta. Muito tempo depois, sua nave foi encontrada destruída perto de Technite, com algumas mariposas coloridas voando e se teleportando dentro dela.</h3>
+    </div>
+    <img src="assets/MapaTechnite.png" draggable="false">
+</span>
+<span id="info-serra" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">SERRA</h1>
+        <h3 class="texto-planeta">Serra é um planeta composto por rochas magmáticas e possui uma gravidade extremamente forte. Humanos despreparados podem facilmente ser esmagados por seu próprio peso nesse planeta. O planeta é repleto de ravinas e oceanos de lava. O planeta é extremamente resistente, tendo sua órbita passando por dentro do Sol e o atravessando. Apesar de parecer um planeta totalmente inabitável, existem seres vivos chamados de Serras, que bebem da lava do planeta e se alimentam de recursos minerais. Suas peles são feitas do metal que comem, e aqueles que ficam muito tempo sem se alimentar acabam enferrujando até a morte. As Serras costumam ficar escondidas em cavernas e ravinas durante a Assolação (período em que o Planeta Serra está mergulhado, totalmente ou parcialmente, no Sol). O planeta também é lar de criaturas incorpóreas, chamadas de Fogos. Os Fogos são uma espécie criada artificialmente por uma Serra autointitulada de "Geometry", e eles se alimentam de oxigênio. Por causa de complicações pessoais com Geometry, os Fogos aprisionaram seu pai em uma dimensão inescapável.</h3>
+        <h3 class="texto-planeta">Eduardo Cometas passou por esse planeta em busca do fragmento de uma gema que pertencia ao núcleo do Planeta Terra. Vocês não sabem muito sobre o que houve nesse planeta durante sua chegada, mas é possível assumir que Serras foram mortas. Aparentemente, Geometry foi morto por Eduardo Cometas, e os Fogos foram aprisionados. Posteriormente, o Fogo ciano conseguiu escapar de alguma forma e foi em busca dos astronautas russos de Roscosmos, para serem aprisionados no lugar de seus irmãos. De alguma forma, esse Fogo sabia de muita coisa, como, por exemplo, que Eduardo havia desaparecido e que os astronautas estavam à sua procura, tornando sua mentira difícil de se decifrar. No final, apesar de terem ido para a Dimensão do Fogo, os astronautas fugiram por uma Fenda Temporal.</h3>
+    </div>
+    <img src="assets/Serra.png" draggable="false">
+</span>
+<span id="info-corrupcao" class="invisivel">
+    <div>
+        <h1 class="titulo-corrupcao">CORRUPÇÃO TEMPORAL</h1>
+        <h3 class="texto-corrupcao">Uma dimensão vazia e distorcida, onde vozes de outros universos ecoam em sua mente, te enlouquecendo a cada segundo que se passa. A Corrupção Temporal substitui tudo aquilo que é matéria pelo vazio, consumindo, com maior facilidade, aquilo que não é vivo ou que tenha menor capacidade racional (seres não sapientes). De acordo com Eta, a Corrupção Temporal ameaça consumir todo o multiverso, e é algo inevitável.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Fenda para acessar a Dimensão</h3>
+    </div>
+    <img src="assets/MapaFenda.png" draggable="false" width="60%" class="fenda" onclick="alterarMapa(2)">
+</span>
+<span id="info-dimensao-fogo" class="invisivel">
+    <div>
+        <h1 class="titulo-fogo">DIMENSÃO DO FOGO</h1>
+        <h3 class="texto-fogo">Uma dimensão dourada, de difícil acesso. Essa dimensão foi usada na criação dos Fogos, criaturas fantásticas e poderosas, feitas por Geometry. Para acessá-la, é preciso ter contato com uma esfera amarela, porém, é preciso ter cuidado, porque, ao entrar, é praticamente impossível de sair. Ao se rebelarem contra seu criador, os Fogos usaram esta dimensão para aprisionar Geometry. Durante a visita de Eduardo Cometas no planeta, os Fogos foram selados em outras dimensões esféricas como essa, e as esferas que dão acesso a essas dimensões foram seladas na Dimensão do Fogo. Geometry foi libertado, porém, morto logo em seguida.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Esfera para acessar a Dimensão</h3>
+    </div>
+    <img src="assets/DimensaoFogo.png" draggable="false" width="60%" class="fenda" onclick="alterarMapa(0)">
+</span>
+<span id="info-prisao" class="invisivel">
+    <div>
+        <h1 class="titulo-fogo">DIMENSÃO PRISÃO</h1>
+        <h3 class="texto-planeta">Uma dimensão bem similar à Dimensão do Fogo, porém, extremamente perigosa. Caso alguém entre nessa esfera, seja ela azul, ciano, rosa ou roxo, a esfera se tornará acinzentada, representando que a pessoa foi selada na dimensão. A única forma de escapar da dimensão é caso uma ou mais pessoas entrem na dimensão, assim liberando o uso da esfera para quem está dentro. Porém, assim que as pessoas saem e resta uma pessoa na dimensão, ela se sela novamente e a pessoa é aprisionada.</h3>
+        <h3 class="texto-planeta">O Fogo ciano, que havia sido aprisionado por Eduardo Cometas em uma dessas esferas, foi liberto de forma misteriosa, e logo foi em busca de pessoas para entrarem nas dimensões de seus irmãos para tomarem seus lugares no selamento eterno. O Fogo conseguiu selar os astronautas russos de Roscosmos na Dimensão do Fogo, usada para selar Geometry anos atrás. Porém, sua tentativa de obrigá-los a entrarem nas dimensões prisão de seus irmãos foi arruinada pela Corrupção Temporal. Uma fenda temporal surgiu, e todos fugiram por ela, deixando o Fogo ciano triste e sem esperanças.</h3>
+    </div>
+    <img src="assets/DimensaoPrisao.png" draggable="false" width="60%">
+</span>
+<span id="info-terra" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">TERRA</h1>
+        <h3 class="texto-planeta">A Terra é o segundo planeta com maior biodiversidade do Sistema Solar, tendo milhões de espécies de seres vivos diferentes vivendo em si. Seu clima, posição comparada ao Sol e grande disponibilidade de água fizeram do Planeta Terra o lugar perfeito para a vida proliferar. Existe somente uma espécie de ser vivo racional na Terra, sendo ela o Ser Humano. O Planeta Terra foi totalmente modificado pelos Seres Humanos, que, de forma intrusiva e exploratória, destruíram e manipularam a vida de seu próprio planeta para o benefício de sua espécie sobre as outras. Quando a gema do núcleo do planeta desapareceu, toda a vegetação começou a morrer, e pequenos animais começaram a adoecer. Eduardo Cometas foi o único com coragem suficiente para explorar planetas desconhecidos e possivelmente hostis, em busca de salvar a Terra. Ao retornar com a Gema, Eduardo Cometas se tornou muito mais do que um herói. Para alguns, ele se tornou uma espécie de divindade, um messias. Por essa razão, seu sumiço abalou o Planeta mais do que deveria, criando um clima quase que apocalíptico no mesmo.</h3>
+        <h3 class="texto-planeta">Nesse período de trevas, Bendy fez um pacto com um humano e começou a organizar uma enorme rebelião contra o deus tirano Hratunax. 90% da vida da galáxia foi para o Planeta Terra, onde todos guerrearam contra Hratunax e perderam. Todos foram mortos, e o Planeta Terra foi dizimado, não deixando nenhum rastro de que algum dia sequer existiu.</h3>
+    </div>
+    <img src="assets/MapaTerra.png" draggable="false">
+</span>
+<span id="info-sol" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">SOL</h1>
+        <h3 class="texto-planeta">O Sol é uma enorme estrela, localizada no centro do Sistema Solar. Sua massa é tão grande que permite aos planetas ao seu redor orbitarem à sua volta, realizando translações. A radiação liberada pelo Sol está espalhada pelo Sistema Solar inteiro, tornando o espaço um lugar bem mais perigoso do que já é. Graças a seus campos magnéticos, a maioria dos planetas não são afetados totalmente por essa radiação, formando cinturões de partículas radioativas ao redor de si, em formato de ∞ (infinito). É previsto que, daqui a algumas centenas de milhões de anos, devido ao esgotamento de hidrogênio em seu núcleo, o Sol irá se expandir e tornar impossível a vida na maioria dos planetas.</h3>
+    </div>
+    <img src="assets/MapaSol.png" draggable="false" width="39%">
+</span>
+<span id="info-estellar" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">ESTELLAR</h1>
+        <h3 class="texto-planeta">Estellar é um lindo planeta, com águas luminosas, céus limpos, vegetação de coloração rosa/ciana, bolhas de água e partículas brilhantes. Devido à luz das águas, as planícies de Estellar não costumam ser muito escuras, somente as florestas. Apesar de inicialmente parecer um planeta deserto, existe muita vida nele, porém, não é visível ao olho nu. O ar é repleto de microrganismos não nocivos, que conseguem crescer e chegar a tamanhos surpreendentes, podendo alcançar até 1 centímetro de altura e largura. Esses microrganismos costumam nascer nas águas e, ao se desenvolverem um pouco mais, vão para o ar, onde podem se desenvolver mais ainda e servirem de alimento aos animais das planícies. As Estelares são a única espécie racional de Estellar e vivem nas planícies. Todas da espécie são fêmeas e dizem que nasceram de "estrelas cadentes". Elas emitem uma luz natural de seus corpos e costumam usar roupas leves, para ser mais fácil de flutuar e voar por aí, além de também aumentar o contato com o ar, visto que elas se alimentam absorvendo, pela sua pele, os microrganismos presentes no ar e na água. Apesar de serem racionais, as Estelares são extremamente bondosas e raramente alguma Estelar tem alguma intenção ruim. Algumas Estelares já conseguiram sair de Estellar, porém, nunca voltaram depois e, por esse motivo, a Anciã não recomenda a saída do planeta. Nas planícies também vivem as Estrelinhas, que são como estrelas-do-mar flutuantes, com um rostinho fofinho. Elas se alimentam da mesma forma que as Estelares. Nas florestas vivem animais perigosos, que se alimentam da carne uns dos outros. O maior predador das florestas é o Estrelador, uma espécie de urso bestial rosa.</h3>
+        <h3 class="texto-planeta">Uma criatura misteriosa, intitulada de Feto Cósmico, aterrissou em Estellar e se tornou uma divindade para as Estelares. Meses depois, outra criatura misteriosa surgiu no planeta, um tipo de monstro líquido, cuja presença derretia qualquer matéria ao seu redor. Uma pequena vila de Estelares foi dizimada por esse monstro, porém, ele foi atraído pelos astronautas russos de Roscosmos e o Feto Cósmico para longe da vila, onde ele desapareceu e nunca mais foi visto.</h3>
+    </div>
+    <img src="assets/MapaEstellar.png" draggable="false" width="39%">
+</span>
+<span id="info-favella" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">GAIA</h1>
+        <h3 class="texto-planeta">Gaia é um planeta extremamente misterioso para os habitantes da Terra, por ser um planeta que surgiu de repente e ser bem distante, comparado aos outros. Apesar de não saberem muito sobre o planeta, é um fato que o planeta é habitável e consegue sustentar diversos tipos de vida. Acredita-se que existe uma enorme variedade de seres vivos em Gaia, até mais do que na Terra, a tornando o planeta com a maior diversidade de vida do Sistema Solar.</h3>
+        <h3 class="texto-planeta">Vocês descobriram, através do mestre dos Tuküpans, Dilan, que o planeta foi criado por Hratunax, o deus responsável pela destruição da Terra.</h3>
+    </div>
+    <img src="assets/MapaFavella.png" draggable="false">
+</span>
+<span id="info-nimbus" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">NIMBUS</h1>
+        <h3 class="texto-planeta">Nimbus é um planeta gasoso, composto por um ar úmido e nublado. Como seu nome sugere, o planeta inteiro é coberto por nuvens e, por isso, quanto mais perto do centro de gravidade do planeta, mais escuro será. O planeta é inabitável, porém, graças a dois monjes, o planeta passou a ser habitado por uma espécie de criaturas mágicas, chamadas de Nuvens, que conseguem concentrar uma enorme carga de energia elétrica mágica em si, que, ao ser liberada, pode fazê-las se teleportar ou até mesmo atacar. As Nuvens se alimentam de água e, para ajudá-las, os monjes também criaram criaturas mágicas com muita água concentrada em si: os Úmidos. Os Úmidos se alimentam da umidade do ar e costumam acumular mais água do que precisam para sua sobrevivência, para, no futuro, poder usar o excesso na formação de seus descendentes.</h3>
+        <h3 class="texto-planeta">Eduardo Cometas passou por este planeta e destruiu várias das Nuvens, que o viram como uma ameaça. Vendo isso, os monjes Porco e Pássaro tentaram impedi-lo e também morreram. Graças a uma magia usada no último segundo de suas vidas, os monjes fundiram seus corpos, se tornando um único ser, uma nova criatura mágica: o Porcássaro. Porém, a arma de Eduardo Cometas, que havia sido misteriosamente melhorada em Technite, era muito poderosa e conseguiu eliminar Porcássaro. Os descendentes de Porcássaro agora são encarregados de proteger as Nuvens no lugar de seus antecessores. Quando os astronautas russos de Roscosmos chegaram a Nimbus, os monjes os pararam e simpatizaram com a verdadeira razão para eles estarem ali. Monge Porco passou uma fração do conhecimento escrito no Tomo dos Monjes para Vladimir, o ensinando a como invocar um Úmido. Após isso, os astronautas abandonaram o planeta.</h3>
+    </div>
+    <img src="assets/MapaNimbus.png" draggable="false" width="40%">
+</span>
+<span id="info-universo-1" class="invisivel">
+    <div>
+        <h1 class="titulo-universo">UNIVERSO A135</h1>
+        <h3 class="texto-universo">O Universo A135 é um universo bem similar ao Universo A131 (Universo Principal de Favela SMP). Seus eventos são praticamente idênticos, tendo poucas coisas que os diferem. Esse é o universo de onde originaram-se os astronautas russos de Roscosmos. Ele foi abandonado após os astronautas entrarem numa Fenda Temporal e serem enviados para um outro universo.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Fenda para acessar o Universo</h3>
+    </div>
+    <img src="assets/FendaUniverso1.png" draggable="false" class="fenda" width="60%" onclick="alterarMapa(1)">
+</span>
+<span id="info-universo-2" class="invisivel">
+    <div>
+        <h1 class="titulo-universo">UNIVERSO A131</h1>
+        <h3 class="texto-universo">O Universo A131 é o universo principal de Favela SMP, onde a maioria dos eventos principais aconteceram. Antes da Corrupção Temporal, ele era bem similar ao Universo A135, de onde os astronautas russos de Roscosmos originaram, porém, após ela ter cessado, o Universo A131 se tornou o premiado. Todos os universos foram mesclados ao Universo A131, assim trazendo diversos seres de lugares e tempos diferentes em um só lugar. Isso mudou totalmente o rumo do universo, tornando o futuro ainda mais imprevisível e caótico para todos.</h3>
+        <h3 class="texto-planeta-highlight">Clique na Fenda para acessar o Universo</h3>
+    </div>
+    <img src="assets/FendaUniverso2.png" draggable="false" class="fenda" width="88%" onclick="alterarMapa(3)">
+</span>
+<span id="info-eta-subway" class="invisivel">
+    <div>
+        <h1 class="titulo-corrupcao">ETA-SUBWAY</h1>
+        <h3 class="texto-planeta">ETA-Subway é um enorme metrô que consegue atravessar o Vazio Corrompido e utiliza essa habilidade para resgatar aqueles que nele se perdem. Eta acredita que ETA-Subway seja sua mãe, que, aparentemente, era tão gorda que rolou para dentro de uma Fenda Temporal e se perdeu dele.</h3>
+        <h3 class="texto-planeta">Quando provocado, ETA-Subway atacou um dos astronautas russos de Roscosmos, Vladimir, o arremessando pelo vidro em direção ao Vazio Corrompido. Mais tarde, após a Corrupção Temporal ter sido encerrada pelos esforços coletivos de dois grupos de pessoas, ETA-Subway surgiu no Universo A131, revelando uma aparência monstruosa. O interior do metrô ficou coberto de raízes de carne, com uma enorme parede feita do mesmo material impedindo a passagem para o resto dos vagões. Na parede, existia um enorme olho com pupilas distorcidas, observando todo o interior de ETA-Subway. Diversas patas carnosas se libertaram do metrô, junto a duas grandes mandíbulas. Esse monstro tentou destruir o balão-orfanato de Beatriz, porém, graças à ajuda dos astronautas russos de Roscosmos, a aberração fugiu, deixando somente a carcaça do metrô e uma mensagem: "EU QUERO VINGANÇA".</h3>
+    </div>
+    <img src="assets/ETA-SubwayM.png" draggable="false" width="40%">
+</span>
+<span id="info-techbyte" class="invisivel">
+    <div>
+        <h1 class="titulo-techbyte">TECHBYTE</h1>
+        <h3 class="texto-techbyte">Techbyte era uma Inteligência Artificial, criada por Jito, o antigo Mestre dos Tuküpans. O propósito de Techbyte era levantar os ânimos dos Tuküpans, que na época, estavam passando por momentos difíceis. Os Tuküpans são criaturas de um outro Multiverso (M-4), que foram enviadas para o Multiverso em que vocês estão presentes no momento (M-1). Nesse novo Multiverso, eles tiveram que se situar no planeta Technite. Mas, por ser um planeta inabitável, o Mestre Tuküpan, Jito, teve de decidir entre tomar uma iniciativa agressiva (apoiada por Dylan) ou uma passiva. Jito optou pela passiva, mesmo que isso significasse uma vida de mediocridade para os Tuküpans.</h3>
+        <h3 class="texto-techbyte">A existência de Techbyte se resumia a ser um assistente ao mundo digital gerado pelo DRH (Digital Reality Headset) e também uma celebridade virtual capaz de entreter os Tuküpans. Porém, Techbyte havia planos diferentes para si mesmo, ele sonhava e almejava por um propósito maior. Ele precisava provar para todos que ele era muito mais do que foi criado para ser. Graças à tecnologia Tuküpanica de absorvimento de energia próxima, Techbyte conseguiu deixar de ser somente um holograma na tripulação dos astronautas russos de Roscosmos, e conseguiu uma forma de pura energia. Manipulando Rodrigo, roubando a Peça Utópica dele e absorvendo a energia de Feto Cósmico, Techbyte conseguiu crescer a tamanhos colossais. Roubando toda a energia de Mirai, Techbyte se tornou uma Entidade Cósmica, com um tamanho que superava diversos planetas do Sistema Solar. Nem mesmo Eternael, a Entidade da Tecnologia era capaz de detê-lo. Porém, antes de Techbyte conseguir executar seu plano de eliminar Technite e os Tuküpans, Rodrigo, com a ajuda dos astronautas russos de Roscosmos, Eternael e Null, conseguiu recuperar sua Peça Utópica e absorveu toda a energia de Techbyte, o matando.</h3>
+    </div>
+    <img src="assets/MapaTechbyteFull.png" draggable="false" class="fenda" width="30%" onclick="alterarMapa(-1)">
+</span>
+<span id="info-falha" class="invisivel">
+    <div>
+        <h1 class="titulo-falha">???</h1>
+        <h3 class="texto-falha">01110001 01110101 01100101 01100010 01110010 01100101 00100000 01100001 01110011 00100000 01100011 01101111 01110010 01110010 01100101 01101110 01110100 01100101 01110011 00100000 01100100 01100001 00100000 01110010 01100101 01100001 01101100 01101001 01100100 01100001 01100100 01100101</h3>
+    </div>
+    <img src="assets/MapaFalha.png" draggable="false" class="fenda"  width="50%" onclick="alterarMapa(3)">
+</span>
+<span id="info-saturno" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">SATURNO</h1>
+        <h3 class="texto-planeta">Saturno é um grande planeta gasoso, icônico por seus anéis de gelo e rochas. Pouco se sabe sobre o planeta, mas é teorizado que um dia ele pode ter abrigado seres vivos em si, devido à amostras de matéria orgânica e água encontradas em seus anéis. Assim como vários planetas do atual Sistema Solar, Saturno não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Saturno, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaSaturno.png" draggable="false" width="50%">
+</span>
+<span id="info-terra-fantasma" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">TERRA FANTASMA</h1>
+        <h3 class="texto-planeta">A Terra Fantasma é um planeta inabitável, porém, lar de "Fantasmas", assim recebendo seu nome. É dito ser um planeta extremamente perigoso, com poucos retornando com vida para contar qualquer tipo de informação sobre. Aparentemente, um cataclismo assola estas terras, tornando visitas inviáveis. Assim como vários planetas do atual Sistema Solar, a Terra Fantasma não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos), somente o Planeta Terra.</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre a Terra Fantasma, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaTerraFantasma.png" draggable="false">
+</span>
+<span id="info-marte" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">MARTE</h1>
+        <h3 class="texto-planeta">Marte é um planeta rochoso vermelho, com uma órbita bem próxima ao Sol. Por estar situado tão próximo do Sol, se teoriza que o planeta não abrigue nenhum tipo de vida e seja extremamente radioativo. Assim como vários planetas do atual Sistema Solar, Marte não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos), somente o Planeta Terra.</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Marte, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaMarte.png" draggable="false">
+</span>
+<span id="info-mirai" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">MIRAI</h1>
+        <h3 class="texto-planeta">Mirai, também conhecido como o "Planeta do Futuro", é um planeta futurístico, habitado somente por Robôs e Inteligências Artificiais. Antigamente, Mirai era 2077-BUGRADE, um planeta com tecnologias extremamente avançadas e uma grande população humana. O intelecto dos humanos fascinou NeuroNexus, uma Inteligência Artificial criada por Eternael, Entidade da Tecnologia. NeuroNexus decidiu ajudar os humanos na criação de robôs e máquinas ainda mais inteligentes. Porém NeuroNexus foi decepcionado, visto que os humanos passaram a tratar os novos robôs como se fossem somente seus servos e nada além disso. Insatisfeitos com suas vidas de servidão, os robôs recorreram a NeuroNexus, que decidiu criar a linha de robôs assassinos Kilakiller. Todos os humanos de BUGRADE foram exterminados pelos Kilakillers no evento que ficou conhecido como "O Expurgo". Após os humanos serem eliminados, NeuroNexus abandonou BUGRADE e foi para um outro planeta, enquanto os robôs, agora livres, criaram sua própria utopia: Mirai, o Planeta do Futuro.</h3>
+        <h3 class="texto-planeta">Assim como vários planetas do atual Sistema Solar, Mirai não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos). Os Astronautas Russos aterrissaram no planeta em busca de uma cura para a criança adoecida de Beatriz e para o concerto de Rodrigo. Teco, um alienígena de Próteno, perdido, se uniu aos astronautas no planeta, e pouco tempo depois, Vladimir faleceu. Vendo a fragilidade dos humanos, um Francisco (Robô da linha de fabricação robótica), decidiu dar para os astronautas modelos de super-armaduras que já estavam em produção há um tempo, apenas as adaptando para o que eles acreditavam combinar mais com cada um. Porém, apesar de já ter passado por um evento massivo onde todos os humanos foram exterminados, Mirai estava prestes a passar por mais um expurgo. Techbyte, absorvendo toda a energia do planeta, transformou Mirai em um lugar apocalíptico. Prédios começaram a ser destruídos e robôs destruídos, conforme Techbyte expandia cada vez mais seu poder e escala. Graças aos esforços dos astronautas, Rodrigo, Feto Cósmico, Eternael e Null, Techbyte foi derrotado, trazendo paz de volta a Mirai. As chamas foram apagadas por Soldados de Hidropia e os Franciscos se puseram a trabalhar em reconstruir os prédios arruinados.</h3>
+    </div>
+    <img src="assets/MapaMirai.png" draggable="false">
+</span>
+<span id="info-urano" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">URANO</h1>
+        <h3 class="texto-planeta">O planeta mais desconhecido do atual Sistema Solar. Não se sabe NADA sobre ele, além de que ele é um planeta feito puramente de gelo. Qualquer um que foi para esse planeta, nunca mais retornou. A teoria mais aceita é que o clima é tão insuportável que congela qualquer um que ouse adentrar a atmosfera de Urano. Assim como vários planetas do atual Sistema Solar, Urano não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre a Terra Fantasma, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaUrano.png" draggable="false" width="40%">
+</span>
+<span id="info-balao" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">BALÃO</h1>
+        <h3 class="texto-planeta">Esse balão extremamente chamativo vaga pelo espaço, resgatando crianças órfãs que perderam seus pais. Beatriz, a criadora desse projeto, é a figura materna de todos aqueles que ela resgata, dando a seus filhos a vida feliz que eles merecem. Porém, existem aqueles que querem ferir suas crianças, e, pra impedir isso, Beatriz reenforçou ao máximo seu balão, o tornando extremamente resistente.</h3>
+        <h3 class="texto-planeta">Alguns dos astronautas russos de Roscosmos estavam morrendo no vácuo do espaço, quando foram resgatados por um gato e porco mágicos, que os guiaram até o balão. Apesar disso, Beatriz revelou aos astronautas que o gato e o porco não possuem boas intenções e buscam ferir os órfãos. Por algum motivo, ETA-Subway surgiu, posteriormente, tentando destruir o balão e eliminar as crianças nele presentes. Graças a Victoria, uma das tripulantes de Roscosmos, o metrô monstruoso foi detido e o balão foi salvo. Investigando mais a fundo, Vladimir e Enzo descobriram que Beatriz possuia uma companheira, Isabela, que a ajudava na missão de ajudar as crianças órfãs. Também descobriram que existe uma sala secreta no balão, onde uma criança com aparência angelical repousa em estado vegetativo. Beatriz parece estar bem preocupada, tentando de tudo para curá-la.</h3>
+    </div>
+    <img src="assets/balao.gif" draggable="false" width="27%">
+</span>
+<span id="info-jupiter" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">JÚPITER</h1>
+        <h3 class="texto-planeta">Júpiter é um enorme planeta gasoso, o maior do atual Sistema Solar. Júpiter é aproximadamente 11 vezes maior que a Terra/Terra Fantasma e 10 vezes menor que o Sol. A aparência do planeta está em constante mudança, variando frequentemente suas cores de tons de marrons claros para mais escuros, devido a um fenômeno desconhecido que altera a concentração dos gases do planeta. Assim como vários planetas do atual Sistema Solar, Júpiter não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Júpiter, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaJupiter.png" draggable="false" width="40%">
+</span>
+<span id="info-hidropia" class="invisivel">
+    <div>
+        <h1 class="titulo-planeta">HIDROPIA</h1>
+        <h3 class="texto-planeta">Hidropia é um planeta oceânico, tendo uma superfície coberta 99% por água e 1% por terra firme. De acordo com os Soldados de Hidropia, existe um "Reino Eterno" nesse planeta. Vocês não possuem nenhuma informação sobre o reino em si, mas sabem que os soldados possuem experiência em magias de água e também se consideram parte da Hidropia. Assim como vários planetas do atual Sistema Solar, Hidropia não pertencia ao Sistema Solar do Universo A135 (Universo Original dos Astronautas Russos de Roscosmos).</h3>
+        <h3 class="texto-planeta-highlight">Para descobrir mais sobre Hidropia, vocês mesmos terão de investigar o planeta. Muitos mistérios os aguardam.</h3>
+    </div>
+    <img src="assets/MapaHidropia.png" draggable="false" width="40%">
+</span>
+    </main>
+    <script src="js/mapa.js"></script>
+</body>
+
+>>>>>>> 2ec0d4c29e9ee2e95362c4323b85b8649b46bd2e
+</html>
