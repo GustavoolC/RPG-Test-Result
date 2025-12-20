@@ -48,6 +48,7 @@ let codigo8descoberto = false;
 let codigo9descoberto = false;
 let codigo10descoberto = false;
 let codigo11descoberto = false;
+let codigo12descoberto = false;
 
 let perfilEscolha = "izumi";
     ficha = cdg("☹☀∹☾☭∹☭η∹☭η∹☭☠∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹★∞∹☾∞∹☭∞∹☾∞∹☹✇∹☾∞∹★∞∹☾☾∹☭∞∹☭☾∹☾∞∹☭∞∹∞∹∞∹∞∹☹☾").split(",");
@@ -168,6 +169,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-10-3") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/uEWVQbEJIlEKBTX.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NI uEWVQ-bEJI"));
+        } else if (perfilEscolha == "personagem-secreto-11") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xQTWQLPElEKBTX.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xQTWQLPE"));
         }
     } else if (tema == "cataclismo") {
         if (perfilEscolha == "zadiel") {
@@ -278,6 +282,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-10-3") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/uEWVQbEJIlEKBTXwQJQWXTPUI.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NI uEWVQ-bEJI"));
+        } else if (perfilEscolha == "personagem-secreto-11") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xQTWQLPElEKBTXwQJQWXTPUI.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xQTWQLPE"));
         }
     } else if (tema == "aquarela") {
         if (perfilEscolha == "zadiel") {
@@ -388,6 +395,9 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-10-3") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/uEWVQbEJIlEKBTXqOAQKEXQ.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NI uEWVQ-bEJI"));
+        } else if (perfilEscolha == "personagem-secreto-11") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xQTWQLPElEKBTXqOAQKEXQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xQTWQLPE"));
         }
     } else if (tema == "tormenta") {
         if (perfilEscolha == "zadiel") {
@@ -498,10 +508,69 @@ function atualizarPerfil() {
         } else if (perfilEscolha == "personagem-secreto-10-3") {
             perfilImagem.setAttribute("src",cdg("QPPEJP/uEWVQbEJIlEKBTXjIKUEZJQ.LZR"));
             perfilImagem.setAttribute("alt",cdg("WIZE NI uEWVQ-bEJI"));
+        } else if (perfilEscolha == "personagem-secreto-11") {
+            perfilImagem.setAttribute("src",cdg("QPPEJP/xQTWQLPElEKBTXjIKUEZJQ.LZR"));
+            perfilImagem.setAttribute("alt",cdg("WIZE NI xQTWQLPE"));
         }
 }
 
-    if (perfilEscolha == "zadiel") {
+    if (perfilEscolha == "izumi") {
+        ficha = cdg("☹☀∹☾☭∹☭η∹☭η∹☭☠∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹★∞∹☾∞∹☭∞∹☾∞∹☹✇∹☾∞∹★∞∹☾☾∹☭∞∹☭☾∹☾∞∹☭∞∹∞∹∞∹∞∹☹☾").split(",");
+        vantagens = cdg("∞∹✇∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹✇∹∞∹∞∹∞∹∞∹∞∹✇").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "victoria") {
+        ficha = cdg("★∞∹☾∞∹☭∞∹☾☾∹∞∹★☾∹☾∞∹☾∞∹☾∞∹☀☾∹☾☾∹∞∹☭∞∹∞∹∞∹∞∹☾∞∹★∞∹∞∹∞∹☾∞∹☾∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "vladimir") {
+        ficha = cdg("☭∞∹☭η∹☭η∹☭∞∹☭∞∹☭η∹☾☾∹☭∞∹∞∹∞∹☭∞∹★∞∹∞∹∞∹∞∹∞∹☭∞∹☀∞∹☭η∹☭η∹☾∞∹☭η∹☭∞∹∞∹∞∹∞∹☾★").split(",");
+        vantagens = cdg("∞∹✇∹✇∹♫∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹♫").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "rodrigo") {
+        ficha = cdg("♫☠∞∹-☭∞∹♫☠∞∹η∞∹∞∹∞∹∞∹∞∹η∞∹η∞∹η∞∹-♫♫∞∹-☭∞∹∞∹♫∞∹♫☹∞∹★∞∹★∞∹☀∞∹✇∞∹η∞∹η∞∹-☭∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("♫∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "planetafetal") {
+        ficha = cdg("☹∞∹☾∹☹∞∹☹∞∹☹∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹-♫∞∹♫☾∹☾∹☾∞∹♫☾∹☀∞∹☀∞∹☹∞∹☹∞∹☹∞∹∞∹♫☾∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("✇∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "teco") {
+        ficha = cdg("☹η∹☹η∹☹η∹☹η∹☹η∹☾η∹♫∞∹∞∹☭✇∹☾∞∹★∞∹☹η∹♫∞∹∞∹★∞∹★∞∹∞∹☾∹♫∞∞∹♫∞∞∹♫☾∹☹η∹☹η∹∞∹∞∹∞∹☀✇").split(",");
+        vantagens = cdg("∞∹✇∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹♫∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-1") {
+        ficha = cdg("η∞∹η∞∹η∞∹η∞∹☾☠∹η∞∹η∞∹η∞∹η∞∹☾∞∹η∞∹♫η∹η∞∹∞∹∞∹∞∹η∞∹η∞∹☾∹η∞∹η∞∹η∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
+        vantagens = cdg("✇∹✇∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹♫∹☀∹∞∹★∹∞∹∞∹∞∹✇").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-9-1") {
+        ficha = cdg("☭∞∹☠∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-9-2") {
+        ficha = cdg("☭∞∹☭∞∹☠∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-9-3") {
+        ficha = cdg("☠∞∹☭∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-10-1") {
+        ficha = cdg("η∞∹✇∞∹☠∞∹☭η∹♫∞∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹∞∹∞∹☭∞∹☾∞∹★∞∹☾∞∹★∞∹☾☾∹☠∞∹♫∞∞∹☠∞∹η∞∹∞∹∞∹∞∹☹☾").split(",");
+        vantagens = cdg("∞∹✇∹∞∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-10-2") {
+        ficha = cdg("☹∞∹☭∞∹☹∞∹η∞∹∞∹η∞∹η∞∹η∞∹η∞∹☾∞∹η∞∹∞∹η∞∹∞∹∞∹∞∹η∞∹η∞∹☾∹η∞∹η∞∹η∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
+        vantagens = cdg("✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-10-3") {
+        ficha = cdg("♫∞∞∹∞∹∞∹☹∞∹♫∞∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹☾∞∹☾∞∹☾∹☾∞∹♫∞∞∹☀∞∹☀∞∹☹∞∹∞∹♫∞∞∹∞∹♫∞∞∹∞∹∞∹∞∹∞").split(",");
+        vantagens = cdg("∞∹∞∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "personagem-secreto-11") {
+        ficha = cdg("☭☾∹☾∞∹η∞∹☾♫∹☾∞∹☭η∹✇∞∹☭✇∹☾∞∹☾∞∹♫∞∹☾∞∹☀♫∹☀∞∹☹∞∹☀∞∹☀☀∹✇η∹η∞∹η∞∹☹✇∹☹∞∹☭∞∹∞∹∞∹∞∹★∞").split(",");
+        vantagens = cdg("♫∹♫∹☀∹♫∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹♫∹★∹♫∹✇∹∞∹∞∹∞∹∞∹∞").split(",");
+        entidade = false;
+    } else if (perfilEscolha == "zadiel") {
         ficha = cdg("η✇∹η✇∹η✇∹η✇∹η✇∹η✇∹☾∞∹☭∞∹☾∞∹★∞∹∞∹✇☾∹★☾∹☾∞∹♫∞∹♫☾∹☹η∹☭∞∹η✇∹η✇∹η✇∹η✇∹η✇∹∞∹☀♫∹∞∹η✇").split(",");
         vantagens = cdg("☀∹∞∹∞∹☀∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹★∹★∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
@@ -596,58 +665,6 @@ function atualizarPerfil() {
     } else if (perfilEscolha == "personagem-secreto-8-2") {
         ficha = cdg("☀η∞∹-✇♫☭∹☀☠η∹☾∞∹♫∞∹η∞∹η∞∹η∞∹η∞∹★∞∹∞∹-✇☭∞∹-✇✇∞∹✇∹✇∹☀∞∞∹η∞∹η∞∹η∞∹☠η∹☠η∹☭∞∹-✇∞✇∹∞∹∞∹η☾∹☭∞").split(",");
         vantagens = cdg("✇∹✇∹☀∹∞∹∞∹☾∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹☾∹∞∹✇∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "izumi") {
-        ficha = cdg("☹☀∹☾☭∹☭η∹☭η∹☭☠∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹★∞∹☾∞∹☭∞∹☾∞∹☹✇∹☾∞∹★∞∹☾☾∹☭∞∹☭☾∹☾∞∹☭∞∹∞∹∞∹∞∹☹☾").split(",");
-        vantagens = cdg("∞∹✇∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹✇∹∞∹∞∹∞∹∞∹∞∹✇").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "victoria") {
-        ficha = cdg("★∞∹☾∞∹☭∞∹☾☾∹∞∹★☾∹☾∞∹☾∞∹☾∞∹☀☾∹☾☾∹∞∹☭∞∹∞∹∞∹∞∹☾∞∹★∞∹∞∹∞∹☾∞∹☾∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
-        vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "vladimir") {
-        ficha = cdg("☭∞∹☭η∹☭η∹☭∞∹☭∞∹☭η∹☾☾∹☭∞∹∞∹∞∹☭∞∹★∞∹∞∹∞∹∞∹∞∹☭∞∹☀∞∹☭η∹☭η∹☾∞∹☭η∹☭∞∹∞∹∞∹∞∹☾★").split(",");
-        vantagens = cdg("∞∹✇∹✇∹♫∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹♫").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "rodrigo") {
-        ficha = cdg("♫☠∞∹-☭∞∹♫☠∞∹η∞∹∞∹∞∹∞∹∞∹η∞∹η∞∹η∞∹-♫♫∞∹-☭∞∹∞∹♫∞∹♫☹∞∹★∞∹★∞∹☀∞∹✇∞∹η∞∹η∞∹-☭∞∹∞∹∞∹∞∹∞").split(",");
-        vantagens = cdg("♫∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "planetafetal") {
-        ficha = cdg("☹∞∹☾∹☹∞∹☹∞∹☹∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹-♫∞∹♫☾∹☾∹☾∞∹♫☾∹☀∞∹☀∞∹☹∞∹☹∞∹☹∞∹∞∹♫☾∹∞∹∞∹∞∹∞").split(",");
-        vantagens = cdg("✇∹∞∹∞∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "teco") {
-        ficha = cdg("☹★∹☹★∹☹★∹☹★∹☹★∹☾η∹♫∞∹∞∹☾∞∹☾∞∹★∞∹☹★∹♫∞∹∞∹★∞∹★∞∹∞∹☾∹♫∞∞∹♫∞∞∹♫☾∹☹★∹☹★∹∞∹∞∹∞∹☀✇").split(",");
-        vantagens = cdg("∞∹♫∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "personagem-secreto-1") {
-        ficha = cdg("η∞∹η∞∹η∞∹η∞∹☾☠∹η∞∹η∞∹η∞∹η∞∹☾∞∹η∞∹♫η∹η∞∹∞∹∞∹∞∹η∞∹η∞∹☾∹η∞∹η∞∹η∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
-        vantagens = cdg("✇∹✇∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹♫∹☀∹∞∹★∹∞∹∞∹∞∹✇").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "personagem-secreto-9-1") {
-        ficha = cdg("☭∞∹☠∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "personagem-secreto-9-2") {
-        ficha = cdg("☭∞∹☭∞∹☠∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "personagem-secreto-9-3") {
-        ficha = cdg("☠∞∹☭∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "personagem-secreto-10-1") {
-        ficha = cdg("η∞∹✇∞∹☠∞∹☭η∹♫∞∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹∞∹∞∹☭∞∹☾∞∹★∞∹☾∞∹★∞∹☾☾∹☠∞∹♫∞∞∹☠∞∹η∞∹∞∹∞∹∞∹☹☾").split(",");
-        vantagens = cdg("∞∹✇∹∞∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "personagem-secreto-10-2") {
-        ficha = cdg("☹∞∹☭∞∹☹∞∹η∞∹∞∹η∞∹η∞∹η∞∹η∞∹☾∞∹η∞∹∞∹η∞∹∞∹∞∹∞∹η∞∹η∞∹☾∹η∞∹η∞∹η∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
-        vantagens = cdg("✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇").split(",");
-        entidade = false;
-    } else if (perfilEscolha == "personagem-secreto-10-3") {
-        ficha = cdg("♫∞∞∹∞∹∞∹☹∞∹♫∞∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹☾∞∹☾∞∹☾∹☾∞∹♫∞∞∹☀∞∹☀∞∹☹∞∹∞∹♫∞∞∹∞∹♫∞∞∹∞∹∞∹∞∹∞").split(",");
-        vantagens = cdg("∞∹∞∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     }
     
@@ -1044,12 +1061,10 @@ function iniciarTeste() {
 }
 
 var resultObject = {
-    perso: perfilEscolha,
-    prc: pericia + " -- " + periciaEscolhida.selectedOptions[0].textContent,
-    prc_vtg: document.getElementById("vantagens__pericia").value,
-    atr: atributo + " -- " + atributoEscolhido.selectedOptions[0].textContent,
-    atr_vtg: document.getElementById("vantagens__atributo").value,
-    res: resultadoFinal,
+    Personagem: perfilEscolha,
+    Perícia: periciaEscolhida.selectedOptions[0].textContent + ": " + pericia + "" + document.getElementById("vantagens__pericia").value + "-->" + periciaResultado,
+    Atributo: atributoEscolhido.selectedOptions[0].textContent + ": " + atributo + "" + document.getElementById("vantagens__atributo").value + "-->" + atributoResultado,
+    Resultado: resultadoFinal,
 };
 
 socket.emit('sendResult', resultObject);
@@ -3950,14 +3965,25 @@ function checarCodigo() {
        }
     }
 
+                        //personagem secreto 11
+    if (codigo == cdg("VTNKILTQ")) {
+       document.getElementById("personagem-secreto-11").setAttribute("class","");
+       document.getElementById("personagem-secreto-11").innerHTML = cdg("xQTWQLPE");
+       if (codigo11descoberto == false) {
+        somCodigo(11);
+        document.getElementById("codigo").value = "";
+        codigo11descoberto = true;
+       }
+    }
+
     //tema secreto 1
     if (codigo == cdg("BETC•I")) {
        document.getElementById("tema-secreto-1").setAttribute("class",""); 
        document.getElementById("tema-secreto-1").innerHTML = cdg("cIZQP hTWJIK");
        if (codigo11descoberto == false) {
-        somCodigo(11);
+        somCodigo(12);
         document.getElementById("codigo").value = "";
-        codigo11descoberto = true;
+        codigo12descoberto = true;
        }
     }
 
@@ -4225,6 +4251,11 @@ function somCodigo(numero) {
     audio.volume = 0.1;
     }
     if (numero == 11) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/perso11_unlocked.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.1;
+    }
+    if (numero == 12) {
     document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/tema1_unlocked.mp3" id="advinhou-${numero}"></audio>`;
     audio = document.getElementById(`advinhou-${numero}`);
     audio.volume = 0.8;
