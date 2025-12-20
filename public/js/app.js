@@ -3980,7 +3980,7 @@ function checarCodigo() {
     if (codigo == cdg("BETC•I")) {
        document.getElementById("tema-secreto-1").setAttribute("class",""); 
        document.getElementById("tema-secreto-1").innerHTML = cdg("cIZQP hTWJIK");
-       if (codigo11descoberto == false) {
+       if (codigo12descoberto == false) {
         somCodigo(12);
         document.getElementById("codigo").value = "";
         codigo12descoberto = true;
