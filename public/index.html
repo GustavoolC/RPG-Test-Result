@@ -7,14 +7,24 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
-    <link id="estilo" rel="stylesheet" href="style-cosmo.css">
+    <link id="estilo" rel="stylesheet" href="style-sinfonia-3.css">
 </head>
 <body class="noturno" id="fundo">
     <header class="cabecalho">
         <span class="perso-e-codigo">
         <div class="personagem">
-            <img src="assets/IzumiPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
+            <img src="assets/CalebPerfil.png" alt="Ícone do Izumi" width="40%" id="perfil">
         <select id="personagens-escolha" class="cabecalhos-n" onclick="atualizarPerfil()">
+            <optgroup label="S!nfon!a 3">
+            <option value="caleb">Caleb</option>
+            <option value="kasyade">Kasyade</option>
+            <option value="rascal">Rascal</option>
+            <option value="jonasvictor">Jonas Victor</option>
+            <!-- <option value="udryk">Udryk</option>
+            <option value="benjamim">Benjamim</option>
+            <option value="kael">Kael</option>
+            <option value="placenta">Placenta</option> -->
+            </optgroup>
             <optgroup label="Cosmo">
             <option value="izumi">Izumi</option>
             <option id="victoria" value="victoria">Victoria</option>
@@ -66,16 +76,17 @@
         <input id="codigo" class="prc_atr_n" type="text" title="Insira um Código" onkeydown="setTimeout(checarCodigo, 10)">
         </span>
         <div class="funcoes">
-            <img src="assets/rollicon.png" alt="Ícone de Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores">
-            <img src="assets/atributoicon.png" alt="Ícone de Dado" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores">
-            <img src="assets/sizeicon.png" alt="Ícone de Comparação" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores">
+            <img src="assets/rolliconsinfonia3.png" alt="Ícone de Dados" width="4%" onclick="funcaoRolar()" type="button" id="funcao-rolar" class="botoes-superiores">
+            <img src="assets/atributoiconsinfonia3.png" alt="Ícone de Dado" width="4%" onclick="funcaoAtributo()" type="button" id="funcao-atributo" class="botoes-superiores">
+            <img src="assets/sizeiconsinfonia3.png" alt="Ícone de Comparação" width="4%" onclick="funcaoSize()" type="button" id="funcao-size" class="botoes-superiores">
             <a href="mapa.html" target="_blank">
-            <img src="assets/mapaicon.png" alt="Ícone de Mapa" width="4%" id="funcao-mapa" class="botoes-superiores">
+            <img src="assets/mapaiconsinfonia3.png" alt="Ícone de Mapa" width="4%" id="funcao-mapa" class="botoes-superiores">
             </a>
             <!--<img src="assets/rollicon.png" alt="Ícone de Impacto" width="4%" onclick="funcaoImpacto()" type="button" id="funcao-impacto" class="botoes-superiores"></button>-->
         </div>
         <div class="aparencia">
         <select id="tema-escolha" class="cabecalhos-n" onclick="trocarTema()">
+            <option value="sinfonia-3" id="sinfonia-3">S!nfon!a 3</option>
             <option value="cosmo" id="cosmo">Cosmo</option>
             <option value="apocalipse" id="apocalipse">Apocalipse</option>
             <option value="cataclismo" id="cataclismo">Cataclismo</option>
@@ -83,7 +94,7 @@
             <option value="tormenta" id="tormenta">Tormenta</option>
             <option id="tema-secreto-1" value="secreto-1" class="invisivel"></option>
         </select>
-        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos" class=""></button>
+        <img src="assets/sol.png" alt="Ícone do Modo Claro" width="26%" onclick="trocarModo()" id="modos" class="invisivel"></button>
         </div>
     </header>
     <main>
@@ -126,7 +137,7 @@
            <input id="vantagens__atributo" class="prc_atr_n" type="number" min="-999" max="999" title="Vantagens">
        </div>
        <input id="vantagens__atributo-solo" class="invisivel" type="number" min="-999" max="999" title="Vantagens">
-       <img src="assets/dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n">
+       <img src="assets/sinfonia3dice.png" alt="Dados" width="4%" onclick="iniciarTeste()" type="button" id="botao-rolar" class="botao-n">
        <div class="valores-iniciais">
        <p id="testeroll__valoresiniciais1" class="valoresiniciais-n"></p>
        <p id="testeroll__barras" class="valoresiniciais-n"></p>
@@ -205,7 +216,17 @@
             </select>
         </div>
         <div id="personagemsize-escolha" class="invisivel">
-            <select id="eu-altura3" class="prc_atr_n">
+            <!-- <select id="eu-altura3" class="prc_atr_n">
+                <optgroup label="S!nfon!a 3">
+                <option value="1.7">Caleb</option>
+                <option value="0">Kasyade</option>
+                <option value="0.75">Rascal</option>
+                <option value="1.7">Jonas Victor</option>
+                <option value="0">Udryk</option>
+                <option value="0">Benjamim</option>
+                <option value="0">Kael</option>
+                <option value="0">Placenta</option>
+                </optgroup> -->
                 <optgroup label="Cosmo">
                 <option value="1.78">Izumi</option>
                 <option value="1.76">Victoria</option>
@@ -232,6 +253,17 @@
                 </optgroup>               
             </select>
             <select id="ele-altura3" class="prc_atr_n">
+                <!-- <select id="eu-altura3" class="prc_atr_n">
+                <optgroup label="S!nfon!a 3">
+                <option value="1.7">Caleb</option>
+                <option value="0">Kasyade</option>
+                <option value="0.75">Rascal</option>
+                <option value="1.7">Jonas Victor</option>
+                <option value="0">Udryk</option>
+                <option value="0">Benjamim</option>
+                <option value="0">Kael</option>
+                <option value="0">Placenta</option>
+                </optgroup> -->
                 <optgroup label="Cosmo">
                 <option value="1.78">Izumi</option>
                 <option value="1.76">Victoria</option>
