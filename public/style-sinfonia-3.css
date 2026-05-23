@@ -157,14 +157,16 @@ body{
 
 .cabecalhos-c {
     font-family: "Big Shoulders", sans-serif;
-    color:rgb(0, 0, 0);
-    background-color: rgb(255, 185, 255);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.767);
+    color:rgb(255, 255, 255);
+    background-color: black;
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+    -webkit-appearance: none;
+    appearance:unset;
     transition: 150ms ease;
 }
 
 .cabecalhos-c:hover {
-    background-color: rgb(255, 199, 255);
+    background-color: rgb(17, 17, 17);
 }
 
 .funcoes {
@@ -474,22 +476,28 @@ input[type=number] {
 }
 
 .valoresiniciais-c {
-    color: rgb(105, 25, 44);
+    font-family: "utopic";
+    color: #eea1ff;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
     font-size: 110%;
-    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
 }
 
 .resultadoinicial-c {
-    color:rgb(75, 11, 101);
+    font-family: "utopic";
+    color:rgb(255, 108, 108);
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
     font-size: 160%;
-    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
 }
 
 .resultadofinal-c {
-    color:rgb(112, 10, 107);
+    font-family: "utopic";
+    color:lime;
     font-size: 300%;
+    font-weight: 600;
     font-weight: bold;
-    font-family: "Big Shoulders", sans-serif;
+    text-shadow: 0px 0px 30px rgb(13, 255, 0);
 }
 
 .hiper-critico-n {
