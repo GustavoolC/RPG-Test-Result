@@ -50,6 +50,7 @@ let codigo10descoberto = false;
 let codigo11descoberto = false;
 let codigo12descoberto = false;
 let codigo13descoberto = false;
+let codigo14descoberto = false;
 
 let perfilEscolha = "izumi";
     ficha = cdg("☹☀∹☾☭∹☭η∹☭η∹☭☠∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹★∞∹☾∞∹☭∞∹☾∞∹☹✇∹☾∞∹★∞∹☾☾∹☭∞∹☭☾∹☾∞∹☭∞∹∞∹∞∹∞∹☹☾").split(",");
@@ -636,9 +637,14 @@ function atualizarPerfil() {
 }
 
     if (perfilEscolha == "izumi") {
-        ficha = cdg("☹☀∹☾☭∹☭η∹☭η∹☭☠∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹★∞∹☾∞∹☭∞∹☾∞∹☹✇∹☾∞∹★∞∹☾☾∹☭∞∹☭☾∹☾∞∹☭∞∹∞∹∞∹∞∹☹☾").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("☹☀∹☾☭∹☭η∹☭η∹☭☠∹☭☾∹☾∞∹☭∞∹☾☾∹☾∞∹☾∞∹★∞∹☾∞∹☭∞∹☾∞∹☹✇∹☾∞∹★∞∹☾☾∹☭∞∹☭☾∹☾∞∹☭∞∹∞∹∞∹∞∹☹☾").split(",");
+        } else {
+            entidade = true;
+            ficha = cdg("♫∞☹☀∹♫∞☾☭∹☭η∹♫∞☭η∹♫∞☭☠∹♫∞☭☾∹♫∞☾∞∹♫∞☭∞∹♫∞☾☾∹♫∞☾∞∹♫∞☾∞∹♫∞★∞∹♫∞☾∞∹♫∞☭∞∹♫∞☾∞∹♫∞☹✇∹♫∞☾∞∹♫∞★∞∹♫∞☾☾∹♫∞☭∞∹♫∞☭☾∹♫∞☾∞∹♫∞☭∞∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞☹☾").split(",");
+        }
         vantagens = cdg("∞∹✇∹✇∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹✇∹∞∹∞∹∞∹∞∹∞∹✇").split(",");
-        entidade = false;
     } else if (perfilEscolha == "victoria") {
         ficha = cdg("★∞∹☾∞∹☭∞∹☾☾∹∞∹★☾∹☾∞∹☾∞∹☾∞∹☀☾∹☾☾∹∞∹☭∞∹∞∹∞∹∞∹☾∞∹★∞∹∞∹∞∹☾∞∹☾∞∹☭∞∹∞∹∞∹∞∹∞").split(",");
         vantagens = cdg("✇∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
@@ -652,29 +658,54 @@ function atualizarPerfil() {
         vantagens = cdg("♫∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     } else if (perfilEscolha == "planetafetal") {
-        ficha = cdg("☹∞∹☾∹☹∞∹☠★∹☹∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹-♫∞∹♫☾∹☾∹☾∞∹♫☾∹☀∞∹☀∞∹☹∞∹☹∞∹☹∞∹☠★∹♫☾∹∞∹∞∹∞∹∞").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("☹∞∹☾∹☹∞∹☠★∹☹∞∹☹∞∹☾∞∹∞∹✇∞∹☾∹☾∞∹-♫∞∹♫☾∹☾∹☾∞∹♫☾∹☀∞∹☀∞∹☹∞∹☹∞∹☹∞∹☠★∹♫☾∹∞∹∞∹∞∹∞").split(",");
+        } else {
+            entidade = true;
+            ficha = cdg("♫∞☹∞∹♫∞☾∹♫∞☹∞∹♫∞☠★∹♫∞☹∞∹♫∞☹∞∹♫∞☾∞∹♫∞∞∹♫∞✇∞∹♫∞☾∹♫∞☾∞∹-♫∞♫∞∹♫∞♫☾∹♫∞☾∹♫∞☾∞∹♫∞♫☾∹♫∞☀∞∹♫∞☀∞∹♫∞☹∞∹♫∞☹∞∹♫∞☹∞∹♫∞☠★∹♫∞♫☾∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞∞").split(",");
+        }
         vantagens = cdg("✇∹∞∹∞∹☀∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹★∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
     } else if (perfilEscolha == "teco") {
-        ficha = cdg("η☭∹☠∞∹☠∞∹η☭∹η☭∹☭✇∹♫∞∹∞∹☭☭∹☾∞∹★∞∹η✇∹♫∞∹∞∹★∞∹★∞∹∞∹☾∹♫∞∞∹♫∞∞∹♫☾∹η☭∹η☭∹∞∹∞∹∞∹☀☭").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("η☭∹☠∞∹☠∞∹η☭∹η☭∹☭✇∹♫∞∹∞∹☭☭∹☾∞∹★∞∹η✇∹♫∞∹∞∹★∞∹★∞∹∞∹☾∹♫∞∞∹♫∞∞∹♫☾∹η☭∹η☭∹∞∹∞∹∞∹☀☭").split(",");
+        } else {
+            entidade = true;
+            ficha = cdg("♫∞η☭∹♫∞☠∞∹♫∞☠∞∹♫∞η☭∹♫∞η☭∹♫∞☭✇∹♫∞♫∞∹♫∞∞∹♫∞☭☭∹♫∞☾∞∹♫∞★∞∹♫∞η✇∹♫∞♫∞∹♫∞∞∹♫∞★∞∹♫∞★∞∹♫∞∞∹♫∞☾∹♫∞∞∹♫∞∞∹♫∞♫☾∹♫∞η☭∹♫∞η☭∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞☀☭").split(",");
+        }
         vantagens = cdg("∞∹☀∹✇∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹★∹☀∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
     } else if (perfilEscolha == "laicapse") {
-        ficha = cdg("☭☾∹☾∞∹η★∹☾♫∹☭∞∹☭η∹✇∞∹☭✇∹☾∞∹☾∞∹♫∞∹☭∞∹☀♫∹☀∞∹☹∞∹☀∞∹☀☀∹✇η∹η∞∹η★∹☹✇∹☹✇∹☹∞∹∞∹∞∹∞∹★∞").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("☭☾∹☾∞∹η★∹☾♫∹☭∞∹☭η∹✇∞∹☭✇∹☾∞∹☾∞∹♫∞∹☭∞∹☀♫∹☀∞∹☹∞∹☀∞∹☀☀∹✇η∹η∞∹η★∹☹✇∹☹✇∹☹∞∹∞∹∞∹∞∹★∞").split(",");
+        } else {
+            entidade = true;
+            ficha = cdg("♫∞☭☾∹♫∞☾∞∹♫∞η★∹♫∞☾♫∹♫∞☭∞∹♫∞☭η∹♫∞✇∞∹♫∞☭✇∹♫∞☾∞∹♫∞☾∞∹♫∞♫∞∹♫∞☭∞∹♫∞☀♫∹♫∞☀∞∹♫∞☹∞∹♫∞☀∞∹♫∞☀☀∹♫∞✇η∹♫∞η∞∹♫∞η★∹♫∞☹✇∹♫∞☹✇∹♫∞☹∞∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞★∞").split(",");
+        }
         vantagens = cdg("♫∹♫∹★∹♫∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹♫∹★∹♫∹✇∹✇∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
     } else if (perfilEscolha == "lincoln") {
         ficha = cdg("☾∹✇∞∹☀∞∹☹✇∹☹☭∹☭★∹∞∹∞∹★☾∹♫∞∹☭☀∹★∞∹∞∹∞∹☾∞∹∞∹☾∞∹☾∞∹η∞∹☾☠∹☀∞∹✇☾∹☀∞∹∞∹∞∹∞∹☭∞").split(",");
         vantagens = cdg("∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     } else if (perfilEscolha == "jonas") {
-        ficha = cdg("☹☭∹☹☭∹☹☭∹☹☭∹☹✇∹☹✇∹∞∹☾∞∹∞∹∞∹☾∞∹☹✇∹☾∞∹∞∹∞∹☾∞∹☹✇∹☹✇∹∞∹☾∞∹☹✇∹☾∞∹☹✇∹∞∹∞∹∞∹☹✇").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("☹☭∹☹☭∹☹☭∹☹☭∹☹✇∹☹✇∹∞∹☾∞∹∞∹∞∹☾∞∹☹✇∹☾∞∹∞∹∞∹☾∞∹☹✇∹☹✇∹∞∹☾∞∹☹✇∹☾∞∹☹✇∹∞∹∞∹∞∹☹✇").split(",");
+        } else {
+            entidade = true
+            ficha = cdg("♫∞☹☭∹♫∞☹☭∹♫∞☹☭∹♫∞☹☭∹♫∞☹✇∹♫∞☹✇∹♫∞∞∹♫∞☾∞∹♫∞∞∹♫∞∞∹♫∞☾∞∹♫∞☹✇∹♫∞☾∞∹♫∞∞∹♫∞∞∹♫∞☾∞∹♫∞☹✇∹♫∞☹✇∹♫∞∞∹♫∞☾∞∹♫∞☹✇∹♫∞☾∞∹♫∞☹✇∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞☹✇").split(",");
+        }
         vantagens = cdg("∞∹✇∹♫∹☀∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹☀∹☀∹∞∹∞∹♫∹∞∹♫∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
     } else if (perfilEscolha == "personagem-secreto-1") {
-        ficha = cdg("ηη∹ηη∹ηη∹η∞∹☾☠∹η∞∹η∞∹η∞∹η∞∹☾∞∹η∞∹♫η∹η∞∹∞∹∞∹∞∹ηη∹ηη∹★☾∹η∞∹ηη∹η∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("ηη∹ηη∹ηη∹η∞∹☾☠∹η∞∹η∞∹η∞∹η∞∹☾∞∹η∞∹♫η∹η∞∹∞∹∞∹∞∹ηη∹ηη∹★☾∹η∞∹ηη∹η∞∹η∞∹∞∹∞∹∞∹η∞").split(",");
+        } else {
+            entidade = true;
+            ficha = cdg("♫∞ηη∹♫∞ηη∹♫∞ηη∹♫∞η∞∹♫∞☾☠∹♫∞η∞∹♫∞η∞∹♫∞η∞∹♫∞η∞∹♫∞☾∞∹♫∞η∞∹♫∞♫η∹♫∞η∞∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞ηη∹♫∞ηη∹♫∞★☾∹♫∞η∞∹♫∞ηη∹♫∞η∞∹♫∞η∞∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞η∞").split(",");
+        }
         vantagens = cdg("✇∹✇∹✇∹∞∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹♫∹∞∹∞∹♫∹☀∹∞∹☾∹∞∹∞∹∞∹✇").split(",");
-        entidade = false;
     } else if (perfilEscolha == "personagem-secreto-9-1") {
         ficha = cdg("☭∞∹☠∞∹☭∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
         vantagens = cdg("∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
@@ -704,13 +735,23 @@ function atualizarPerfil() {
         vantagens = cdg("♫∹☀∹★∹♫∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹✇∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹★∹♫∹☭∹☭∹∞∹∞∹∞∹∞").split(",");
         entidade = false;
     } else if (perfilEscolha == "personagem-secreto-12-1") {
-        ficha = cdg("☠∞∹η∞∹☠∞∹☠∞∹∞∹☠∞∹☠∞∹☠∞∹✇∞∹☀∞∹♫∞∹♫∞∹☭∞∹★∞∹★∞∹★∞∹✇∞∹☠∞∹☠∞∹☹∞∹∞∹∞∹∞∹∞").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("☠∞∹η∞∹☠∞∹☠∞∹∞∹☠∞∹☠∞∹☠∞∹✇∞∹☀∞∹♫∞∹♫∞∹☭∞∹★∞∹★∞∹★∞∹✇∞∹☠∞∹☠∞∹☹∞∹∞∹∞∹∞∹∞").split(",");
+        } else {
+            entidade = true;
+            ficha = cdg("♫∞☠∞∹♫∞η∞∹♫∞☠∞∹♫∞☠∞∹♫∞∞∹♫∞☠∞∹♫∞☠∞∹♫∞☠∞∹♫∞✇∞∹♫∞☀∞∹♫∞♫∞∹♫∞♫∞∹♫∞☭∞∹♫∞★∞∹♫∞★∞∹♫∞★∞∹♫∞✇∞∹♫∞☠∞∹♫∞☠∞∹♫∞☹∞∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞∞").split(",");
+        }
         vantagens = cdg("✇∹∞∹♫∹✇∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹✇∹♫∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
     } else if (perfilEscolha == "personagem-secreto-12-2") {
-        ficha = cdg("☾∹☀☾∹☾∞∹☹✇∹☹☭∹☭★∹∞∹∞∹★☾∹♫∞∹☭☀∹★∞∹∞∹∞∹☾∞∹∞∹☾∞∹☾∞∹η∞∹☾☠∹☀∞∹☾∞∹☀∞∹∞∹∞∹∞∹☭∞").split(",");
+        if (harmonia == false) {
+            entidade = false;
+            ficha = cdg("☾∹☀☾∹☾∞∹☹✇∹☹☭∹☭★∹∞∹∞∹★☾∹♫∞∹☭☀∹★∞∹∞∹∞∹☾∞∹∞∹☾∞∹☾∞∹η∞∹☾☠∹☀∞∹☾∞∹☀∞∹∞∹∞∹∞∹☭∞").split(",");
+        } else {
+            entidade = true;
+            ficha = cdg("♫∞☾∹♫∞☀☾∹♫∞☾∞∹♫∞☹✇∹♫∞☹☭∹♫∞☭★∹♫∞∞∹♫∞∞∹♫∞★☾∹♫∞♫∞∹♫∞☭☀∹♫∞★∞∹♫∞∞∹♫∞∞∹♫∞☾∞∹♫∞∞∹♫∞☾∞∹♫∞☾∞∹♫∞η∞∹♫∞☾☠∹♫∞☀∞∹♫∞☾∞∹♫∞☀∞∹♫∞∞∹♫∞∞∹♫∞∞∹♫∞☭∞").split(",");
+        }
         vantagens = cdg("∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞").split(",");
-        entidade = false;
     } else if (perfilEscolha == "caleb") {
         ficha = cdg("☾∞∹☾∞∹☾∞∹☾∞∹♫∹☾∞∹☾∞∹☾∞∹☾∞∹♫∹☾∞∹♫☾∹☾∞∹♫∹♫∹♫∹♫∹♫∹♫∹☾∞∹☭∞∹☭∞∹☭∞∹∞∹∞∹∞∹☾∞").split(",");
         vantagens = cdg("♫∹♫∹♫∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹∞∹♫∹♫∹♫∹∞∹∞∹∞∹∞").split(",");
@@ -4187,6 +4228,18 @@ function checarCodigo() {
        }
     }
 
+    //harmonia
+    if (codigo == cdg("vqkuiztq")) {
+        harmonia = true;
+        atualizarPerfil();
+        document.getElementById("fundo").setAttribute("class","harmonia");
+       if (codigo14descoberto == false) {
+        somCodigo(14);
+        document.getElementById("codigo").value = "";
+        codigo14descoberto = true;
+       }
+    }
+
     //temas secretos do tormenta
     if (tema == "tormenta") {
         if (codigo == cdg("∞∞")) {
@@ -4464,6 +4517,11 @@ function somCodigo(numero) {
     document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/tema1_unlocked.mp3" id="advinhou-${numero}"></audio>`;
     audio = document.getElementById(`advinhou-${numero}`);
     audio.volume = 0.8;
+    }
+    if (numero == 14) {
+    document.getElementById("codigo").innerHTML = document.getElementById("codigo").innerHTML + `<audio controls autoplay hidden src="assets/harmonia.mp3" id="advinhou-${numero}"></audio>`;
+    audio = document.getElementById(`advinhou-${numero}`);
+    audio.volume = 0.3;
     }
 }
 

@@ -39,6 +39,11 @@ body{
     transition: 150ms ease;
 }
 
+.harmonia {
+    background-image: url(assets/FundoHarmonia.png);
+    transition: 150ms ease;
+}
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
