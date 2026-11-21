@@ -960,10 +960,6 @@ input[type=number] {
   }
 }
 
-#titulo2 {
-    margin-top:2.8%;
-}
-
 #comparaSize {
     display: flex;
     flex-direction: column;
